@@ -3,7 +3,7 @@ const CONTACT = {
   whatsapp: '60124775410',   // digits only with country code (012-477 5410)
   email: 'aerynnnn7@gmail.com',
   instagram: 'ckyw.1',       // handle without @
-  waMessage: "Hi Aeryn's! I'd like a website for my café / restaurant: "
+  waMessage: "Hi Aeryn's! I'd like a website for my business: "
 };
 
 // Contact buttons

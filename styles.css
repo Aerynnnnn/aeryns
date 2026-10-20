@@ -128,6 +128,18 @@ p { margin: 0; }
 .link-arrow span { display: inline-block; transition: transform .2s ease; }
 .link-arrow:hover span { transform: translateX(4px); }
 
+.work-label { font: 600 13px/1 var(--sans); letter-spacing: .12em; text-transform: uppercase; color: var(--muted); margin-bottom: 32px; padding-bottom: 14px; border-bottom: 1px solid var(--line); }
+.concepts-head { margin-top: clamp(96px, 11vw, 150px); }
+.concepts-head .work-label { margin-bottom: 14px; }
+.concepts-head p { color: var(--muted); margin-bottom: 36px; max-width: 40em; }
+.concepts { display: grid; grid-template-columns: 1fr 1fr; gap: clamp(28px, 4vw, 56px) clamp(20px, 3vw, 40px); }
+.concept { display: block; text-decoration: none; color: inherit; }
+.concept .frame { margin-bottom: 20px; transition: transform .35s ease, box-shadow .35s ease; }
+.concept:hover .frame { transform: translateY(-6px) rotate(-.6deg); box-shadow: 0 1px 0 rgba(0,0,0,.04), 0 34px 70px -26px rgba(40, 28, 15, .5); }
+.concept h3 { font: 400 clamp(30px, 3vw, 40px)/1 var(--serif); margin-bottom: 10px; }
+.concept > p:not(.case-tag) { color: #4a4238; margin-bottom: 16px; }
+.concept:hover .link-arrow span { transform: translateX(4px); }
+
 /* Day / night demo */
 .daynight .frame { position: relative; }
 .daynight .dn-night { position: absolute; left: 0; right: 0; bottom: 0; top: 30px; height: calc(100% - 30px); opacity: 0; transition: opacity .6s ease; }
@@ -228,7 +240,7 @@ p { margin: 0; }
   .hero { padding-top: 32px; }
   .hero-cta .btn { width: 100%; }
   .sticker { width: 86px; height: 86px; font-size: 17px; left: -6px; }
-  .grid-3, .plans, .steps { grid-template-columns: 1fr; }
+  .grid-3, .plans, .steps, .concepts { grid-template-columns: 1fr; }
   .care { flex-direction: column; align-items: flex-start; }
   .faq summary { font-size: 18px; }
   .ticker span { font-size: 21px; }

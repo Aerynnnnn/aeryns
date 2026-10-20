@@ -1,0 +1,169 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="robots" content="noindex">
+<title>Sinar Dental · Concept site by Aeryn's</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+<style>
+  :root { --bg: #f7fafb; --white: #fff; --teal: #0f7c7a; --teal-l: #d9f0ee; --navy: #10263a; --muted: #5c6f7d; --line: #e2e9ed; --sun: #ffc94d; }
+  * { box-sizing: border-box; }
+  body { margin: 0; background: var(--bg); color: var(--navy); font: 400 16.5px/1.6 'Plus Jakarta Sans', system-ui, sans-serif; overflow-x: hidden; }
+  a { color: inherit; }
+  .concept { background: var(--navy); color: #fff; font-size: 13px; text-align: center; padding: 8px 16px; }
+  .concept a { color: var(--sun); }
+  header { display: flex; align-items: center; gap: 32px; padding: 18px clamp(16px, 5vw, 64px); background: var(--white); border-bottom: 1px solid var(--line); position: sticky; top: 0; z-index: 5; }
+  .logo { display: flex; align-items: center; gap: 10px; font-weight: 800; font-size: 20px; margin-right: auto; }
+  .logo i { width: 34px; height: 34px; border-radius: 50%; background: radial-gradient(circle at 50% 50%, var(--sun) 0 38%, transparent 40%), conic-gradient(var(--sun) 0 10%, transparent 10% 20%, var(--sun) 20% 30%, transparent 30% 40%, var(--sun) 40% 50%, transparent 50% 60%, var(--sun) 60% 70%, transparent 70% 80%, var(--sun) 80% 90%, transparent 90%); }
+  nav { display: flex; gap: 26px; font-size: 15px; font-weight: 500; color: var(--muted); } nav a { text-decoration: none; }
+  .btn { display: inline-flex; align-items: center; justify-content: center; gap: 8px; background: var(--teal); color: #fff; text-decoration: none; padding: 13px 22px; border-radius: 12px; font-weight: 600; font-size: 15px; border: 0; cursor: pointer; font-family: inherit; }
+  .btn.light { background: var(--teal-l); color: var(--teal); }
+  .hero { display: grid; grid-template-columns: 1.1fr 1fr; gap: 48px; align-items: center; padding: clamp(40px, 6vw, 88px) clamp(16px, 5vw, 64px); }
+  .open { display: inline-flex; align-items: center; gap: 8px; background: var(--white); border: 1px solid var(--line); padding: 6px 14px; border-radius: 999px; font-size: 14px; font-weight: 600; }
+  .open::before { content: ""; width: 8px; height: 8px; border-radius: 50%; background: #22b573; }
+  .open.closed::before { background: #e5484d; }
+  .hero h1 { font-size: clamp(42px, 5.4vw, 72px); line-height: 1.04; letter-spacing: -.03em; font-weight: 800; margin: 20px 0; }
+  .hero h1 span { color: var(--teal); }
+  .hero p { color: var(--muted); font-size: 18px; max-width: 30em; margin: 0 0 28px; }
+  .hero .ctas { display: flex; gap: 12px; flex-wrap: wrap; }
+  .trust { display: flex; gap: 28px; margin-top: 36px; flex-wrap: wrap; font-size: 14px; color: var(--muted); }
+  .trust b { display: block; color: var(--navy); font-size: 22px; }
+  .art { position: relative; aspect-ratio: 1; border-radius: 40px; background: linear-gradient(160deg, var(--teal-l), #bfe6e2); display: grid; place-items: center; overflow: hidden; }
+  .art .sunburst { position: absolute; width: 130%; aspect-ratio: 1; background: repeating-conic-gradient(#ffffff55 0 6deg, transparent 6deg 18deg); border-radius: 50%; }
+  .art svg { position: relative; width: 52%; filter: drop-shadow(0 30px 30px #0f7c7a33); }
+  .art .chip { position: absolute; background: var(--white); border-radius: 14px; padding: 12px 16px; font-size: 14px; font-weight: 600; box-shadow: 0 12px 30px -12px #10263a44; }
+  .art .c1 { top: 10%; left: 6%; } .art .c2 { bottom: 10%; right: 6%; }
+  .art .chip small { display: block; color: var(--muted); font-weight: 500; }
+  section { padding: 88px clamp(16px, 5vw, 64px); }
+  .center { text-align: center; max-width: 640px; margin: 0 auto 48px; }
+  .kicker { color: var(--teal); font-weight: 700; font-size: 14px; letter-spacing: .08em; text-transform: uppercase; }
+  h2 { font-size: clamp(32px, 4vw, 48px); line-height: 1.1; letter-spacing: -.02em; font-weight: 800; margin: 10px 0 12px; }
+  .center p { color: var(--muted); margin: 0; }
+  .services { display: grid; grid-template-columns: repeat(3, 1fr); gap: 20px; }
+  .svc { background: var(--white); border: 1px solid var(--line); border-radius: 20px; padding: 28px; transition: transform .2s, box-shadow .2s; }
+  .svc:hover { transform: translateY(-4px); box-shadow: 0 20px 40px -24px #10263a55; }
+  .svc .ic { width: 52px; height: 52px; border-radius: 14px; background: var(--teal-l); display: grid; place-items: center; margin-bottom: 18px; }
+  .svc .ic svg { width: 28px; height: 28px; stroke: var(--teal); fill: none; stroke-width: 2; stroke-linecap: round; stroke-linejoin: round; }
+  .svc h3 { margin: 0 0 6px; font-size: 19px; }
+  .svc p { margin: 0; color: var(--muted); font-size: 15px; }
+  .prices { background: var(--white); border-block: 1px solid var(--line); }
+  .ptable { max-width: 820px; margin: 0 auto; border: 1px solid var(--line); border-radius: 20px; overflow: hidden; }
+  .prow { display: flex; justify-content: space-between; gap: 16px; padding: 18px 24px; border-bottom: 1px solid var(--line); }
+  .prow:last-child { border-bottom: 0; } .prow:nth-child(odd) { background: var(--bg); }
+  .prow b { color: var(--teal); white-space: nowrap; }
+  .note { text-align: center; color: var(--muted); font-size: 14px; margin-top: 18px; }
+  .book { display: grid; grid-template-columns: 1fr 1.1fr; gap: 48px; align-items: start; }
+  .hours { background: var(--navy); color: #fff; border-radius: 24px; padding: 32px; }
+  .hours h3 { margin: 0 0 18px; font-size: 22px; }
+  .hours dl { display: grid; grid-template-columns: 1fr auto; gap: 10px; margin: 0 0 24px; }
+  .hours dd { margin: 0; font-weight: 600; } .hours dt { color: #b9c7d2; }
+  .hours dt.today, .hours dt.today + dd { color: var(--sun); }
+  form { background: var(--white); border: 1px solid var(--line); border-radius: 24px; padding: 32px; display: grid; gap: 16px; }
+  label { display: grid; gap: 6px; font-size: 14px; font-weight: 600; }
+  input, select { font: inherit; padding: 13px 14px; border: 1px solid var(--line); border-radius: 12px; background: var(--bg); color: var(--navy); }
+  input:focus, select:focus { outline: 2px solid var(--teal); border-color: transparent; }
+  .two { display: grid; grid-template-columns: 1fr 1fr; gap: 16px; }
+  .faq { max-width: 820px; margin: 0 auto; }
+  details { background: var(--white); border: 1px solid var(--line); border-radius: 16px; padding: 18px 22px; margin-bottom: 12px; }
+  summary { font-weight: 600; cursor: pointer; }
+  details p { color: var(--muted); margin: 10px 0 0; }
+  footer { padding: 32px clamp(16px, 5vw, 64px); border-top: 1px solid var(--line); display: flex; justify-content: space-between; flex-wrap: wrap; gap: 12px; color: var(--muted); font-size: 14px; background: var(--white); }
+  .toast { position: fixed; left: 50%; bottom: 24px; transform: translate(-50%, calc(100% + 48px)); background: var(--navy); color: #fff; padding: 14px 22px; border-radius: 14px; font-size: 14px; transition: transform .3s; z-index: 9; max-width: calc(100% - 32px); }
+  .toast.show { transform: translate(-50%, 0); } .toast a { color: var(--sun); }
+  @media (max-width: 900px) { nav { display: none; } .hero, .book { grid-template-columns: 1fr; } .services { grid-template-columns: 1fr 1fr; } }
+  @media (max-width: 560px) { .services, .two { grid-template-columns: 1fr; } header .btn { padding: 10px 14px; } }
+</style>
+</head>
+<body>
+<div class="concept">Concept site by <a href="../../">Aeryn's</a>. Sinar Dental is a fictional clinic; please don't book here.</div>
+<header>
+  <div class="logo"><i></i>Sinar Dental</div>
+  <nav><a href="#services">Treatments</a><a href="#prices">Prices</a><a href="#book">Hours</a><a href="#faq">FAQ</a></nav>
+  <a class="btn" href="#book">Book a visit</a>
+</header>
+
+<div class="hero">
+  <div>
+    <span class="open" id="open">Open today</span>
+    <h1>A dentist you <span>won't dread</span> visiting.</h1>
+    <p>Gentle family dentistry in Subang Jaya. Clear prices before we start, no pressure to add extras, and evening slots for after work.</p>
+    <div class="ctas"><a class="btn" href="#book">Book an appointment</a><a class="btn light" href="#prices">See prices</a></div>
+    <div class="trust"><span><b>Same week</b>appointments</span><span><b>Fixed</b>prices, shown upfront</span><span><b>Till 9pm</b>on weekdays</span></div>
+  </div>
+  <div class="art" aria-hidden="true">
+    <div class="sunburst"></div>
+    <svg viewBox="0 0 120 130"><path d="M60 18c-10-8-28-12-40-4-14 10-12 32-6 50 5 16 6 38 12 54 3 8 12 8 14 0l6-26c2-8 12-8 14 0l6 26c2 8 11 8 14 0 6-16 7-38 12-54 6-18 8-40-6-50-12-8-30-4-40 4z" fill="#fff" stroke="#0f7c7a" stroke-width="3"/><path d="M38 34c4-4 12-5 16-1" fill="none" stroke="#d9f0ee" stroke-width="5" stroke-linecap="round"/></svg>
+    <div class="chip c1">Next free slot<small>Tomorrow, 10:30am</small></div>
+    <div class="chip c2">Scale &amp; polish<small>from RM120</small></div>
+  </div>
+</div>
+
+<section id="services">
+  <div class="center"><span class="kicker">Treatments</span><h2>Everything for healthy, happy teeth</h2><p>From a first check-up for your little one to straightening and implants.</p></div>
+  <div class="services">
+    <div class="svc"><div class="ic"><svg viewBox="0 0 24 24"><circle cx="11" cy="11" r="7"/><path d="M20 20l-4-4"/></svg></div><h3>Check-up &amp; clean</h3><p>Exam, scale and polish, with photos so you can see what we see.</p></div>
+    <div class="svc"><div class="ic"><svg viewBox="0 0 24 24"><path d="M12 3l2.5 5 5.5.8-4 3.9 1 5.5-5-2.7-5 2.7 1-5.5-4-3.9 5.5-.8z"/></svg></div><h3>Whitening</h3><p>In-clinic or take-home kits, a few shades brighter, safely.</p></div>
+    <div class="svc"><div class="ic"><svg viewBox="0 0 24 24"><path d="M4 12h16M4 8h16M4 16h16"/></svg></div><h3>Braces &amp; aligners</h3><p>Metal, ceramic or clear aligners, with a plan and price before you commit.</p></div>
+    <div class="svc"><div class="ic"><svg viewBox="0 0 24 24"><path d="M12 21c-4-3-8-6.5-8-11a4 4 0 018-1 4 4 0 018 1c0 4.5-4 8-8 11z"/></svg></div><h3>Kids' dentistry</h3><p>Slow, friendly first visits. Stickers are compulsory.</p></div>
+    <div class="svc"><div class="ic"><svg viewBox="0 0 24 24"><path d="M12 3v18M8 7h8M7 12h10M8 17h8"/></svg></div><h3>Fillings &amp; root canals</h3><p>Tooth-coloured fillings and calm, well-numbed root canal care.</p></div>
+    <div class="svc"><div class="ic"><svg viewBox="0 0 24 24"><rect x="7" y="3" width="10" height="8" rx="3"/><path d="M12 11v10M9 15h6M9 18h6"/></svg></div><h3>Implants &amp; crowns</h3><p>Replace a missing tooth with one that looks and feels like yours.</p></div>
+  </div>
+</section>
+
+<section class="prices" id="prices">
+  <div class="center"><span class="kicker">Prices</span><h2>No surprises at the counter</h2><p>Starting prices; we always confirm yours before treatment.</p></div>
+  <div class="ptable">
+    <div class="prow"><span>Consultation &amp; check-up</span><b>RM50</b></div>
+    <div class="prow"><span>Scale &amp; polish</span><b>from RM120</b></div>
+    <div class="prow"><span>Tooth-coloured filling</span><b>from RM150</b></div>
+    <div class="prow"><span>In-clinic whitening</span><b>RM1,200</b></div>
+    <div class="prow"><span>Clear aligners (full course)</span><b>from RM9,000</b></div>
+    <div class="prow"><span>Dental implant (incl. crown)</span><b>from RM6,500</b></div>
+  </div>
+  <p class="note">Example prices for a concept site.</p>
+</section>
+
+<section id="book">
+  <div class="center"><span class="kicker">Visit us</span><h2>Book in under a minute</h2></div>
+  <div class="book">
+    <div class="hours">
+      <h3>Opening hours</h3>
+      <dl id="hours"></dl>
+      <p style="margin:0;color:#b9c7d2">Jalan SS (fictional), Subang Jaya · parking at the back</p>
+    </div>
+    <form onsubmit="event.preventDefault(); toast()">
+      <div class="two"><label>Name<input required placeholder="Your name"></label><label>Phone<input required placeholder="012-345 6789" inputmode="tel"></label></div>
+      <label>Treatment<select><option>Check-up &amp; clean</option><option>Whitening</option><option>Braces / aligners</option><option>Kids' visit</option><option>Toothache, need help soon</option></select></label>
+      <div class="two"><label>Preferred day<input type="date"></label><label>Time<select><option>Morning</option><option>Afternoon</option><option>Evening (after 6pm)</option></select></label></div>
+      <button class="btn">Request appointment</button>
+    </form>
+  </div>
+</section>
+
+<section id="faq">
+  <div class="center"><span class="kicker">Questions</span><h2>Before your first visit</h2></div>
+  <div class="faq">
+    <details><summary>Do you take walk-ins?</summary><p>Yes, if a chair is free. Booking ahead guarantees your time.</p></details>
+    <details><summary>Can I use my company's dental panel?</summary><p>We work with most major panels. Bring your staff card.</p></details>
+    <details><summary>I'm nervous about dentists. Can you help?</summary><p>Tell us when you book. We'll go slowly, explain each step, and you can stop any time.</p></details>
+  </div>
+</section>
+
+<footer><span>© Sinar Dental (fictional) · Concept by Aeryn's</span><span>WhatsApp · Google Maps · Instagram</span></footer>
+<div class="toast" role="status">Concept site, so no booking was sent. Want one for your clinic? <a href="../../#contact">Ask Aeryn's.</a></div>
+<script>
+  const hours = [['Sunday', 'Closed', null], ['Monday', '9am – 9pm', [9, 21]], ['Tuesday', '9am – 9pm', [9, 21]], ['Wednesday', '9am – 9pm', [9, 21]], ['Thursday', '9am – 9pm', [9, 21]], ['Friday', '9am – 9pm', [9, 21]], ['Saturday', '9am – 5pm', [9, 17]]];
+  const now = new Date(), d = now.getDay(), h = now.getHours();
+  const order = [1, 2, 3, 4, 5, 6, 0];
+  document.getElementById('hours').innerHTML = order.map(i => `<dt class="${i === d ? 'today' : ''}">${hours[i][0]}${i === d ? ' (today)' : ''}</dt><dd>${hours[i][1]}</dd>`).join('');
+  const r = hours[d][2], open = document.getElementById('open');
+  if (r && h >= r[0] && h < r[1]) open.textContent = `Open now · until ${hours[d][1].split('– ')[1]}`;
+  else { open.textContent = 'Closed now · book online anytime'; open.classList.add('closed'); }
+  const t = document.querySelector('.toast'); let timer;
+  function toast() { t.classList.add('show'); clearTimeout(timer); timer = setTimeout(() => t.classList.remove('show'), 3500); }
+</script>
+</body>
+</html>

@@ -1,0 +1,156 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="robots" content="noindex">
+<title>Embun Botanics · Concept site by Aeryn's</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;1,400&family=Jost:wght@300;400;500&display=swap" rel="stylesheet">
+<style>
+  :root { --cream: #f4f1ea; --sage: #b9c4ad; --sage-d: #5d6b52; --ink: #2b2f27; --blush: #e8cfc2; --gold: #b8955a; }
+  * { box-sizing: border-box; }
+  body { margin: 0; background: var(--cream); color: var(--ink); font: 300 17px/1.6 Jost, system-ui, sans-serif; overflow-x: hidden; }
+  a { color: inherit; }
+  .concept { background: var(--ink); color: var(--cream); font-size: 13px; text-align: center; padding: 8px 16px; letter-spacing: .02em; }
+  .concept a { color: var(--blush); }
+  header { display: flex; align-items: center; justify-content: space-between; padding: 22px clamp(16px, 5vw, 64px); }
+  .logo { font: 500 28px/1 'Cormorant Garamond', serif; letter-spacing: .14em; text-transform: uppercase; }
+  .logo small { display: block; font: 400 11px Jost; letter-spacing: .4em; color: var(--sage-d); margin-top: 4px; }
+  nav { display: flex; gap: 28px; font-size: 14px; letter-spacing: .12em; text-transform: uppercase; }
+  nav a { text-decoration: none; }
+  .bag { border: 1px solid var(--ink); border-radius: 999px; padding: 8px 16px; font-size: 13px; letter-spacing: .1em; text-transform: uppercase; background: none; font-family: inherit; cursor: pointer; }
+  .hero { display: grid; grid-template-columns: 1fr 1fr; align-items: center; gap: 40px; padding: 40px clamp(16px, 5vw, 64px) 80px; }
+  .hero h1 { font: 400 clamp(52px, 7vw, 104px)/.95 'Cormorant Garamond', serif; margin: 0 0 24px; }
+  .hero h1 em { color: var(--sage-d); }
+  .hero p { max-width: 30em; color: #555a50; margin: 0 0 32px; }
+  .btn { display: inline-block; background: var(--ink); color: var(--cream); text-decoration: none; padding: 16px 30px; border-radius: 999px; font-size: 14px; letter-spacing: .14em; text-transform: uppercase; border: 0; cursor: pointer; font-family: inherit; }
+  .stage { position: relative; aspect-ratio: 1 / 1; border-radius: 50% 50% 0 0; background: radial-gradient(circle at 50% 35%, #fff8 0, transparent 60%), linear-gradient(180deg, var(--sage) 0%, #a7b39a 100%); display: flex; align-items: flex-end; justify-content: center; gap: 4%; padding-bottom: 12%; overflow: hidden; }
+  .leaf { position: absolute; width: 46%; height: 60%; border-radius: 0 100% 0 100%; background: linear-gradient(135deg, #7d8c6f, #4f5d45); opacity: .35; }
+  .leaf.l1 { top: 4%; left: -8%; transform: rotate(-20deg); }
+  .leaf.l2 { top: 10%; right: -12%; transform: rotate(60deg) scale(.8); }
+  /* CSS bottles */
+  .bottle { position: relative; display: flex; flex-direction: column; align-items: center; z-index: 1; }
+  .cap { background: var(--gold); border-radius: 6px 6px 2px 2px; }
+  .glass { border-radius: 14px 14px 10px 10px; display: flex; align-items: center; justify-content: center; box-shadow: inset -10px 0 18px #0001, inset 8px 0 10px #fff6, 0 30px 40px -24px #0006; }
+  .label { background: #fbf9f4; width: 70%; padding: 10% 4%; text-align: center; font: 500 9px/1.3 Jost; letter-spacing: .2em; text-transform: uppercase; }
+  .label b { display: block; font: 500 15px 'Cormorant Garamond', serif; letter-spacing: .08em; margin: 2px 0; }
+  .b1 .cap { width: 26px; height: 54px; } .b1 .glass { width: 92px; height: 200px; background: linear-gradient(90deg, #d9a77f, #e8c2a3); }
+  .b2 .cap { width: 60px; height: 26px; border-radius: 8px; } .b2 .glass { width: 120px; height: 120px; border-radius: 24px; background: linear-gradient(90deg, #ece4d6, #fbf7f0); }
+  .b3 .cap { width: 18px; height: 64px; border-radius: 9px 9px 2px 2px; } .b3 .glass { width: 70px; height: 150px; background: linear-gradient(90deg, #8a9a7a, #aab896); }
+  .strip { display: flex; justify-content: space-around; flex-wrap: wrap; gap: 16px; padding: 22px 16px; border-block: 1px solid #2b2f2722; font-size: 13px; letter-spacing: .2em; text-transform: uppercase; color: var(--sage-d); }
+  section { padding: 96px clamp(16px, 5vw, 64px); }
+  .eyebrow { font-size: 13px; letter-spacing: .3em; text-transform: uppercase; color: var(--sage-d); margin: 0 0 12px; }
+  h2 { font: 400 clamp(38px, 4.6vw, 64px)/1 'Cormorant Garamond', serif; margin: 0 0 48px; }
+  .products { display: grid; grid-template-columns: repeat(4, 1fr); gap: 24px; }
+  .card { background: #fbf9f4; border-radius: 4px; padding: 0 0 22px; text-align: center; }
+  .card .pic { height: 260px; display: flex; align-items: flex-end; justify-content: center; padding-bottom: 28px; margin-bottom: 18px; }
+  .card h3 { font: 500 24px 'Cormorant Garamond', serif; margin: 0; }
+  .card p { margin: 4px 0 14px; font-size: 14px; color: #6b6f64; }
+  .card .row { display: flex; justify-content: center; align-items: center; gap: 14px; }
+  .card button { background: none; border: 1px solid var(--ink); border-radius: 999px; padding: 8px 16px; font: 400 12px Jost; letter-spacing: .14em; text-transform: uppercase; cursor: pointer; }
+  .card button:hover { background: var(--ink); color: var(--cream); }
+  .story { display: grid; grid-template-columns: 1fr 1fr; gap: 64px; align-items: center; background: var(--sage-d); color: var(--cream); }
+  .story h2 { margin-bottom: 24px; } .story .eyebrow { color: var(--blush); }
+  .ingredients { display: grid; grid-template-columns: 1fr 1fr; gap: 16px; }
+  .ing { border: 1px solid #f4f1ea44; padding: 24px; }
+  .ing b { display: block; font: 400 28px 'Cormorant Garamond', serif; }
+  .ing span { font-size: 14px; color: #dfe3d6; }
+  .routine { display: grid; grid-template-columns: repeat(3, 1fr); gap: 40px; counter-reset: r; }
+  .step { border-top: 1px solid var(--ink); padding-top: 20px; }
+  .step::before { counter-increment: r; content: "0" counter(r); font: italic 400 40px 'Cormorant Garamond', serif; color: var(--gold); }
+  .step h3 { font: 500 26px 'Cormorant Garamond', serif; margin: 8px 0; }
+  .news { text-align: center; background: var(--blush); }
+  .news h2 { margin-bottom: 16px; }
+  .news form { display: flex; max-width: 480px; margin: 28px auto 0; border-bottom: 1px solid var(--ink); }
+  .news input { flex: 1; background: none; border: 0; padding: 14px 4px; font: inherit; outline: none; min-width: 0; }
+  .news button { background: none; border: 0; font: 400 13px Jost; letter-spacing: .2em; text-transform: uppercase; cursor: pointer; }
+  footer { padding: 48px clamp(16px, 5vw, 64px); display: flex; justify-content: space-between; flex-wrap: wrap; gap: 16px; font-size: 13px; color: #6b6f64; }
+  .toast { position: fixed; left: 50%; bottom: 24px; transform: translate(-50%, calc(100% + 48px)); background: var(--ink); color: var(--cream); padding: 14px 22px; border-radius: 999px; font-size: 14px; transition: transform .35s ease; z-index: 9; }
+  .toast.show { transform: translate(-50%, 0); }
+  @media (max-width: 900px) {
+    nav { display: none; }
+    .hero, .story { grid-template-columns: 1fr; }
+    .products { grid-template-columns: 1fr 1fr; }
+    .routine { grid-template-columns: 1fr; }
+  }
+  @media (max-width: 520px) { .products, .ingredients { grid-template-columns: 1fr; } .b1 .glass { width: 74px; height: 160px; } .b2 .glass { width: 96px; height: 96px; } .b3 .glass { width: 56px; height: 120px; } }
+</style>
+</head>
+<body>
+<div class="concept">Concept site by <a href="../../">Aeryn's</a>. Embun Botanics is a fictional brand; nothing here is for sale.</div>
+<header>
+  <div class="logo">Embun<small>botanics</small></div>
+  <nav><a href="#shop">Shop</a><a href="#story">Ingredients</a><a href="#routine">Routine</a></nav>
+  <button class="bag" data-demo>Bag (0)</button>
+</header>
+
+<div class="hero">
+  <div>
+    <p class="eyebrow">Small-batch skincare · Cameron Highlands botanicals</p>
+    <h1>Skin care that starts with the <em>morning dew.</em></h1>
+    <p>Gentle serums, balms and mists made with pandan, ginger and highland tea, mixed in small batches and made for humid days.</p>
+    <a class="btn" href="#shop">Shop the collection</a>
+  </div>
+  <div class="stage" aria-hidden="true">
+    <span class="leaf l1"></span><span class="leaf l2"></span>
+    <div class="bottle b3"><div class="cap"></div><div class="glass"><div class="label">Mist<b>Teh</b>100ml</div></div></div>
+    <div class="bottle b1"><div class="cap"></div><div class="glass"><div class="label">Serum<b>Halia</b>30ml</div></div></div>
+    <div class="bottle b2"><div class="cap"></div><div class="glass"><div class="label">Balm<b>Pandan</b>50g</div></div></div>
+  </div>
+</div>
+
+<div class="strip"><span>Free delivery over RM150</span><span>Cruelty-free</span><span>Made in Malaysia</span><span>Refill pouches</span></div>
+
+<section id="shop">
+  <p class="eyebrow">Bestsellers</p>
+  <h2>The collection</h2>
+  <div class="products">
+    <div class="card"><div class="pic" style="background:#efe3d6"><div class="bottle b1"><div class="cap"></div><div class="glass"><div class="label">Serum<b>Halia</b>30ml</div></div></div></div><h3>Halia Glow Serum</h3><p>Ginger root + niacinamide</p><div class="row"><span>RM89</span><button data-demo>Add to bag</button></div></div>
+    <div class="card"><div class="pic" style="background:#e3e8dc"><div class="bottle b2"><div class="cap"></div><div class="glass"><div class="label">Balm<b>Pandan</b>50g</div></div></div></div><h3>Pandan Night Balm</h3><p>Pandan + shea, for dry patches</p><div class="row"><span>RM72</span><button data-demo>Add to bag</button></div></div>
+    <div class="card"><div class="pic" style="background:#dfe4d6"><div class="bottle b3"><div class="cap"></div><div class="glass"><div class="label">Mist<b>Teh</b>100ml</div></div></div></div><h3>Highland Tea Mist</h3><p>Green tea + rose water</p><div class="row"><span>RM55</span><button data-demo>Add to bag</button></div></div>
+    <div class="card"><div class="pic" style="background:#f1e1da"><div class="bottle b1"><div class="cap" style="background:#9a8a7a"></div><div class="glass" style="background:linear-gradient(90deg,#e7b7a6,#f2d3c6)"><div class="label">Oil<b>Bunga</b>30ml</div></div></div></div><h3>Bunga Cleansing Oil</h3><p>Hibiscus + jojoba</p><div class="row"><span>RM68</span><button data-demo>Add to bag</button></div></div>
+  </div>
+</section>
+
+<section class="story" id="story">
+  <div>
+    <p class="eyebrow">What's inside</p>
+    <h2>Four plants, grown an hour from the lab.</h2>
+    <p>Every Embun formula starts with something you'd find in a Malaysian garden. Short ingredient lists you can actually read, and fragrance only from the plants themselves.</p>
+  </div>
+  <div class="ingredients">
+    <div class="ing"><b>Halia</b><span>Ginger: warming, brightens dull skin</span></div>
+    <div class="ing"><b>Pandan</b><span>Soothing, rich in antioxidants</span></div>
+    <div class="ing"><b>Teh hijau</b><span>Green tea: calms redness</span></div>
+    <div class="ing"><b>Bunga raya</b><span>Hibiscus: natural gentle exfoliant</span></div>
+  </div>
+</section>
+
+<section id="routine">
+  <p class="eyebrow">Your routine</p>
+  <h2>Three steps, morning or night.</h2>
+  <div class="routine">
+    <div class="step"><h3>Cleanse</h3><p>Massage Bunga Cleansing Oil into dry skin, then rinse with warm water.</p></div>
+    <div class="step"><h3>Treat</h3><p>Press two drops of Halia Glow Serum into damp skin.</p></div>
+    <div class="step"><h3>Seal</h3><p>A thin layer of Pandan Night Balm, or a spritz of Tea Mist through the day.</p></div>
+  </div>
+</section>
+
+<section class="news">
+  <p class="eyebrow">Letters from the highlands</p>
+  <h2>10% off your first order.</h2>
+  <p>New batches, refill days and the odd recipe, once a month.</p>
+  <form onsubmit="event.preventDefault(); toast()"><input type="email" placeholder="Your email" aria-label="Your email"><button>Join</button></form>
+</section>
+
+<footer><span>© Embun Botanics (fictional) · Concept by Aeryn's</span><span>Instagram · WhatsApp · Stockists</span></footer>
+<div class="toast" role="status">This is a concept site, so nothing is sold here. Like it? <a href="../../#contact">Get one made.</a></div>
+<script>
+  const t = document.querySelector('.toast'); let timer;
+  function toast() { t.classList.add('show'); clearTimeout(timer); timer = setTimeout(() => t.classList.remove('show'), 3200); }
+  document.querySelectorAll('[data-demo]').forEach(b => b.addEventListener('click', toast));
+</script>
+</body>
+</html>

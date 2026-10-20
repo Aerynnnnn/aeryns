@@ -1,0 +1,166 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="robots" content="noindex">
+<title>Gerak Studio · Concept site by Aeryn's</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Anton&family=Space+Grotesk:wght@400;500;700&display=swap" rel="stylesheet">
+<style>
+  :root { --bg: #111210; --bg2: #1b1c19; --line: #ffffff1f; --lime: #d4ff3a; --text: #f2f2ec; --muted: #9a9b93; --orange: #ff6a3d; }
+  * { box-sizing: border-box; }
+  body { margin: 0; background: var(--bg); color: var(--text); font: 400 17px/1.55 'Space Grotesk', system-ui, sans-serif; overflow-x: hidden; }
+  a { color: inherit; }
+  .concept { background: var(--lime); color: #111; font-size: 13px; text-align: center; padding: 8px 16px; font-weight: 500; }
+  header { display: flex; align-items: center; justify-content: space-between; padding: 20px clamp(16px, 5vw, 56px); border-bottom: 1px solid var(--line); }
+  .logo { font: 400 30px/1 Anton, sans-serif; letter-spacing: .02em; }
+  .logo span { color: var(--lime); }
+  nav { display: flex; gap: 28px; font-size: 15px; } nav a { text-decoration: none; color: var(--muted); } nav a:hover { color: var(--text); }
+  .btn { display: inline-flex; align-items: center; gap: 10px; background: var(--lime); color: #111; text-decoration: none; padding: 14px 24px; border-radius: 4px; font-weight: 700; border: 0; cursor: pointer; font-family: inherit; font-size: 16px; }
+  .btn.ghost { background: none; color: var(--text); border: 1px solid var(--line); }
+  .hero { position: relative; padding: clamp(48px, 8vw, 110px) clamp(16px, 5vw, 56px) 64px; overflow: hidden; }
+  .hero h1 { font: 400 clamp(84px, 17vw, 260px)/.82 Anton, sans-serif; margin: 0; text-transform: uppercase; letter-spacing: -.01em; }
+  .hero h1 .o { -webkit-text-stroke: 2px var(--text); color: transparent; }
+  .hero h1 .l { color: var(--lime); }
+  .hero-row { display: flex; justify-content: space-between; align-items: flex-end; gap: 32px; flex-wrap: wrap; margin-top: 36px; }
+  .hero-row p { max-width: 30em; color: var(--muted); margin: 0; }
+  .hero-row .ctas { display: flex; gap: 12px; flex-wrap: wrap; }
+  .rings { position: absolute; right: -120px; top: 40px; width: 520px; height: 520px; border-radius: 50%; border: 60px solid #d4ff3a14; pointer-events: none; }
+  .stats { display: grid; grid-template-columns: repeat(4, 1fr); border-block: 1px solid var(--line); }
+  .stat { padding: 28px clamp(16px, 3vw, 40px); border-right: 1px solid var(--line); }
+  .stat:last-child { border-right: 0; }
+  .stat b { display: block; font: 400 48px/1 Anton, sans-serif; color: var(--lime); }
+  .stat span { color: var(--muted); font-size: 14px; }
+  section { padding: 96px clamp(16px, 5vw, 56px); }
+  h2 { font: 400 clamp(48px, 7vw, 96px)/.9 Anton, sans-serif; text-transform: uppercase; margin: 0 0 40px; }
+  .classes { display: grid; grid-template-columns: repeat(3, 1fr); gap: 16px; }
+  .class { background: var(--bg2); border: 1px solid var(--line); border-radius: 8px; padding: 28px; position: relative; overflow: hidden; transition: border-color .2s; }
+  .class:hover { border-color: var(--lime); }
+  .class .lvl { font-size: 12px; text-transform: uppercase; letter-spacing: .14em; color: var(--muted); }
+  .class h3 { font: 400 40px/1 Anton, sans-serif; text-transform: uppercase; margin: 14px 0 10px; }
+  .class p { color: var(--muted); margin: 0; }
+  .class .shape { position: absolute; right: -30px; top: -30px; width: 120px; height: 120px; }
+  .tabs { display: flex; gap: 8px; flex-wrap: wrap; margin-bottom: 20px; }
+  .tabs button { background: none; color: var(--muted); border: 1px solid var(--line); border-radius: 999px; padding: 10px 18px; font: 500 15px 'Space Grotesk'; cursor: pointer; }
+  .tabs button[aria-selected="true"] { background: var(--text); color: #111; border-color: var(--text); }
+  .sched { border-top: 1px solid var(--line); }
+  .slot { display: grid; grid-template-columns: 120px 1fr 160px 140px; align-items: center; gap: 16px; padding: 18px 0; border-bottom: 1px solid var(--line); }
+  .slot time { font: 400 28px Anton, sans-serif; }
+  .slot b { font-size: 19px; }
+  .slot .coach { color: var(--muted); }
+  .slot .spots { font-size: 14px; color: var(--lime); }
+  .slot .spots.full { color: var(--orange); }
+  .passes { display: grid; grid-template-columns: repeat(3, 1fr); gap: 16px; }
+  .pass { border: 1px solid var(--line); border-radius: 8px; padding: 32px; display: flex; flex-direction: column; gap: 14px; }
+  .pass.hot { background: var(--lime); color: #111; border-color: var(--lime); }
+  .pass .price { font: 400 64px/1 Anton, sans-serif; }
+  .pass .price small { font: 400 16px 'Space Grotesk'; }
+  .pass ul { margin: 0; padding-left: 18px; }
+  .pass.hot .btn { background: #111; color: var(--lime); }
+  .coaches { display: grid; grid-template-columns: repeat(4, 1fr); gap: 16px; }
+  .coach-card .ph { aspect-ratio: 4 / 5; border-radius: 8px; display: grid; place-items: center; font: 400 88px Anton, sans-serif; color: #111; margin-bottom: 12px; }
+  .coach-card b { display: block; font-size: 19px; } .coach-card span { color: var(--muted); font-size: 14px; }
+  .cta { text-align: center; border-top: 1px solid var(--line); }
+  .cta h2 { margin-bottom: 24px; }
+  .cta p { color: var(--muted); margin: 0 0 28px; }
+  footer { padding: 32px clamp(16px, 5vw, 56px); border-top: 1px solid var(--line); display: flex; justify-content: space-between; flex-wrap: wrap; gap: 12px; color: var(--muted); font-size: 14px; }
+  .toast { position: fixed; left: 50%; bottom: 24px; transform: translate(-50%, calc(100% + 48px)); background: var(--lime); color: #111; padding: 14px 22px; border-radius: 6px; font-weight: 500; transition: transform .3s; z-index: 9; }
+  .toast.show { transform: translate(-50%, 0); }
+  @media (max-width: 900px) {
+    nav { display: none; }
+    .stats { grid-template-columns: 1fr 1fr; } .stat:nth-child(2) { border-right: 0; } .stat:nth-child(-n+2) { border-bottom: 1px solid var(--line); }
+    .classes, .passes { grid-template-columns: 1fr; }
+    .coaches { grid-template-columns: 1fr 1fr; }
+    .slot { grid-template-columns: 84px 1fr; } .slot .coach, .slot .spots { grid-column: 2; }
+    .rings { width: 320px; height: 320px; border-width: 40px; right: -140px; }
+  }
+</style>
+</head>
+<body>
+<div class="concept">Concept site by <a href="../../">Aeryn's</a>. Gerak Studio is a fictional gym.</div>
+<header>
+  <div class="logo">GERAK<span>.</span></div>
+  <nav><a href="#classes">Classes</a><a href="#schedule">Timetable</a><a href="#passes">Passes</a><a href="#coaches">Coaches</a></nav>
+  <a class="btn" href="#passes">Free trial</a>
+</header>
+
+<div class="hero">
+  <div class="rings" aria-hidden="true"></div>
+  <h1>Move<br><span class="o">better</span><span class="l">.</span></h1>
+  <div class="hero-row">
+    <p>Reformer pilates, strength and mobility classes for real bodies with real schedules. Small groups of 8, coaches who learn your name. Bangsar South, open 6:30am.</p>
+    <div class="ctas"><a class="btn" href="#passes">Book a free trial →</a><a class="btn ghost" href="#schedule">See timetable</a></div>
+  </div>
+</div>
+
+<div class="stats">
+  <div class="stat"><b>8</b><span>people max per class</span></div>
+  <div class="stat"><b>42</b><span>classes every week</span></div>
+  <div class="stat"><b>6:30</b><span>first class, weekdays</span></div>
+  <div class="stat"><b>3</b><span>class types, all levels</span></div>
+</div>
+
+<section id="classes">
+  <h2>Three ways<br>to move</h2>
+  <div class="classes">
+    <div class="class"><svg class="shape" viewBox="0 0 100 100"><circle cx="50" cy="50" r="50" fill="#d4ff3a"/></svg><span class="lvl">All levels · 50 min</span><h3>Reformer</h3><p>Spring-loaded pilates machines for core, posture and control. Gentle on joints, hard on excuses.</p></div>
+    <div class="class"><svg class="shape" viewBox="0 0 100 100"><rect width="100" height="100" fill="#ff6a3d"/></svg><span class="lvl">Beginner to advanced · 45 min</span><h3>Strength</h3><p>Kettlebells, dumbbells and good form. Progress tracked week to week so you actually get stronger.</p></div>
+    <div class="class"><svg class="shape" viewBox="0 0 100 100"><polygon points="50,0 100,100 0,100" fill="#f2f2ec"/></svg><span class="lvl">All levels · 40 min</span><h3>Mobility</h3><p>Stretch, breathe, undo the desk. The class people say they don't need, then never miss.</p></div>
+  </div>
+</section>
+
+<section id="schedule">
+  <h2>Timetable</h2>
+  <div class="tabs" role="tablist"></div>
+  <div class="sched"></div>
+</section>
+
+<section id="passes">
+  <h2>Passes</h2>
+  <div class="passes">
+    <div class="pass"><span>Drop-in</span><div class="price">RM45<small> / class</small></div><ul><li>Any class type</li><li>Book up to 3 days ahead</li></ul><button class="btn ghost" data-demo>Buy a class</button></div>
+    <div class="pass hot"><span>Most popular · first class free</span><div class="price">RM320<small> / month</small></div><ul><li>Up to 12 classes a month</li><li>Book 7 days ahead</li><li>Free towel + locker</li></ul><button class="btn" data-demo>Start free trial</button></div>
+    <div class="pass"><span>Unlimited</span><div class="price">RM480<small> / month</small></div><ul><li>As many classes as you like</li><li>1 personal session a month</li><li>Bring a friend once a month</li></ul><button class="btn ghost" data-demo>Go unlimited</button></div>
+  </div>
+</section>
+
+<section id="coaches">
+  <h2>Coaches</h2>
+  <div class="coaches">
+    <div class="coach-card"><div class="ph" style="background:#d4ff3a">A</div><b>Coach A.</b><span>Reformer · Mobility</span></div>
+    <div class="coach-card"><div class="ph" style="background:#ff6a3d">R</div><b>Coach R.</b><span>Strength</span></div>
+    <div class="coach-card"><div class="ph" style="background:#f2f2ec">M</div><b>Coach M.</b><span>Reformer</span></div>
+    <div class="coach-card"><div class="ph" style="background:#8f9cff">J</div><b>Coach J.</b><span>Strength · Mobility</span></div>
+  </div>
+</section>
+
+<section class="cta">
+  <h2>First class is on us</h2>
+  <p>Pick a time, bring water, we'll handle the rest.</p>
+  <button class="btn" data-demo>Book on WhatsApp →</button>
+</section>
+
+<footer><span>© Gerak Studio (fictional) · Concept by Aeryn's</span><span>Bangsar South · Mon–Fri 6:30am–9:30pm · Sat–Sun 8am–6pm</span></footer>
+<div class="toast" role="status">Concept site, so no bookings here. Want one for your studio? <a href="../../#contact">Talk to Aeryn's.</a></div>
+<script>
+  const days = { Mon: [['07:00','Reformer','Coach A.',3],['12:30','Mobility','Coach J.',5],['18:30','Strength','Coach R.',0],['19:45','Reformer','Coach M.',2]],
+    Tue: [['06:30','Strength','Coach R.',4],['09:00','Reformer','Coach M.',1],['18:30','Reformer','Coach A.',0],['19:45','Mobility','Coach J.',6]],
+    Wed: [['07:00','Reformer','Coach M.',2],['12:30','Strength','Coach J.',3],['18:30','Mobility','Coach A.',5],['19:45','Strength','Coach R.',1]],
+    Thu: [['06:30','Mobility','Coach J.',7],['09:00','Reformer','Coach A.',2],['18:30','Strength','Coach R.',0],['19:45','Reformer','Coach M.',4]],
+    Fri: [['07:00','Strength','Coach R.',3],['12:30','Reformer','Coach M.',1],['18:00','Mobility','Coach A.',6]],
+    Sat: [['08:30','Reformer','Coach A.',0],['10:00','Strength','Coach J.',2],['11:30','Reformer','Coach M.',3]],
+    Sun: [['09:00','Mobility','Coach J.',5],['10:30','Reformer','Coach A.',1]] };
+  const tabs = document.querySelector('.tabs'), sched = document.querySelector('.sched');
+  function show(d) {
+    tabs.querySelectorAll('button').forEach(b => b.setAttribute('aria-selected', b.textContent === d));
+    sched.innerHTML = days[d].map(([t, c, coach, s]) => `<div class="slot"><time>${t}</time><b>${c}</b><span class="coach">${coach}</span><span class="spots ${s ? '' : 'full'}">${s ? s + ' spots left' : 'Full · join waitlist'}</span></div>`).join('');
+  }
+  Object.keys(days).forEach(d => { const b = document.createElement('button'); b.role = 'tab'; b.textContent = d; b.onclick = () => show(d); tabs.append(b); });
+  show(['Sun','Mon','Tue','Wed','Thu','Fri','Sat'][new Date().getDay()]);
+  const t = document.querySelector('.toast'); let timer;
+  document.querySelectorAll('[data-demo]').forEach(b => b.addEventListener('click', () => { t.classList.add('show'); clearTimeout(timer); timer = setTimeout(() => t.classList.remove('show'), 3200); }));
+</script>
+</body>
+</html>
