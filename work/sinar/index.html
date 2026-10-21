@@ -1,169 +1,455 @@
 <!doctype html>
-<html lang="en">
+<html lang="en-MY">
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <meta name="robots" content="noindex">
-<title>Sinar Dental · Concept site by Aeryn's</title>
+<title>Sinar Dental · Gentle family dentist in Subang Jaya · Concept site by Aeryn's</title>
+<meta name="description" content="A concept site by Aeryn's for a fictional family dental clinic in Subang Jaya: prices shown upfront, evening slots till 9pm on weekdays, kids' dentistry and company panels.">
+<meta name="theme-color" content="#ffffff">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
-<style>
-  :root { --bg: #f7fafb; --white: #fff; --teal: #0f7c7a; --teal-l: #d9f0ee; --navy: #10263a; --muted: #5c6f7d; --line: #e2e9ed; --sun: #ffc94d; }
-  * { box-sizing: border-box; }
-  body { margin: 0; background: var(--bg); color: var(--navy); font: 400 16.5px/1.6 'Plus Jakarta Sans', system-ui, sans-serif; overflow-x: hidden; }
-  a { color: inherit; }
-  .concept { background: var(--navy); color: #fff; font-size: 13px; text-align: center; padding: 8px 16px; }
-  .concept a { color: var(--sun); }
-  header { display: flex; align-items: center; gap: 32px; padding: 18px clamp(16px, 5vw, 64px); background: var(--white); border-bottom: 1px solid var(--line); position: sticky; top: 0; z-index: 5; }
-  .logo { display: flex; align-items: center; gap: 10px; font-weight: 800; font-size: 20px; margin-right: auto; }
-  .logo i { width: 34px; height: 34px; border-radius: 50%; background: radial-gradient(circle at 50% 50%, var(--sun) 0 38%, transparent 40%), conic-gradient(var(--sun) 0 10%, transparent 10% 20%, var(--sun) 20% 30%, transparent 30% 40%, var(--sun) 40% 50%, transparent 50% 60%, var(--sun) 60% 70%, transparent 70% 80%, var(--sun) 80% 90%, transparent 90%); }
-  nav { display: flex; gap: 26px; font-size: 15px; font-weight: 500; color: var(--muted); } nav a { text-decoration: none; }
-  .btn { display: inline-flex; align-items: center; justify-content: center; gap: 8px; background: var(--teal); color: #fff; text-decoration: none; padding: 13px 22px; border-radius: 12px; font-weight: 600; font-size: 15px; border: 0; cursor: pointer; font-family: inherit; }
-  .btn.light { background: var(--teal-l); color: var(--teal); }
-  .hero { display: grid; grid-template-columns: 1.1fr 1fr; gap: 48px; align-items: center; padding: clamp(40px, 6vw, 88px) clamp(16px, 5vw, 64px); }
-  .open { display: inline-flex; align-items: center; gap: 8px; background: var(--white); border: 1px solid var(--line); padding: 6px 14px; border-radius: 999px; font-size: 14px; font-weight: 600; }
-  .open::before { content: ""; width: 8px; height: 8px; border-radius: 50%; background: #22b573; }
-  .open.closed::before { background: #e5484d; }
-  .hero h1 { font-size: clamp(42px, 5.4vw, 72px); line-height: 1.04; letter-spacing: -.03em; font-weight: 800; margin: 20px 0; }
-  .hero h1 span { color: var(--teal); }
-  .hero p { color: var(--muted); font-size: 18px; max-width: 30em; margin: 0 0 28px; }
-  .hero .ctas { display: flex; gap: 12px; flex-wrap: wrap; }
-  .trust { display: flex; gap: 28px; margin-top: 36px; flex-wrap: wrap; font-size: 14px; color: var(--muted); }
-  .trust b { display: block; color: var(--navy); font-size: 22px; }
-  .art { position: relative; aspect-ratio: 1; border-radius: 40px; background: linear-gradient(160deg, var(--teal-l), #bfe6e2); display: grid; place-items: center; overflow: hidden; }
-  .art .sunburst { position: absolute; width: 130%; aspect-ratio: 1; background: repeating-conic-gradient(#ffffff55 0 6deg, transparent 6deg 18deg); border-radius: 50%; }
-  .art svg { position: relative; width: 52%; filter: drop-shadow(0 30px 30px #0f7c7a33); }
-  .art .chip { position: absolute; background: var(--white); border-radius: 14px; padding: 12px 16px; font-size: 14px; font-weight: 600; box-shadow: 0 12px 30px -12px #10263a44; }
-  .art .c1 { top: 10%; left: 6%; } .art .c2 { bottom: 10%; right: 6%; }
-  .art .chip small { display: block; color: var(--muted); font-weight: 500; }
-  section { padding: 88px clamp(16px, 5vw, 64px); }
-  .center { text-align: center; max-width: 640px; margin: 0 auto 48px; }
-  .kicker { color: var(--teal); font-weight: 700; font-size: 14px; letter-spacing: .08em; text-transform: uppercase; }
-  h2 { font-size: clamp(32px, 4vw, 48px); line-height: 1.1; letter-spacing: -.02em; font-weight: 800; margin: 10px 0 12px; }
-  .center p { color: var(--muted); margin: 0; }
-  .services { display: grid; grid-template-columns: repeat(3, 1fr); gap: 20px; }
-  .svc { background: var(--white); border: 1px solid var(--line); border-radius: 20px; padding: 28px; transition: transform .2s, box-shadow .2s; }
-  .svc:hover { transform: translateY(-4px); box-shadow: 0 20px 40px -24px #10263a55; }
-  .svc .ic { width: 52px; height: 52px; border-radius: 14px; background: var(--teal-l); display: grid; place-items: center; margin-bottom: 18px; }
-  .svc .ic svg { width: 28px; height: 28px; stroke: var(--teal); fill: none; stroke-width: 2; stroke-linecap: round; stroke-linejoin: round; }
-  .svc h3 { margin: 0 0 6px; font-size: 19px; }
-  .svc p { margin: 0; color: var(--muted); font-size: 15px; }
-  .prices { background: var(--white); border-block: 1px solid var(--line); }
-  .ptable { max-width: 820px; margin: 0 auto; border: 1px solid var(--line); border-radius: 20px; overflow: hidden; }
-  .prow { display: flex; justify-content: space-between; gap: 16px; padding: 18px 24px; border-bottom: 1px solid var(--line); }
-  .prow:last-child { border-bottom: 0; } .prow:nth-child(odd) { background: var(--bg); }
-  .prow b { color: var(--teal); white-space: nowrap; }
-  .note { text-align: center; color: var(--muted); font-size: 14px; margin-top: 18px; }
-  .book { display: grid; grid-template-columns: 1fr 1.1fr; gap: 48px; align-items: start; }
-  .hours { background: var(--navy); color: #fff; border-radius: 24px; padding: 32px; }
-  .hours h3 { margin: 0 0 18px; font-size: 22px; }
-  .hours dl { display: grid; grid-template-columns: 1fr auto; gap: 10px; margin: 0 0 24px; }
-  .hours dd { margin: 0; font-weight: 600; } .hours dt { color: #b9c7d2; }
-  .hours dt.today, .hours dt.today + dd { color: var(--sun); }
-  form { background: var(--white); border: 1px solid var(--line); border-radius: 24px; padding: 32px; display: grid; gap: 16px; }
-  label { display: grid; gap: 6px; font-size: 14px; font-weight: 600; }
-  input, select { font: inherit; padding: 13px 14px; border: 1px solid var(--line); border-radius: 12px; background: var(--bg); color: var(--navy); }
-  input:focus, select:focus { outline: 2px solid var(--teal); border-color: transparent; }
-  .two { display: grid; grid-template-columns: 1fr 1fr; gap: 16px; }
-  .faq { max-width: 820px; margin: 0 auto; }
-  details { background: var(--white); border: 1px solid var(--line); border-radius: 16px; padding: 18px 22px; margin-bottom: 12px; }
-  summary { font-weight: 600; cursor: pointer; }
-  details p { color: var(--muted); margin: 10px 0 0; }
-  footer { padding: 32px clamp(16px, 5vw, 64px); border-top: 1px solid var(--line); display: flex; justify-content: space-between; flex-wrap: wrap; gap: 12px; color: var(--muted); font-size: 14px; background: var(--white); }
-  .toast { position: fixed; left: 50%; bottom: 24px; transform: translate(-50%, calc(100% + 48px)); background: var(--navy); color: #fff; padding: 14px 22px; border-radius: 14px; font-size: 14px; transition: transform .3s; z-index: 9; max-width: calc(100% - 32px); }
-  .toast.show { transform: translate(-50%, 0); } .toast a { color: var(--sun); }
-  @media (max-width: 900px) { nav { display: none; } .hero, .book { grid-template-columns: 1fr; } .services { grid-template-columns: 1fr 1fr; } }
-  @media (max-width: 560px) { .services, .two { grid-template-columns: 1fr; } header .btn { padding: 10px 14px; } }
-</style>
+<link rel="stylesheet" href="styles.css">
+<link rel="preload" as="image" href="assets/hero-consult.jpg">
 </head>
 <body>
+<a class="skip" href="#main">Skip to content</a>
 <div class="concept">Concept site by <a href="../../">Aeryn's</a>. Sinar Dental is a fictional clinic; please don't book here.</div>
-<header>
-  <div class="logo"><i></i>Sinar Dental</div>
-  <nav><a href="#services">Treatments</a><a href="#prices">Prices</a><a href="#book">Hours</a><a href="#faq">FAQ</a></nav>
-  <a class="btn" href="#book">Book a visit</a>
+
+<header class="hdr">
+  <div class="wrap hdr-in">
+    <a class="logo" href="#top" aria-label="Sinar Dental, back to top">
+      <svg class="mark" viewBox="0 0 40 40" aria-hidden="true"><circle cx="20" cy="20" r="8" fill="#ffc94d"/><g stroke="#ffc94d" stroke-width="3" stroke-linecap="round"><path d="M20 3v5M20 32v5M3 20h5M32 20h5M8 8l3.5 3.5M28.5 28.5L32 32M8 32l3.5-3.5M28.5 11.5L32 8"/></g></svg>
+      <span><b>Sinar</b> Dental</span>
+    </a>
+    <nav class="nav" aria-label="Main">
+      <a href="#treatments">Treatments</a><a href="#prices">Prices</a><a href="#first-visit">First visit</a><a href="#kids">Kids</a><a href="#team">Team</a><a href="#visit">Find us</a>
+    </nav>
+    <span class="status sm" data-status aria-live="polite">Open Mon–Sat</span>
+    <a class="btn" href="#book">Book a visit</a>
+    <button class="menu-btn" aria-expanded="false" aria-controls="mnav">Menu</button>
+  </div>
+  <nav class="mnav" id="mnav" aria-label="Mobile">
+    <a href="#treatments">Treatments</a><a href="#prices">Prices</a><a href="#first-visit">Your first visit</a><a href="#kids">Kids</a><a href="#clinic">The clinic</a><a href="#team">Team</a><a href="#pay">Panels &amp; payment</a><a href="#book">Book</a><a href="#visit">Find us</a>
+  </nav>
 </header>
 
-<div class="hero">
-  <div>
-    <span class="open" id="open">Open today</span>
-    <h1>A dentist you <span>won't dread</span> visiting.</h1>
-    <p>Gentle family dentistry in Subang Jaya. Clear prices before we start, no pressure to add extras, and evening slots for after work.</p>
-    <div class="ctas"><a class="btn" href="#book">Book an appointment</a><a class="btn light" href="#prices">See prices</a></div>
-    <div class="trust"><span><b>Same week</b>appointments</span><span><b>Fixed</b>prices, shown upfront</span><span><b>Till 9pm</b>on weekdays</span></div>
-  </div>
-  <div class="art" aria-hidden="true">
-    <div class="sunburst"></div>
-    <svg viewBox="0 0 120 130"><path d="M60 18c-10-8-28-12-40-4-14 10-12 32-6 50 5 16 6 38 12 54 3 8 12 8 14 0l6-26c2-8 12-8 14 0l6 26c2 8 11 8 14 0 6-16 7-38 12-54 6-18 8-40-6-50-12-8-30-4-40 4z" fill="#fff" stroke="#0f7c7a" stroke-width="3"/><path d="M38 34c4-4 12-5 16-1" fill="none" stroke="#d9f0ee" stroke-width="5" stroke-linecap="round"/></svg>
-    <div class="chip c1">Next free slot<small>Tomorrow, 10:30am</small></div>
-    <div class="chip c2">Scale &amp; polish<small>from RM120</small></div>
-  </div>
-</div>
-
-<section id="services">
-  <div class="center"><span class="kicker">Treatments</span><h2>Everything for healthy, happy teeth</h2><p>From a first check-up for your little one to straightening and implants.</p></div>
-  <div class="services">
-    <div class="svc"><div class="ic"><svg viewBox="0 0 24 24"><circle cx="11" cy="11" r="7"/><path d="M20 20l-4-4"/></svg></div><h3>Check-up &amp; clean</h3><p>Exam, scale and polish, with photos so you can see what we see.</p></div>
-    <div class="svc"><div class="ic"><svg viewBox="0 0 24 24"><path d="M12 3l2.5 5 5.5.8-4 3.9 1 5.5-5-2.7-5 2.7 1-5.5-4-3.9 5.5-.8z"/></svg></div><h3>Whitening</h3><p>In-clinic or take-home kits, a few shades brighter, safely.</p></div>
-    <div class="svc"><div class="ic"><svg viewBox="0 0 24 24"><path d="M4 12h16M4 8h16M4 16h16"/></svg></div><h3>Braces &amp; aligners</h3><p>Metal, ceramic or clear aligners, with a plan and price before you commit.</p></div>
-    <div class="svc"><div class="ic"><svg viewBox="0 0 24 24"><path d="M12 21c-4-3-8-6.5-8-11a4 4 0 018-1 4 4 0 018 1c0 4.5-4 8-8 11z"/></svg></div><h3>Kids' dentistry</h3><p>Slow, friendly first visits. Stickers are compulsory.</p></div>
-    <div class="svc"><div class="ic"><svg viewBox="0 0 24 24"><path d="M12 3v18M8 7h8M7 12h10M8 17h8"/></svg></div><h3>Fillings &amp; root canals</h3><p>Tooth-coloured fillings and calm, well-numbed root canal care.</p></div>
-    <div class="svc"><div class="ic"><svg viewBox="0 0 24 24"><rect x="7" y="3" width="10" height="8" rx="3"/><path d="M12 11v10M9 15h6M9 18h6"/></svg></div><h3>Implants &amp; crowns</h3><p>Replace a missing tooth with one that looks and feels like yours.</p></div>
-  </div>
-</section>
-
-<section class="prices" id="prices">
-  <div class="center"><span class="kicker">Prices</span><h2>No surprises at the counter</h2><p>Starting prices; we always confirm yours before treatment.</p></div>
-  <div class="ptable">
-    <div class="prow"><span>Consultation &amp; check-up</span><b>RM50</b></div>
-    <div class="prow"><span>Scale &amp; polish</span><b>from RM120</b></div>
-    <div class="prow"><span>Tooth-coloured filling</span><b>from RM150</b></div>
-    <div class="prow"><span>In-clinic whitening</span><b>RM1,200</b></div>
-    <div class="prow"><span>Clear aligners (full course)</span><b>from RM9,000</b></div>
-    <div class="prow"><span>Dental implant (incl. crown)</span><b>from RM6,500</b></div>
-  </div>
-  <p class="note">Example prices for a concept site.</p>
-</section>
-
-<section id="book">
-  <div class="center"><span class="kicker">Visit us</span><h2>Book in under a minute</h2></div>
-  <div class="book">
-    <div class="hours">
-      <h3>Opening hours</h3>
-      <dl id="hours"></dl>
-      <p style="margin:0;color:#b9c7d2">Jalan SS (fictional), Subang Jaya · parking at the back</p>
+<main id="main">
+<!-- HERO -->
+<section class="hero" id="top" aria-labelledby="hero-h">
+  <div class="wrap hero-in">
+    <div class="hero-copy">
+      <span class="status" data-status>Open Mon–Fri 9am–9pm, Sat 9am–5pm</span>
+      <h1 id="hero-h">The family dentist in Subang that tells you the price first.</h1>
+      <p class="lede">Check-ups, fillings, braces and kids' visits on Jalan SS 15. You get a written quote before any treatment starts, and weekday slots run until 9pm so you don't have to take leave.</p>
+      <div class="ctas">
+        <a class="btn lg" href="#book">Book a visit</a>
+        <a class="btn ghost lg" href="#prices">See the price list</a>
+      </div>
+      <p class="slot-line"><span class="slot-chip" data-next-slot>Next free slot: <b>see booking</b></span> <span class="muted">Most check-ups are booked within the week.</span></p>
     </div>
-    <form onsubmit="event.preventDefault(); toast()">
-      <div class="two"><label>Name<input required placeholder="Your name"></label><label>Phone<input required placeholder="012-345 6789" inputmode="tel"></label></div>
-      <label>Treatment<select><option>Check-up &amp; clean</option><option>Whitening</option><option>Braces / aligners</option><option>Kids' visit</option><option>Toothache, need help soon</option></select></label>
-      <div class="two"><label>Preferred day<input type="date"></label><label>Time<select><option>Morning</option><option>Afternoon</option><option>Evening (after 6pm)</option></select></label></div>
-      <button class="btn">Request appointment</button>
+    <figure class="hero-media">
+      <img src="assets/hero-consult.jpg" width="1600" height="1200" alt="A dentist chatting with a relaxed patient sitting upright in a bright treatment room" fetchpriority="high">
+      <figcaption class="hero-tag"><b>We talk first.</b> The chair stays upright until you're ready.</figcaption>
+    </figure>
+  </div>
+  <div class="wrap">
+    <ul class="facts" aria-label="At a glance">
+      <li><b class="num">Till 9pm</b><span>Monday to Friday</span></li>
+      <li><b>Price first</b><span>Written quote before treatment</span></li>
+      <li><b>From age 1</b><span>Kids' visits with a parent in the room</span></li>
+      <li><b>Panel friendly</b><span>Most company dental panels</span></li>
+    </ul>
+  </div>
+</section>
+
+<!-- TREATMENTS -->
+<section class="sec" id="treatments" aria-labelledby="tr-h">
+  <div class="wrap">
+    <div class="sec-head rv">
+      <p class="kicker">Treatments</p>
+      <h2 id="tr-h">What we do, in plain words</h2>
+      <p>Tap a treatment to see what actually happens in the chair, how long it takes and what it usually costs.</p>
+    </div>
+    <ul class="tgrid">
+      <li class="rv"><button class="tcard" data-treat="checkup"><img src="assets/t-checkup.jpg" width="1000" height="667" alt="" loading="lazy"><span class="tc-in"><b>Check-up &amp; clean</b><span>Exam, scale and polish, every 6 months</span><span class="tc-meta"><span class="num">45 min</span><span class="num">from RM120</span></span></span></button></li>
+      <li class="rv"><button class="tcard" data-treat="filling"><img src="assets/t-fillings.jpg" width="1000" height="1500" alt="" loading="lazy"><span class="tc-in"><b>Fillings</b><span>Tooth-coloured, matched to your tooth</span><span class="tc-meta"><span class="num">30–60 min</span><span class="num">from RM150</span></span></span></button></li>
+      <li class="rv"><button class="tcard" data-treat="rootcanal"><img src="assets/t-rootcanal.jpg" width="1000" height="667" alt="" loading="lazy"><span class="tc-in"><b>Root canal</b><span>Saving a tooth that's infected inside</span><span class="tc-meta"><span class="num">2 visits</span><span class="num">from RM700</span></span></span></button></li>
+      <li class="rv"><button class="tcard" data-treat="aligners"><img src="assets/t-aligners.jpg" width="1000" height="667" alt="" loading="lazy"><span class="tc-in"><b>Braces &amp; clear aligners</b><span>Metal, ceramic or clear trays</span><span class="tc-meta"><span class="num">12–24 months</span><span class="num">from RM5,500</span></span></span></button></li>
+      <li class="rv"><button class="tcard" data-treat="whitening"><img src="assets/t-whitening.jpg" width="1000" height="667" alt="" loading="lazy"><span class="tc-in"><b>Whitening</b><span>In-clinic or a take-home kit</span><span class="tc-meta"><span class="num">90 min</span><span class="num">from RM850</span></span></span></button></li>
+      <li class="rv"><button class="tcard" data-treat="implant"><img src="assets/t-implants.jpg" width="1000" height="667" alt="" loading="lazy"><span class="tc-in"><b>Implants &amp; crowns</b><span>Replacing or capping a tooth</span><span class="tc-meta"><span class="num">2–4 months</span><span class="num">from RM1,500</span></span></span></button></li>
+    </ul>
+    <p class="aside-note rv">Toothache right now? Call or WhatsApp before 7pm on a weekday and we'll fit you in the same evening where we can. <button class="link" data-demo>WhatsApp the front desk</button></p>
+  </div>
+</section>
+
+<!-- PRICES -->
+<section class="sec prices" id="prices" aria-labelledby="pr-h">
+  <div class="wrap pr-in">
+    <div class="pr-main">
+      <div class="sec-head rv">
+        <p class="kicker">Prices</p>
+        <h2 id="pr-h">The whole price list, not just the cheap bits</h2>
+        <p>Ranges depend on the tooth and how much work it needs. We confirm your exact price on paper before we start.</p>
+      </div>
+      <div class="ptabs rv" role="tablist" aria-label="Price categories">
+        <button role="tab" aria-selected="true" aria-controls="p-every" id="tab-every">Everyday care</button>
+        <button role="tab" aria-selected="false" aria-controls="p-fix" id="tab-fix" tabindex="-1">Fixing teeth</button>
+        <button role="tab" aria-selected="false" aria-controls="p-smile" id="tab-smile" tabindex="-1">Straightening &amp; whitening</button>
+        <button role="tab" aria-selected="false" aria-controls="p-kids" id="tab-kids" tabindex="-1">Kids</button>
+      </div>
+      <div class="plist rv">
+        <div class="pgroup" id="p-every" role="tabpanel" aria-labelledby="tab-every">
+          <h3 class="pg-h">Everyday care</h3>
+          <dl>
+            <div><dt>Consultation &amp; check-up<small>Includes intraoral photos you can see on screen</small></dt><dd class="num">RM50</dd></div>
+            <div><dt>Scale &amp; polish<small>Most people need the lower end</small></dt><dd class="num">RM120–180</dd></div>
+            <div><dt>Small digital X-ray<small>One or two teeth</small></dt><dd class="num">RM30</dd></div>
+            <div><dt>Full-mouth X-ray (OPG)<small>Before braces, implants or wisdom teeth</small></dt><dd class="num">RM100</dd></div>
+            <div><dt>Fluoride varnish</dt><dd class="num">RM40</dd></div>
+            <div><dt>Night guard for grinding</dt><dd class="num">RM650</dd></div>
+          </dl>
+        </div>
+        <div class="pgroup" id="p-fix" role="tabpanel" aria-labelledby="tab-fix">
+          <h3 class="pg-h">Fixing teeth</h3>
+          <dl>
+            <div><dt>Tooth-coloured filling<small>Per tooth, by size</small></dt><dd class="num">RM150–300</dd></div>
+            <div><dt>Simple extraction</dt><dd class="num">RM120–200</dd></div>
+            <div><dt>Wisdom tooth surgery<small>X-ray first; quoted per tooth</small></dt><dd class="num">from RM800</dd></div>
+            <div><dt>Root canal, front tooth</dt><dd class="num">from RM700</dd></div>
+            <div><dt>Root canal, back tooth</dt><dd class="num">from RM1,200</dd></div>
+            <div><dt>Porcelain crown</dt><dd class="num">from RM1,500</dd></div>
+            <div><dt>Implant, including the crown</dt><dd class="num">from RM6,500</dd></div>
+          </dl>
+        </div>
+        <div class="pgroup" id="p-smile" role="tabpanel" aria-labelledby="tab-smile">
+          <h3 class="pg-h">Straightening &amp; whitening</h3>
+          <dl>
+            <div><dt>Braces or aligner consultation<small>With photos and a written plan</small></dt><dd class="num">RM80</dd></div>
+            <div><dt>Metal braces, full course</dt><dd class="num">from RM5,500</dd></div>
+            <div><dt>Ceramic braces, full course</dt><dd class="num">from RM7,000</dd></div>
+            <div><dt>Clear aligners, full course</dt><dd class="num">from RM9,000</dd></div>
+            <div><dt>Take-home whitening kit<small>Custom trays + gel</small></dt><dd class="num">RM850</dd></div>
+            <div><dt>In-clinic whitening<small>One 90-minute session</small></dt><dd class="num">RM1,200</dd></div>
+          </dl>
+        </div>
+        <div class="pgroup" id="p-kids" role="tabpanel" aria-labelledby="tab-kids">
+          <h3 class="pg-h">Kids</h3>
+          <dl>
+            <div><dt>"Meet the chair" visit<small>A first look around, no treatment</small></dt><dd class="num">Free</dd></div>
+            <div><dt>Kids' check-up &amp; clean<small>Under 12</small></dt><dd class="num">RM40</dd></div>
+            <div><dt>Fissure sealant<small>Per tooth</small></dt><dd class="num">RM60</dd></div>
+            <div><dt>Baby tooth filling</dt><dd class="num">from RM100</dd></div>
+            <div><dt>Baby tooth removal</dt><dd class="num">RM80</dd></div>
+          </dl>
+        </div>
+      </div>
+      <p class="note rv">Example prices for a concept site.</p>
+    </div>
+
+    <aside class="receipt rv" aria-label="Sample written quote">
+      <div class="r-top"><span class="r-logo">Sinar Dental</span><span class="num">Quote #0418</span></div>
+      <p class="r-sub">What you'd take home after a check-up, before any treatment</p>
+      <ul>
+        <li><span>Check-up &amp; intraoral photos</span><b class="num">RM50</b></li>
+        <li><span>Scale &amp; polish</span><b class="num">RM120</b></li>
+        <li><span>Filling, lower left molar (medium)</span><b class="num">RM220</b></li>
+        <li class="optional"><span>Optional: fluoride varnish</span><b class="num">RM40</b></li>
+      </ul>
+      <div class="r-total"><span>If you say yes to all</span><b class="num">RM430</b></div>
+      <p class="r-fine">Pay only for what you agree to. Panel patients see what the panel covers on the same sheet.</p>
+      <div class="r-edge" aria-hidden="true"></div>
+    </aside>
+  </div>
+</section>
+
+<!-- FIRST VISIT -->
+<section class="sec" id="first-visit" aria-labelledby="fv-h">
+  <div class="wrap fv-in">
+    <figure class="fv-media rv">
+      <img src="assets/first-visit.jpg" width="1200" height="900" alt="A dentist pointing at a dental scan on a screen while the patient watches from the chair" loading="lazy">
+      <figcaption>Everything we see goes on the screen in front of you.</figcaption>
+    </figure>
+    <div class="fv-copy">
+      <div class="sec-head rv">
+        <p class="kicker">Your first visit</p>
+        <h2 id="fv-h">Nervous? Here's exactly what happens</h2>
+        <p>About 45 minutes from the front door to the front door. You can stop at any point.</p>
+      </div>
+      <ol class="steps">
+        <li class="rv"><span class="n num">1</span><div><h3>Book, and tell us how you feel</h3><p>Tick "I'm nervous" when you book. We give you a longer slot and the first chair by the window.</p></div></li>
+        <li class="rv"><span class="n num">2</span><div><h3>Arrive ten minutes early</h3><p>A short health form on a tablet, a glass of cold water, and no drill sounds in the waiting area.</p></div></li>
+        <li class="rv"><span class="n num">3</span><div><h3>Talk first, chair upright</h3><p>Your dentist asks what's bothering you and what has gone badly before. Nothing starts until you say so.</p></div></li>
+        <li class="rv"><span class="n num">4</span><div><h3>A gentle look, on screen</h3><p>Raise your left hand and we stop. Photos of your teeth go up on the monitor so you can see what we see.</p></div></li>
+        <li class="rv"><span class="n num">5</span><div><h3>A written plan and price</h3><p>You leave with a printed quote. Book the next step at the desk or take it home and think about it.</p></div></li>
+      </ol>
+    </div>
+  </div>
+</section>
+
+<!-- KIDS -->
+<section class="sec kids" id="kids" aria-labelledby="kids-h">
+  <div class="wrap kids-in">
+    <div class="kids-copy">
+      <div class="sec-head rv">
+        <p class="kicker">Kids' dentistry</p>
+        <h2 id="kids-h">Their first dentist should be a good memory</h2>
+        <p>We see children from their first tooth or first birthday. Short visits, a parent in the room, and nothing done without a "tell, show, do" first.</p>
+      </div>
+      <ul class="ticks rv">
+        <li><b>"Meet the chair" visit, free.</b> A ride up and down, counting teeth with a mirror, a sticker at the end.</li>
+        <li><b>Saturday mornings and school holidays</b> are kept for families.</li>
+        <li><b>Sealants and fluoride</b> to protect new adult teeth, explained to you and to them.</li>
+        <li><b>Brushing coaching</b> with your child's own toothbrush. Bring it along.</li>
+      </ul>
+      <a class="btn rv" href="#book" data-book="kids">Book a kids' visit</a>
+    </div>
+    <div class="kids-media">
+      <figure class="km1 rv"><img src="assets/kids-chair.jpg" width="1200" height="800" alt="A boy lying back in a blue dental chair, looking at the camera, with the dentist beside him" loading="lazy"></figure>
+      <figure class="km2 rv"><img src="assets/kids-brushing.jpg" width="900" height="1350" alt="Two young brothers brushing their teeth at the bathroom sink" loading="lazy"></figure>
+      <figure class="km3 rv"><img src="assets/kids-brushes.jpg" width="900" height="1125" alt="" loading="lazy"></figure>
+    </div>
+  </div>
+</section>
+
+<!-- CLINIC -->
+<section class="sec" id="clinic" aria-labelledby="cl-h">
+  <div class="wrap">
+    <div class="sec-head wide rv">
+      <p class="kicker">The clinic</p>
+      <h2 id="cl-h">Three treatment rooms, one quiet waiting area</h2>
+      <p>Ground floor, step-free from the car park, with a ramp at the back door. Every instrument is sterilised in a separate room you can look into on the way in.</p>
+    </div>
+    <div class="gallery">
+      <figure class="g1 rv"><img src="assets/room-main.jpg" width="1400" height="936" alt="A bright treatment room with a dental chair, overhead light and white cabinets" loading="lazy"><figcaption>Room 1, by the window</figcaption></figure>
+      <figure class="g2 rv"><img src="assets/waiting-teal.jpg" width="1200" height="779" alt="A waiting area with long teal sofas and a reception counter" loading="lazy"><figcaption>Waiting area</figcaption></figure>
+      <figure class="g3 rv"><img src="assets/room-window.jpg" width="1000" height="1500" alt="A white dental chair next to a window" loading="lazy"><figcaption>Room 2</figcaption></figure>
+      <figure class="g4 rv"><img src="assets/xray-screen.jpg" width="1200" height="800" alt="A full-mouth digital X-ray shown on a monitor beside the chair" loading="lazy"><figcaption>Digital X-rays on the chairside screen</figcaption></figure>
+      <figure class="g5 rv"><img src="assets/room-desk.jpg" width="1200" height="800" alt="A treatment room with a pale grey chair and wooden floor" loading="lazy"><figcaption>Room 3, for longer treatments</figcaption></figure>
+      <figure class="g6 rv"><img src="assets/waiting-chairs.jpg" width="1000" height="1170" alt="A quiet corner with four black chairs, a small olive tree and a letter board" loading="lazy"><figcaption>The quiet corner</figcaption></figure>
+    </div>
+    <ul class="kit rv" aria-label="Equipment">
+      <li><b>Digital X-ray</b>A fraction of the dose of film, ready in seconds</li>
+      <li><b>Intraoral camera</b>Photos of your teeth on the screen above you</li>
+      <li><b>Separate sterilisation room</b>Sealed, dated pouches opened in front of you</li>
+      <li><b>Noise-cancelling headphones</b>Bring your own playlist</li>
+    </ul>
+  </div>
+</section>
+
+<!-- TEAM -->
+<section class="sec team" id="team" aria-labelledby="team-h">
+  <div class="wrap">
+    <div class="sec-head rv">
+      <p class="kicker">The team</p>
+      <h2 id="team-h">Four people you'll get to know</h2>
+      <p>Between us we speak English, Bahasa Melayu, Mandarin and Cantonese.</p>
+    </div>
+    <ul class="people">
+      <li class="rv"><img src="assets/team-mei.jpg" width="600" height="600" alt="Portrait of Dr Mei" loading="lazy"><h3>Dr Mei</h3><p class="role">Dentist</p><p>Check-ups, fillings, root canals and the long evening slots.</p></li>
+      <li class="rv"><img src="assets/team-nurul.jpg" width="600" height="600" alt="Portrait of Dr Nurul" loading="lazy"><h3>Dr Nurul</h3><p class="role">Dentist</p><p>Kids' visits and patients who'd rather not be here. Saturdays.</p></li>
+      <li class="rv"><img src="assets/team-anis.jpg" width="600" height="600" alt="Portrait of Anis" loading="lazy"><h3>Anis</h3><p class="role">Dental assistant</p><p>Sets up your room, sterilises the instruments, holds the hand you need held.</p></li>
+      <li class="rv"><img src="assets/team-jiahui.jpg" width="600" height="600" alt="Portrait of Jia Hui" loading="lazy"><h3>Jia Hui</h3><p class="role">Front desk &amp; panels</p><p>Bookings, reminders and your panel or insurance paperwork.</p></li>
+    </ul>
+  </div>
+</section>
+
+<!-- PANELS & PAYMENT -->
+<section class="sec pay" id="pay" aria-labelledby="pay-h">
+  <div class="wrap">
+    <div class="sec-head rv">
+      <p class="kicker">Panels, insurance &amp; payment</p>
+      <h2 id="pay-h">Sorted at the front desk, not in a phone queue</h2>
+    </div>
+    <div class="pay-cols">
+      <div class="rv"><h3>Company dental panels</h3><p>We work with most corporate panel administrators. Bring your staff card or IC; Jia Hui checks your balance before treatment so you know what's covered.</p></div>
+      <div class="rv"><h3>Insurance claims</h3><p>If your insurer pays you back, we print an itemised receipt with treatment codes and the dentist's notes, ready to upload.</p></div>
+      <div class="rv"><h3>Ways to pay</h3><p>Cash, debit and credit cards, DuitNow QR and the usual e-wallets. Instalments on credit cards for braces, aligners and implants.</p></div>
+    </div>
+  </div>
+</section>
+
+<!-- BOOKING -->
+<section class="sec book" id="book" aria-labelledby="bk-h">
+  <div class="wrap bk-in">
+    <div class="bk-side">
+      <div class="sec-head rv">
+        <p class="kicker">Book a visit</p>
+        <h2 id="bk-h">Pick a time in under a minute</h2>
+        <p>Four short steps. We'll send a WhatsApp reminder the day before.</p>
+      </div>
+      <div class="hours rv">
+        <div class="hours-top"><h3>Opening hours</h3><span class="status inv" data-status>Open Mon–Sat</span></div>
+        <dl id="hours">
+          <div><dt>Monday</dt><dd>9am – 9pm</dd></div>
+          <div><dt>Tuesday</dt><dd>9am – 9pm</dd></div>
+          <div><dt>Wednesday</dt><dd>9am – 9pm</dd></div>
+          <div><dt>Thursday</dt><dd>9am – 9pm</dd></div>
+          <div><dt>Friday</dt><dd>9am – 9pm</dd></div>
+          <div><dt>Saturday</dt><dd>9am – 5pm</dd></div>
+          <div><dt>Sunday</dt><dd>Closed</dd></div>
+        </dl>
+        <p class="h-note">Lunch 1–2pm. Closed on public holidays.</p>
+      </div>
+    </div>
+
+    <form class="booker rv" id="booker" novalidate aria-labelledby="bk-h">
+      <ol class="progress" aria-label="Booking steps">
+        <li class="on" data-pstep="1"><span class="num">1</span>Treatment</li>
+        <li data-pstep="2"><span class="num">2</span>Day &amp; time</li>
+        <li data-pstep="3"><span class="num">3</span>Your details</li>
+        <li data-pstep="4"><span class="num">4</span>Confirm</li>
+      </ol>
+
+      <fieldset class="step on" data-step="1">
+        <legend>What would you like to come in for?</legend>
+        <div class="opts">
+          <label class="opt"><input type="radio" name="treat" value="checkup" checked><span><b>Check-up &amp; clean</b><small class="num">45 min · RM50 + from RM120</small></span></label>
+          <label class="opt"><input type="radio" name="treat" value="pain"><span><b>Something hurts</b><small class="num">30 min · RM50 to start</small></span></label>
+          <label class="opt"><input type="radio" name="treat" value="filling"><span><b>Filling</b><small class="num">45 min · from RM150</small></span></label>
+          <label class="opt"><input type="radio" name="treat" value="aligners"><span><b>Braces / aligner chat</b><small class="num">30 min · RM80</small></span></label>
+          <label class="opt"><input type="radio" name="treat" value="whitening"><span><b>Whitening</b><small class="num">30 min consult · from RM850</small></span></label>
+          <label class="opt"><input type="radio" name="treat" value="kids"><span><b>Kids' visit</b><small class="num">30 min · RM40, first look free</small></span></label>
+        </div>
+      </fieldset>
+
+      <fieldset class="step" data-step="2">
+        <legend>Choose a day and time</legend>
+        <div class="days" id="days" role="group" aria-label="Day"><p class="muted">Turn on JavaScript to see live times, or call the front desk.</p></div>
+        <div class="slots" id="slots" role="group" aria-label="Time"></div>
+        <p class="slot-key"><span class="k-free"></span>Free <span class="k-taken"></span>Taken <span class="k-eve"></span>After 6pm</p>
+      </fieldset>
+
+      <fieldset class="step" data-step="3">
+        <legend>Your details</legend>
+        <div class="two">
+          <label>Name<input name="name" autocomplete="off" placeholder="As on your IC"></label>
+          <label>Mobile<input name="phone" inputmode="tel" autocomplete="off" placeholder="01x-xxx xxxx"></label>
+        </div>
+        <label>Paying by<select name="payer"><option>Myself</option><option>Company dental panel</option><option>Insurance (I'll claim)</option></select></label>
+        <label class="check"><input type="checkbox" name="nervous"> <span>I'm nervous about dentists. Please give me extra time.</span></label>
+        <label>Anything we should know? <span class="muted">(optional)</span><textarea name="notes" rows="2" placeholder="e.g. lower right tooth hurts with cold drinks"></textarea></label>
+        <p class="err" id="err" role="alert"></p>
+      </fieldset>
+
+      <fieldset class="step" data-step="4">
+        <legend>Check and confirm</legend>
+        <dl class="summary" id="summary"></dl>
+        <p class="muted small">Concept site: confirming shows a note and sends nothing. Nothing you type leaves this page.</p>
+      </fieldset>
+
+      <div class="done" id="done" hidden tabindex="-1">
+        <h3>That's the demo done</h3>
+        <p>On a real Sinar site this is where the clinic gets your booking and you get a WhatsApp confirmation. Here, nothing was sent.</p>
+        <button type="button" class="btn ghost" id="again">Start again</button>
+      </div>
+
+      <div class="bk-nav">
+        <button type="button" class="btn ghost" id="back" hidden>Back</button>
+        <button type="button" class="btn" id="next">Next: day &amp; time</button>
+      </div>
     </form>
   </div>
 </section>
 
-<section id="faq">
-  <div class="center"><span class="kicker">Questions</span><h2>Before your first visit</h2></div>
-  <div class="faq">
-    <details><summary>Do you take walk-ins?</summary><p>Yes, if a chair is free. Booking ahead guarantees your time.</p></details>
-    <details><summary>Can I use my company's dental panel?</summary><p>We work with most major panels. Bring your staff card.</p></details>
-    <details><summary>I'm nervous about dentists. Can you help?</summary><p>Tell us when you book. We'll go slowly, explain each step, and you can stop any time.</p></details>
+<!-- FAQ -->
+<section class="sec faq" id="faq" aria-labelledby="faq-h">
+  <div class="wrap faq-in">
+    <div class="sec-head rv">
+      <p class="kicker">Questions</p>
+      <h2 id="faq-h">Before you come in</h2>
+      <p>Something else? <button class="link" data-demo>Ask the front desk on WhatsApp</button>.</p>
+    </div>
+    <div class="qs rv">
+      <details><summary>Do you take walk-ins?</summary><p>Yes, if a chair is free, and we always squeeze in toothaches. Booking ahead means you won't wait.</p></details>
+      <details><summary>Will you push extra treatments on me?</summary><p>No. You get a written list of what we found, what is urgent and what can wait, with prices. You choose what to do and when.</p></details>
+      <details><summary>Can I use my company's dental panel?</summary><p>Most likely. Tell us your company when you book and we'll check your coverage before the visit.</p></details>
+      <details><summary>Does a scale and polish hurt?</summary><p>It can feel scratchy and a little sensitive, especially if it's been a while. We can numb sensitive areas, and you can raise your hand for a break at any time.</p></details>
+      <details><summary>How early should my child come for a first visit?</summary><p>When the first tooth appears, or by their first birthday. Early visits are short and mostly about getting used to the place.</p></details>
+      <details><summary>Can I come after work?</summary><p>Yes. We're open until 9pm Monday to Friday; the last appointment starts at 8:30pm.</p></details>
+      <details><summary>What if I need to cancel?</summary><p>Let us know a day before if you can. There's no cancellation fee; we'd just like to offer the slot to someone in pain.</p></details>
+    </div>
   </div>
 </section>
 
-<footer><span>© Sinar Dental (fictional) · Concept by Aeryn's</span><span>WhatsApp · Google Maps · Instagram</span></footer>
-<div class="toast" role="status">Concept site, so no booking was sent. Want one for your clinic? <a href="../../#contact">Ask Aeryn's.</a></div>
-<script>
-  const hours = [['Sunday', 'Closed', null], ['Monday', '9am – 9pm', [9, 21]], ['Tuesday', '9am – 9pm', [9, 21]], ['Wednesday', '9am – 9pm', [9, 21]], ['Thursday', '9am – 9pm', [9, 21]], ['Friday', '9am – 9pm', [9, 21]], ['Saturday', '9am – 5pm', [9, 17]]];
-  const now = new Date(), d = now.getDay(), h = now.getHours();
-  const order = [1, 2, 3, 4, 5, 6, 0];
-  document.getElementById('hours').innerHTML = order.map(i => `<dt class="${i === d ? 'today' : ''}">${hours[i][0]}${i === d ? ' (today)' : ''}</dt><dd>${hours[i][1]}</dd>`).join('');
-  const r = hours[d][2], open = document.getElementById('open');
-  if (r && h >= r[0] && h < r[1]) open.textContent = `Open now · until ${hours[d][1].split('– ')[1]}`;
-  else { open.textContent = 'Closed now · book online anytime'; open.classList.add('closed'); }
-  const t = document.querySelector('.toast'); let timer;
-  function toast() { t.classList.add('show'); clearTimeout(timer); timer = setTimeout(() => t.classList.remove('show'), 3500); }
-</script>
+<!-- VISIT -->
+<section class="sec visit" id="visit" aria-labelledby="vs-h">
+  <div class="wrap vs-in">
+    <div class="vs-copy rv">
+      <p class="kicker">Find us</p>
+      <h2 id="vs-h">Ground floor, Jalan SS 15, Subang Jaya</h2>
+      <address>No. 12, Jalan SS 15/4X (fictional address)<br>47500 Subang Jaya, Selangor</address>
+      <ul class="how">
+        <li><b>Parking</b>Our own bays behind the shop lot; enter from the back lane. Street parking out front after 6pm.</li>
+        <li><b>Train</b>About a 7-minute walk from SS 15 LRT station, under the shop-lot walkways.</li>
+        <li><b>Access</b>Step-free from the back car park, with a wide door and a ramp.</li>
+      </ul>
+      <div class="ctas">
+        <button class="btn" data-demo>Open in Google Maps</button>
+        <button class="btn ghost" data-demo>Call the clinic</button>
+      </div>
+    </div>
+    <div class="map rv" role="img" aria-label="Simple map: Sinar Dental sits one block from SS 15 LRT station, with parking behind the shop lot">
+      <svg viewBox="0 0 560 420" aria-hidden="true">
+        <rect width="560" height="420" fill="#eef4f5"/>
+        <g fill="#fff"><rect x="40" y="40" width="190" height="120" rx="6"/><rect x="270" y="40" width="250" height="120" rx="6"/><rect x="40" y="200" width="190" height="180" rx="6"/><rect x="270" y="200" width="250" height="180" rx="6"/></g>
+        <g fill="none" stroke="#d7e3e6" stroke-width="22"><path d="M0 180h560M250 0v420"/></g>
+        <path d="M0 180h560M250 0v420" stroke="#fff" stroke-width="2" stroke-dasharray="8 8" fill="none"/>
+        <path d="M0 395 C140 390 200 405 560 392" stroke="#9fb8c1" stroke-width="6" fill="none"/>
+        <g font-family="Plus Jakarta Sans, sans-serif" font-size="13" fill="#5c6f7d" font-weight="600">
+          <text x="60" y="176" fill="#7c8f9a">Jalan SS 15/4X</text>
+          <text x="400" y="412">LRT line</text>
+          <text x="290" y="300">Parking behind the shops</text>
+        </g>
+        <rect x="285" y="225" width="220" height="50" rx="6" fill="#e3f3f1" stroke="#0f7c7a" stroke-dasharray="5 4"/>
+        <text x="300" y="255" font-family="Plus Jakarta Sans, sans-serif" font-size="14" font-weight="700" fill="#0f7c7a">P</text>
+        <circle cx="120" cy="392" r="12" fill="#10263a"/><text x="113" y="397" font-family="Plus Jakarta Sans, sans-serif" font-size="12" font-weight="800" fill="#fff">M</text>
+        <text x="138" y="368" font-family="Plus Jakarta Sans, sans-serif" font-size="13" font-weight="600" fill="#10263a">SS 15 LRT · 7 min walk</text>
+        <path d="M120 380 C130 300 200 200 330 150" stroke="#0f7c7a" stroke-width="3" stroke-dasharray="2 7" stroke-linecap="round" fill="none"/>
+        <g transform="translate(330 120)"><circle r="26" fill="#ffc94d"/><circle r="10" fill="#10263a"/></g>
+        <text x="365" y="117" font-family="Plus Jakarta Sans, sans-serif" font-size="15" font-weight="800" fill="#10263a">Sinar Dental</text>
+        <text x="365" y="136" font-family="Plus Jakarta Sans, sans-serif" font-size="12" fill="#5c6f7d">Ground floor, shop lot</text>
+      </svg>
+    </div>
+  </div>
+</section>
+</main>
+
+<footer class="ftr">
+  <div class="wrap">
+    <div class="ftr-top">
+      <div>
+        <p class="ftr-line">Gentle family dentistry in Subang Jaya. Price first, always.</p>
+        <a class="btn sun" href="#book">Book a visit</a>
+      </div>
+      <div class="ftr-cols">
+        <div><h4>Visit</h4><p>No. 12, Jalan SS 15/4X (fictional)<br>47500 Subang Jaya, Selangor</p></div>
+        <div><h4>Hours</h4><p>Mon–Fri 9am–9pm<br>Sat 9am–5pm · Sun closed</p></div>
+        <div><h4>Contact</h4><p><button class="link" data-demo>WhatsApp</button><br><button class="link" data-demo>Call the clinic</button><br><button class="link" data-demo>Instagram</button></p></div>
+      </div>
+    </div>
+    <p class="wordmark" aria-hidden="true">Sinar Dental</p>
+    <div class="ftr-bottom"><span>© 2026 Sinar Dental (fictional). Example prices for a concept site.</span><span>Concept by <a href="../../">Aeryn's</a></span></div>
+  </div>
+</footer>
+
+<dialog class="panel" id="tpanel" aria-labelledby="tp-title">
+  <div class="tp-media"><img id="tp-img" src="assets/t-checkup.jpg" alt="" width="1000" height="667"></div>
+  <div class="tp-body">
+    <button class="x" type="button" data-close aria-label="Close">Close <span aria-hidden="true">×</span></button>
+    <p class="kicker" id="tp-kicker">Treatment</p>
+    <h3 id="tp-title">Check-up &amp; clean</h3>
+    <p id="tp-intro" class="tp-intro"></p>
+    <dl class="tp-facts"><div><dt>How long</dt><dd id="tp-time" class="num"></dd></div><div><dt>From</dt><dd id="tp-price" class="num"></dd></div></dl>
+    <h4>What happens</h4>
+    <ol id="tp-steps" class="tp-steps"></ol>
+    <p id="tp-note" class="tp-note"></p>
+    <div class="tp-cta"><button class="btn" type="button" id="tp-book">Book this</button><span class="muted small">Example prices for a concept site.</span></div>
+  </div>
+</dialog>
+
+<div class="toast" role="status" aria-live="polite"><span class="t-msg"></span>Concept site, so no booking was sent. Want one for your clinic? <a href="../../#contact">Ask Aeryn's.</a></div>
+<script src="app.js"></script>
 </body>
 </html>

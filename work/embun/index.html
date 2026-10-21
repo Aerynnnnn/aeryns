@@ -1,156 +1,387 @@
 <!doctype html>
-<html lang="en">
+<html lang="en-MY">
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <meta name="robots" content="noindex">
-<title>Embun Botanics · Concept site by Aeryn's</title>
+<title>Embun Botanics · Small-batch skincare from Cameron Highlands · Concept site by Aeryn's</title>
+<meta name="description" content="A concept shop by Aeryn's for a fictional skincare brand: ginger, pandan, highland tea and hibiscus, poured in small batches in Cameron Highlands.">
+<meta name="theme-color" content="#f4f1ea">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;1,400&family=Jost:wght@300;400;500&display=swap" rel="stylesheet">
-<style>
-  :root { --cream: #f4f1ea; --sage: #b9c4ad; --sage-d: #5d6b52; --ink: #2b2f27; --blush: #e8cfc2; --gold: #b8955a; }
-  * { box-sizing: border-box; }
-  body { margin: 0; background: var(--cream); color: var(--ink); font: 300 17px/1.6 Jost, system-ui, sans-serif; overflow-x: hidden; }
-  a { color: inherit; }
-  .concept { background: var(--ink); color: var(--cream); font-size: 13px; text-align: center; padding: 8px 16px; letter-spacing: .02em; }
-  .concept a { color: var(--blush); }
-  header { display: flex; align-items: center; justify-content: space-between; padding: 22px clamp(16px, 5vw, 64px); }
-  .logo { font: 500 28px/1 'Cormorant Garamond', serif; letter-spacing: .14em; text-transform: uppercase; }
-  .logo small { display: block; font: 400 11px Jost; letter-spacing: .4em; color: var(--sage-d); margin-top: 4px; }
-  nav { display: flex; gap: 28px; font-size: 14px; letter-spacing: .12em; text-transform: uppercase; }
-  nav a { text-decoration: none; }
-  .bag { border: 1px solid var(--ink); border-radius: 999px; padding: 8px 16px; font-size: 13px; letter-spacing: .1em; text-transform: uppercase; background: none; font-family: inherit; cursor: pointer; }
-  .hero { display: grid; grid-template-columns: 1fr 1fr; align-items: center; gap: 40px; padding: 40px clamp(16px, 5vw, 64px) 80px; }
-  .hero h1 { font: 400 clamp(52px, 7vw, 104px)/.95 'Cormorant Garamond', serif; margin: 0 0 24px; }
-  .hero h1 em { color: var(--sage-d); }
-  .hero p { max-width: 30em; color: #555a50; margin: 0 0 32px; }
-  .btn { display: inline-block; background: var(--ink); color: var(--cream); text-decoration: none; padding: 16px 30px; border-radius: 999px; font-size: 14px; letter-spacing: .14em; text-transform: uppercase; border: 0; cursor: pointer; font-family: inherit; }
-  .stage { position: relative; aspect-ratio: 1 / 1; border-radius: 50% 50% 0 0; background: radial-gradient(circle at 50% 35%, #fff8 0, transparent 60%), linear-gradient(180deg, var(--sage) 0%, #a7b39a 100%); display: flex; align-items: flex-end; justify-content: center; gap: 4%; padding-bottom: 12%; overflow: hidden; }
-  .leaf { position: absolute; width: 46%; height: 60%; border-radius: 0 100% 0 100%; background: linear-gradient(135deg, #7d8c6f, #4f5d45); opacity: .35; }
-  .leaf.l1 { top: 4%; left: -8%; transform: rotate(-20deg); }
-  .leaf.l2 { top: 10%; right: -12%; transform: rotate(60deg) scale(.8); }
-  /* CSS bottles */
-  .bottle { position: relative; display: flex; flex-direction: column; align-items: center; z-index: 1; }
-  .cap { background: var(--gold); border-radius: 6px 6px 2px 2px; }
-  .glass { border-radius: 14px 14px 10px 10px; display: flex; align-items: center; justify-content: center; box-shadow: inset -10px 0 18px #0001, inset 8px 0 10px #fff6, 0 30px 40px -24px #0006; }
-  .label { background: #fbf9f4; width: 70%; padding: 10% 4%; text-align: center; font: 500 9px/1.3 Jost; letter-spacing: .2em; text-transform: uppercase; }
-  .label b { display: block; font: 500 15px 'Cormorant Garamond', serif; letter-spacing: .08em; margin: 2px 0; }
-  .b1 .cap { width: 26px; height: 54px; } .b1 .glass { width: 92px; height: 200px; background: linear-gradient(90deg, #d9a77f, #e8c2a3); }
-  .b2 .cap { width: 60px; height: 26px; border-radius: 8px; } .b2 .glass { width: 120px; height: 120px; border-radius: 24px; background: linear-gradient(90deg, #ece4d6, #fbf7f0); }
-  .b3 .cap { width: 18px; height: 64px; border-radius: 9px 9px 2px 2px; } .b3 .glass { width: 70px; height: 150px; background: linear-gradient(90deg, #8a9a7a, #aab896); }
-  .strip { display: flex; justify-content: space-around; flex-wrap: wrap; gap: 16px; padding: 22px 16px; border-block: 1px solid #2b2f2722; font-size: 13px; letter-spacing: .2em; text-transform: uppercase; color: var(--sage-d); }
-  section { padding: 96px clamp(16px, 5vw, 64px); }
-  .eyebrow { font-size: 13px; letter-spacing: .3em; text-transform: uppercase; color: var(--sage-d); margin: 0 0 12px; }
-  h2 { font: 400 clamp(38px, 4.6vw, 64px)/1 'Cormorant Garamond', serif; margin: 0 0 48px; }
-  .products { display: grid; grid-template-columns: repeat(4, 1fr); gap: 24px; }
-  .card { background: #fbf9f4; border-radius: 4px; padding: 0 0 22px; text-align: center; }
-  .card .pic { height: 260px; display: flex; align-items: flex-end; justify-content: center; padding-bottom: 28px; margin-bottom: 18px; }
-  .card h3 { font: 500 24px 'Cormorant Garamond', serif; margin: 0; }
-  .card p { margin: 4px 0 14px; font-size: 14px; color: #6b6f64; }
-  .card .row { display: flex; justify-content: center; align-items: center; gap: 14px; }
-  .card button { background: none; border: 1px solid var(--ink); border-radius: 999px; padding: 8px 16px; font: 400 12px Jost; letter-spacing: .14em; text-transform: uppercase; cursor: pointer; }
-  .card button:hover { background: var(--ink); color: var(--cream); }
-  .story { display: grid; grid-template-columns: 1fr 1fr; gap: 64px; align-items: center; background: var(--sage-d); color: var(--cream); }
-  .story h2 { margin-bottom: 24px; } .story .eyebrow { color: var(--blush); }
-  .ingredients { display: grid; grid-template-columns: 1fr 1fr; gap: 16px; }
-  .ing { border: 1px solid #f4f1ea44; padding: 24px; }
-  .ing b { display: block; font: 400 28px 'Cormorant Garamond', serif; }
-  .ing span { font-size: 14px; color: #dfe3d6; }
-  .routine { display: grid; grid-template-columns: repeat(3, 1fr); gap: 40px; counter-reset: r; }
-  .step { border-top: 1px solid var(--ink); padding-top: 20px; }
-  .step::before { counter-increment: r; content: "0" counter(r); font: italic 400 40px 'Cormorant Garamond', serif; color: var(--gold); }
-  .step h3 { font: 500 26px 'Cormorant Garamond', serif; margin: 8px 0; }
-  .news { text-align: center; background: var(--blush); }
-  .news h2 { margin-bottom: 16px; }
-  .news form { display: flex; max-width: 480px; margin: 28px auto 0; border-bottom: 1px solid var(--ink); }
-  .news input { flex: 1; background: none; border: 0; padding: 14px 4px; font: inherit; outline: none; min-width: 0; }
-  .news button { background: none; border: 0; font: 400 13px Jost; letter-spacing: .2em; text-transform: uppercase; cursor: pointer; }
-  footer { padding: 48px clamp(16px, 5vw, 64px); display: flex; justify-content: space-between; flex-wrap: wrap; gap: 16px; font-size: 13px; color: #6b6f64; }
-  .toast { position: fixed; left: 50%; bottom: 24px; transform: translate(-50%, calc(100% + 48px)); background: var(--ink); color: var(--cream); padding: 14px 22px; border-radius: 999px; font-size: 14px; transition: transform .35s ease; z-index: 9; }
-  .toast.show { transform: translate(-50%, 0); }
-  @media (max-width: 900px) {
-    nav { display: none; }
-    .hero, .story { grid-template-columns: 1fr; }
-    .products { grid-template-columns: 1fr 1fr; }
-    .routine { grid-template-columns: 1fr; }
-  }
-  @media (max-width: 520px) { .products, .ingredients { grid-template-columns: 1fr; } .b1 .glass { width: 74px; height: 160px; } .b2 .glass { width: 96px; height: 96px; } .b3 .glass { width: 56px; height: 120px; } }
-</style>
+<link rel="stylesheet" href="styles.css">
+<link rel="preload" as="image" href="assets/hero-highlands.jpg">
 </head>
 <body>
 <div class="concept">Concept site by <a href="../../">Aeryn's</a>. Embun Botanics is a fictional brand; nothing here is for sale.</div>
-<header>
-  <div class="logo">Embun<small>botanics</small></div>
-  <nav><a href="#shop">Shop</a><a href="#story">Ingredients</a><a href="#routine">Routine</a></nav>
-  <button class="bag" data-demo>Bag (0)</button>
+<div class="announce">Free delivery over RM150 in West Malaysia · Refill Saturdays at the Brinchang studio</div>
+
+<header class="hdr">
+  <div class="wrap">
+    <nav class="nav" aria-label="Main">
+      <a href="#shop">Shop</a><a href="#ingredients">Ingredients</a><a href="#routine">Routine</a><a href="#refill">Refills</a><a href="#stockists">Stockists</a>
+    </nav>
+    <button class="menu-btn" aria-expanded="false" aria-controls="mnav">Menu</button>
+    <a class="logo" href="#top" aria-label="Embun Botanics, back to top"><b>EMBUN</b><span>Botanics</span></a>
+    <div class="hdr-r">
+      <button class="txt" data-demo>Account</button>
+      <button class="bag-btn" data-open-bag aria-controls="bag"><span class="lbl-t">Bag</span><span class="count num" aria-label="items in bag">0</span></button>
+    </div>
+  </div>
+  <nav class="mnav" id="mnav" aria-label="Mobile">
+    <a href="#shop">Shop</a><a href="#ingredients">Ingredients</a><a href="#routine">Routine</a><a href="#refill">Refills</a><a href="#stockists">Stockists</a>
+  </nav>
 </header>
 
-<div class="hero">
-  <div>
-    <p class="eyebrow">Small-batch skincare · Cameron Highlands botanicals</p>
-    <h1>Skin care that starts with the <em>morning dew.</em></h1>
-    <p>Gentle serums, balms and mists made with pandan, ginger and highland tea, mixed in small batches and made for humid days.</p>
-    <a class="btn" href="#shop">Shop the collection</a>
+<main id="top">
+<section class="hero" aria-labelledby="hero-h">
+  <img src="assets/hero-highlands.jpg" width="1600" height="898" alt="Tea terraces on a misty hillside in the Malaysian highlands">
+  <div class="wrap">
+    <div>
+      <p class="eyebrow">Small-batch skincare · Cameron Highlands, Malaysia</p>
+      <h1 id="hero-h">Skin care that starts with the morning dew.</h1>
+      <p class="lead">Serums, balms and toners made with ginger, pandan, highland tea and hibiscus. Poured by hand in batches of 200, and made for humid days.</p>
+      <div class="ctas">
+        <a class="btn on-photo" href="#shop">Shop the bestsellers</a>
+        <a class="btn line-light" href="#ingredients">See what's inside</a>
+      </div>
+    </div>
+    <p class="cap">Tea terraces, early morning<span>Cameron Highlands · 1,500 m</span></p>
   </div>
-  <div class="stage" aria-hidden="true">
-    <span class="leaf l1"></span><span class="leaf l2"></span>
-    <div class="bottle b3"><div class="cap"></div><div class="glass"><div class="label">Mist<b>Teh</b>100ml</div></div></div>
-    <div class="bottle b1"><div class="cap"></div><div class="glass"><div class="label">Serum<b>Halia</b>30ml</div></div></div>
-    <div class="bottle b2"><div class="cap"></div><div class="glass"><div class="label">Balm<b>Pandan</b>50g</div></div></div>
-  </div>
+</section>
+
+<div class="promises">
+  <ul>
+    <li><b>Batches of 200</b>Every bottle carries its batch number and pour date.</li>
+    <li><b>Four plants, one hour away</b>Grown in Pahang, most within an hour of the studio.</li>
+    <li><b>Bring the bottle back</b>RM5 off every refill, at the studio or by post.</li>
+    <li><b>Never tested on animals</b>No synthetic fragrance; the scent is the plant.</li>
+  </ul>
 </div>
 
-<div class="strip"><span>Free delivery over RM150</span><span>Cruelty-free</span><span>Made in Malaysia</span><span>Refill pouches</span></div>
+<section class="sec" id="shop" aria-labelledby="shop-h">
+  <div class="wrap">
+    <div class="head rv">
+      <div>
+        <p class="eyebrow">Bestsellers</p>
+        <h2 id="shop-h">The highland shelf</h2>
+        <p class="sub">Six formulas, each built around one plant. Tap a bottle to see what's in it and how to use it.</p>
+      </div>
+      <div class="chips" role="group" aria-label="Filter products">
+        <button class="chip" data-filter="all" aria-pressed="true">All 6</button>
+        <button class="chip" data-filter="face" aria-pressed="false">Face</button>
+        <button class="chip" data-filter="body" aria-pressed="false">Body</button>
+        <button class="chip" data-filter="under60" aria-pressed="false">Under RM60</button>
+      </div>
+    </div>
 
-<section id="shop">
-  <p class="eyebrow">Bestsellers</p>
-  <h2>The collection</h2>
-  <div class="products">
-    <div class="card"><div class="pic" style="background:#efe3d6"><div class="bottle b1"><div class="cap"></div><div class="glass"><div class="label">Serum<b>Halia</b>30ml</div></div></div></div><h3>Halia Glow Serum</h3><p>Ginger root + niacinamide</p><div class="row"><span>RM89</span><button data-demo>Add to bag</button></div></div>
-    <div class="card"><div class="pic" style="background:#e3e8dc"><div class="bottle b2"><div class="cap"></div><div class="glass"><div class="label">Balm<b>Pandan</b>50g</div></div></div></div><h3>Pandan Night Balm</h3><p>Pandan + shea, for dry patches</p><div class="row"><span>RM72</span><button data-demo>Add to bag</button></div></div>
-    <div class="card"><div class="pic" style="background:#dfe4d6"><div class="bottle b3"><div class="cap"></div><div class="glass"><div class="label">Mist<b>Teh</b>100ml</div></div></div></div><h3>Highland Tea Mist</h3><p>Green tea + rose water</p><div class="row"><span>RM55</span><button data-demo>Add to bag</button></div></div>
-    <div class="card"><div class="pic" style="background:#f1e1da"><div class="bottle b1"><div class="cap" style="background:#9a8a7a"></div><div class="glass" style="background:linear-gradient(90deg,#e7b7a6,#f2d3c6)"><div class="label">Oil<b>Bunga</b>30ml</div></div></div></div><h3>Bunga Cleansing Oil</h3><p>Hibiscus + jojoba</p><div class="row"><span>RM68</span><button data-demo>Add to bag</button></div></div>
+    <div class="grid">
+      <article class="prod rv" data-id="halia" data-cat="face">
+        <button class="media" data-qv aria-label="Quick view: Halia Glow Serum">
+          <span class="tag">Bestseller</span>
+          <img src="assets/serum-halia.jpg" width="880" height="1100" alt="Amber glass dropper bottle on a stone plinth" loading="lazy">
+          <span class="lbl serum" aria-hidden="true"><i>EMBUN</i><s></s><u>Halia</u><em>Glow serum · 30 ml</em></span>
+          <span class="qv">Quick view</span>
+        </button>
+        <div class="info">
+          <h3>Halia Glow Serum</h3><span class="price num">RM89</span>
+          <p class="desc">Bentong ginger + 5% niacinamide · 30 ml</p>
+          <div class="meta"><span class="batch num">Batch 031 · poured 9 Oct</span><button class="add" data-add>Add to bag</button></div>
+        </div>
+      </article>
+
+      <article class="prod rv" data-id="pandan" data-cat="face">
+        <button class="media" data-qv aria-label="Quick view: Pandan Night Balm">
+          <img src="assets/balm-pandan.jpg" width="880" height="1100" alt="Frosted glass jar with a white lid beside a plain paper box" loading="lazy">
+          <span class="lbl balm" aria-hidden="true"><i>EMBUN</i><u>Pandan</u></span>
+          <span class="qv">Quick view</span>
+        </button>
+        <div class="info">
+          <h3>Pandan Night Balm</h3><span class="price num">RM72</span>
+          <p class="desc">Pandan leaf + shea, for dry patches · 50 g</p>
+          <div class="meta"><span class="batch num">Batch 018 · poured 2 Oct</span><button class="add" data-add>Add to bag</button></div>
+        </div>
+      </article>
+
+      <article class="prod rv" data-id="teh" data-cat="face under60">
+        <button class="media" data-qv aria-label="Quick view: Teh Hijau Toner">
+          <img src="assets/toner-teh.jpg" width="880" height="1100" alt="Tall amber dropper bottle on a marble table in soft light" loading="lazy">
+          <span class="qv">Quick view</span>
+        </button>
+        <div class="info">
+          <h3>Teh Hijau Toner</h3><span class="price num">RM58</span>
+          <p class="desc">Highland green tea + rice water · 120 ml</p>
+          <div class="meta"><span class="batch num">Batch 027 · poured 6 Oct</span><button class="add" data-add>Add to bag</button></div>
+        </div>
+      </article>
+
+      <article class="prod rv" data-id="bunga" data-cat="face">
+        <button class="media" data-qv aria-label="Quick view: Bunga Raya Cleansing Oil">
+          <span class="tag">New batch</span>
+          <img src="assets/oil-bunga.jpg" width="880" height="1100" alt="Amber glass bottle lying on loose-weave linen" loading="lazy">
+          <span class="qv">Quick view</span>
+        </button>
+        <div class="info">
+          <h3>Bunga Raya Cleansing Oil</h3><span class="price num">RM68</span>
+          <p class="desc">Hibiscus + cold-pressed jojoba · 100 ml</p>
+          <div class="meta"><span class="batch num">Batch 022 · poured 16 Oct</span><button class="add" data-add>Add to bag</button></div>
+        </div>
+      </article>
+
+      <article class="prod rv" data-id="embun" data-cat="face">
+        <button class="media" data-qv aria-label="Quick view: Embun Dew Cream">
+          <span class="tag">Small batch</span>
+          <img src="assets/cream-embun.jpg" width="880" height="1100" alt="Open jar of white gel-cream resting on grey river stone" loading="lazy">
+          <span class="qv">Quick view</span>
+        </button>
+        <div class="info">
+          <h3>Embun Dew Cream</h3><span class="price num">RM96</span>
+          <p class="desc">Light gel-cream with tea + pandan · 50 ml</p>
+          <div class="meta"><span class="batch num">Batch 009 · poured 12 Oct</span><button class="add" data-add>Add to bag</button></div>
+        </div>
+      </article>
+
+      <article class="prod rv" data-id="wash" data-cat="body under60">
+        <button class="media" data-qv aria-label="Quick view: Bunga Raya Body Wash">
+          <img src="assets/wash-bunga.jpg" width="880" height="1100" alt="Blush-pink pump bottle on linen with palm-leaf shadows" loading="lazy">
+          <span class="lbl wash" aria-hidden="true"><i>EMBUN</i><s></s><u>Bunga Raya</u><em>Body wash</em></span>
+          <span class="qv">Quick view</span>
+        </button>
+        <div class="info">
+          <h3>Bunga Raya Body Wash</h3><span class="price num">RM46</span>
+          <p class="desc">Hibiscus + coconut-based cleansers · 300 ml</p>
+          <div class="meta"><span class="batch num">Batch 040 · poured 30 Sep</span><button class="add" data-add>Add to bag</button></div>
+        </div>
+      </article>
+    </div>
   </div>
 </section>
 
-<section class="story" id="story">
-  <div>
-    <p class="eyebrow">What's inside</p>
-    <h2>Four plants, grown an hour from the lab.</h2>
-    <p>Every Embun formula starts with something you'd find in a Malaysian garden. Short ingredient lists you can actually read, and fragrance only from the plants themselves.</p>
-  </div>
-  <div class="ingredients">
-    <div class="ing"><b>Halia</b><span>Ginger: warming, brightens dull skin</span></div>
-    <div class="ing"><b>Pandan</b><span>Soothing, rich in antioxidants</span></div>
-    <div class="ing"><b>Teh hijau</b><span>Green tea: calms redness</span></div>
-    <div class="ing"><b>Bunga raya</b><span>Hibiscus: natural gentle exfoliant</span></div>
-  </div>
-</section>
-
-<section id="routine">
-  <p class="eyebrow">Your routine</p>
-  <h2>Three steps, morning or night.</h2>
-  <div class="routine">
-    <div class="step"><h3>Cleanse</h3><p>Massage Bunga Cleansing Oil into dry skin, then rinse with warm water.</p></div>
-    <div class="step"><h3>Treat</h3><p>Press two drops of Halia Glow Serum into damp skin.</p></div>
-    <div class="step"><h3>Seal</h3><p>A thin layer of Pandan Night Balm, or a spritz of Tea Mist through the day.</p></div>
+<section class="sec" id="about" aria-labelledby="about-h" style="padding-top:0">
+  <div class="wrap intro">
+    <div class="big rv">
+      <img src="assets/dew.jpg" width="1600" height="1067" alt="Dew drops beaded on bright green leaves" loading="lazy">
+      <figure class="small" style="margin:0"><img src="assets/workshop.jpg" width="1000" height="1498" alt="A maker in gloves measuring liquids at a workbench of glass bottles and notebooks" loading="lazy"></figure>
+    </div>
+    <div class="copy rv">
+      <p class="eyebrow">Why "Embun"</p>
+      <h2 id="about-h">Embun is the Malay word for morning dew.</h2>
+      <p>At six in the morning the tea terraces above Brinchang are soaked in it. That's when we cut the pandan and pick up the ginger, and by the afternoon it's in the pot.</p>
+      <p>Two of us, one steam kettle and a shophouse workshop on Jalan Besar. We pour 200 bottles at a time, write the batch number on every label, and only pour again when the last batch is nearly gone.</p>
+      <dl class="facts">
+        <div><dt>Per batch</dt><dd class="num">200</dd></div>
+        <div><dt>Plants</dt><dd class="num">4</dd></div>
+        <div><dt>Altitude</dt><dd class="num">1,500 m</dd></div>
+      </dl>
+    </div>
   </div>
 </section>
 
-<section class="news">
-  <p class="eyebrow">Letters from the highlands</p>
-  <h2>10% off your first order.</h2>
-  <p>New batches, refill days and the odd recipe, once a month.</p>
-  <form onsubmit="event.preventDefault(); toast()"><input type="email" placeholder="Your email" aria-label="Your email"><button>Join</button></form>
+<section class="sec deep story" id="ingredients" aria-labelledby="ing-h">
+  <div class="wrap">
+    <div class="head rv">
+      <div>
+        <p class="eyebrow">The ingredient story</p>
+        <h2 id="ing-h">Four plants, all from Pahang</h2>
+        <p class="sub">Every formula is built around one of them. Short ingredient lists you can read, and no fragrance but the plant's own.</p>
+      </div>
+    </div>
+    <div class="story-grid">
+      <div class="story-pin" aria-hidden="true">
+        <div class="dots"><i class="on"></i><i></i><i></i><i></i></div>
+        <figure class="on"><img src="assets/ing-halia.jpg" width="900" height="1355" alt="" loading="lazy"><figcaption>Bentong, Pahang</figcaption></figure>
+        <figure><img src="assets/ing-pandan.jpg" width="1200" height="800" alt="" loading="lazy"><figcaption>Ringlet, Cameron Highlands</figcaption></figure>
+        <figure><img src="assets/ing-teh.jpg" width="1200" height="800" alt="" loading="lazy"><figcaption>Brinchang, 1,500 m</figcaption></figure>
+        <figure><img src="assets/ing-bunga.jpg" width="900" height="1355" alt="" loading="lazy"><figcaption>Kuala Terla, Cameron Highlands</figcaption></figure>
+      </div>
+      <div class="ings">
+        <article class="ing" data-step="0">
+          <img class="mimg" src="assets/ing-halia.jpg" width="900" height="1355" alt="A pile of fresh ginger roots" loading="lazy">
+          <span class="no">01 / 04</span>
+          <h3>Halia</h3>
+          <p class="en">Bentong ginger</p>
+          <p class="body">Fibrous, fiery and famous across Malaysia. We slice the root thin and leave it in oil for three weeks, which pulls out the warming, brightening part without the sting.</p>
+          <dl><dt>Grown</dt><dd>A family farm in Bentong, 90 minutes down the hill</dd><dt>Does</dt><dd>Brightens dull skin, evens tone</dd><dt>Find it in</dt><dd>Halia Glow Serum</dd></dl>
+        </article>
+        <article class="ing" data-step="1">
+          <img class="mimg" src="assets/ing-pandan.jpg" width="1200" height="800" alt="Long green pandan leaves" loading="lazy">
+          <span class="no">02 / 04</span>
+          <h3>Pandan</h3>
+          <p class="en">Screwpine leaf</p>
+          <p class="body">The smell of every kuih stall. It grows along our neighbour's fence in Ringlet; we cut it the morning we pour, so the balm smells the way the leaf does.</p>
+          <dl><dt>Grown</dt><dd>Ringlet, 20 minutes from the studio</dd><dt>Does</dt><dd>Soothes and calms, rich in antioxidants</dd><dt>Find it in</dt><dd>Pandan Night Balm, Embun Dew Cream</dd></dl>
+        </article>
+        <article class="ing" data-step="2">
+          <img class="mimg" src="assets/ing-teh.jpg" width="1200" height="800" alt="Fresh tea leaves with water droplets" loading="lazy">
+          <span class="no">03 / 04</span>
+          <h3>Teh hijau</h3>
+          <p class="en">Highland green tea</p>
+          <p class="body">Young leaves from a small estate above Brinchang, steamed and dried within the day. Brewed strong, it becomes the base of the toner instead of plain water.</p>
+          <dl><dt>Grown</dt><dd>Brinchang, at 1,500 m</dd><dt>Does</dt><dd>Calms redness, helps with shine</dd><dt>Find it in</dt><dd>Teh Hijau Toner, Embun Dew Cream</dd></dl>
+        </article>
+        <article class="ing" data-step="3">
+          <img class="mimg" src="assets/ing-bunga.jpg" width="900" height="1355" alt="A red hibiscus flower in bloom" loading="lazy">
+          <span class="no">04 / 04</span>
+          <h3>Bunga raya</h3>
+          <p class="en">Hibiscus, the national flower</p>
+          <p class="body">Its petals carry gentle fruit acids. We dry them on racks in the studio for a week, then infuse them into oil and soap: a soft polish, never a scrub.</p>
+          <dl><dt>Grown</dt><dd>Flower farms in Kuala Terla</dd><dt>Does</dt><dd>Gently lifts dead skin, adds glow</dd><dt>Find it in</dt><dd>Bunga Raya Cleansing Oil, Bunga Raya Body Wash</dd></dl>
+        </article>
+      </div>
+    </div>
+  </div>
 </section>
 
-<footer><span>© Embun Botanics (fictional) · Concept by Aeryn's</span><span>Instagram · WhatsApp · Stockists</span></footer>
-<div class="toast" role="status">This is a concept site, so nothing is sold here. Like it? <a href="../../#contact">Get one made.</a></div>
-<script>
-  const t = document.querySelector('.toast'); let timer;
-  function toast() { t.classList.add('show'); clearTimeout(timer); timer = setTimeout(() => t.classList.remove('show'), 3200); }
-  document.querySelectorAll('[data-demo]').forEach(b => b.addEventListener('click', toast));
-</script>
+<section class="sec" id="routine" aria-labelledby="routine-h">
+  <div class="wrap routine">
+    <div class="photo rv">
+      <img src="assets/routine-hands.jpg" width="1000" height="1500" alt="Hands in a linen shirt warming a pump of lotion between the fingers" loading="lazy">
+      <p>Warm it between your fingers first. It spreads further.</p>
+    </div>
+    <div class="rv">
+      <p class="eyebrow">The routine</p>
+      <h2 id="routine-h">Three steps, about two minutes.</h2>
+      <p class="lead">Made for skin that lives in 30 °C and 80% humidity: light layers that sink in, nothing that sits on top.</p>
+      <ol class="steps">
+        <li><h3>Cleanse</h3><span class="when">AM &amp; PM · 60 sec</span><p>Massage <a href="#shop" data-qv-id="bunga">Bunga Raya Cleansing Oil</a> into dry skin, add a splash of water until it turns milky, then rinse.</p></li>
+        <li><h3>Treat</h3><span class="when">AM &amp; PM · 20 sec</span><p>Press two drops of <a href="#shop" data-qv-id="halia">Halia Glow Serum</a> into damp skin. Follow with the toner on hot days.</p></li>
+        <li><h3>Seal</h3><span class="when">PM · 30 sec</span><p>Warm a pea of <a href="#shop" data-qv-id="pandan">Pandan Night Balm</a> between your fingers and press it over cheeks and any dry patches.</p></li>
+      </ol>
+      <div class="bundle">
+        <div><b class="num">The Highland Routine · RM209</b><span>All three full sizes. Bought separately: RM229.</span></div>
+        <button class="btn" data-add-bundle>Add the routine</button>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="sec refill" id="refill" aria-labelledby="refill-h">
+  <div class="wrap refill-grid">
+    <div class="photo rv"><img src="assets/refill-bottles.jpg" width="1200" height="832" alt="Empty amber glass bottles and caps lined up in a beam of light" loading="lazy"></div>
+    <div class="rv">
+      <p class="eyebrow">Refill program</p>
+      <h2 id="refill-h">Keep the bottle. We'll fill it again.</h2>
+      <p class="lead">Amber glass lasts for years. Bring it back clean and pay only for what goes inside.</p>
+      <ol class="how">
+        <li><b>Finish it</b>Rinse the bottle and keep the cap.</li>
+        <li><b>Bring or post it</b>To the studio, or with a free return label.</li>
+        <li><b>Pay less</b>Refill price, every time after.</li>
+      </ol>
+      <table class="prices">
+        <thead><tr><th>Product</th><th>Full price</th><th>Refill</th><th>You save</th></tr></thead>
+        <tbody>
+          <tr><td>Halia Glow Serum</td><td>RM89</td><td>RM74</td><td class="save">RM15</td></tr>
+          <tr><td>Pandan Night Balm</td><td>RM72</td><td>RM60</td><td class="save">RM12</td></tr>
+          <tr><td>Teh Hijau Toner</td><td>RM58</td><td>RM48</td><td class="save">RM10</td></tr>
+          <tr><td>Bunga Raya Cleansing Oil</td><td>RM68</td><td>RM56</td><td class="save">RM12</td></tr>
+          <tr><td>Bunga Raya Body Wash</td><td>RM46</td><td>RM38</td><td class="save">RM8</td></tr>
+        </tbody>
+      </table>
+      <div class="ctas" style="display:flex;flex-wrap:wrap;gap:12px;align-items:center">
+        <button class="btn" data-demo>Request a return label</button>
+        <span style="font-size:13.5px;color:#4d4440">Refill Saturdays, 10am–2pm at the studio.</span>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="sec" id="stockists" aria-labelledby="stock-h">
+  <div class="wrap">
+    <div class="head rv">
+      <div>
+        <p class="eyebrow">Where to buy</p>
+        <h2 id="stock-h">Stockists</h2>
+      </div>
+      <p class="sub" style="margin:0">Smell them before you buy. Every shop below carries testers.</p>
+    </div>
+    <div class="stock rv">
+      <div class="shop">
+        <p class="city">Cameron Highlands</p>
+        <h3>Embun Studio</h3>
+        <address>14 Jalan Besar, Brinchang<br>39100 Cameron Highlands, Pahang</address>
+        <p class="hrs">Wed–Sun · 9am–5pm<br>Refill Saturdays · 10am–2pm</p>
+        <p class="carries">The full range, refills and seconds.</p>
+        <button class="link" data-demo>Get directions</button>
+      </div>
+      <div class="shop">
+        <p class="city">Kuala Lumpur</p>
+        <h3>Kedai Daun</h3>
+        <address>22-1 Jalan Telawi 3, Bangsar Baru<br>59100 Kuala Lumpur</address>
+        <p class="hrs">Daily · 10am–9pm</p>
+        <p class="carries">Serum, balm, toner and refills.</p>
+        <button class="link" data-demo>Get directions</button>
+      </div>
+      <div class="shop">
+        <p class="city">Penang</p>
+        <h3>Sana Sini Goods</h3>
+        <address>61 Lebuh Armenian<br>10200 George Town, Penang</address>
+        <p class="hrs">Tue–Sun · 11am–7pm</p>
+        <p class="carries">Body wash, cleansing oil and gift boxes.</p>
+        <button class="link" data-demo>Get directions</button>
+      </div>
+      <div class="shop">
+        <p class="city">Online</p>
+        <h3>Ships nationwide</h3>
+        <address>West Malaysia: 2–4 working days<br>Sabah &amp; Sarawak: 4–7 working days</address>
+        <p class="hrs">Free over RM150 (West)<br>Free over RM250 (East)</p>
+        <p class="carries">Posted in recycled paper, no plastic fill.</p>
+        <a class="link" href="#shop">Shop online</a>
+      </div>
+    </div>
+    <p class="note">Like the brand, these shops and addresses are fictional.</p>
+  </div>
+</section>
+
+<section class="news" aria-labelledby="news-h">
+  <img src="assets/sunrise.jpg" width="1600" height="1067" alt="" loading="lazy">
+  <div class="wrap rv">
+    <p class="eyebrow">Letters from the highlands</p>
+    <h2 id="news-h">One letter a month, when a new batch is poured.</h2>
+    <p>Pour dates, refill days, and what's growing on the hill. 10% off your first order when you join.</p>
+    <form data-demo-form>
+      <label class="sr" for="email">Email address</label>
+      <input id="email" type="email" placeholder="Your email" autocomplete="off">
+      <button class="btn on-photo" type="submit">Join the letter</button>
+    </form>
+    <small>Demo form: nothing is sent or stored.</small>
+  </div>
+</section>
+</main>
+
+<footer class="foot">
+  <div class="wrap">
+    <div class="foot-grid">
+      <div class="about"><b>Embun Botanics</b>Small-batch skincare poured by hand in Brinchang, Cameron Highlands. Ginger, pandan, highland tea and hibiscus.</div>
+      <div><h4>Shop</h4><ul><li><a href="#shop">Bestsellers</a></li><li><a href="#routine">The Highland Routine</a></li><li><a href="#refill">Refills</a></li><li><button class="flink" data-demo>Gift cards</button></li></ul></div>
+      <div><h4>Help</h4><ul><li><button class="flink" data-demo>Delivery &amp; returns</button></li><li><a href="#stockists">Stockists</a></li><li><button class="flink" data-demo>Contact us</button></li><li><button class="flink" data-demo>Ingredient lists (INCI)</button></li></ul></div>
+      <div><h4>Follow</h4><ul><li><button class="flink" data-demo>Instagram</button></li><li><button class="flink" data-demo>TikTok</button></li><li><button class="flink" data-demo>WhatsApp the studio</button></li></ul></div>
+    </div>
+    <div class="legal"><span>© 2026 Embun Botanics (fictional) · Concept by <a href="../../">Aeryn's</a></span><span>Photos: Unsplash (free licence)</span></div>
+  </div>
+  <div class="wordmark" aria-hidden="true">EMBUN</div>
+</footer>
+
+<div class="scrim" data-close></div>
+
+<aside class="drawer" id="qv" role="dialog" aria-modal="true" aria-labelledby="qv-title" aria-hidden="true">
+  <div class="d-head"><h2>Quick view</h2><button class="x" data-close aria-label="Close quick view">&times;</button></div>
+  <div class="d-body" id="qv-body"></div>
+  <div class="d-foot"><div class="qv-add"><span class="p num" id="qv-price"></span><button class="btn" id="qv-add">Add to bag</button></div></div>
+</aside>
+
+<aside class="drawer" id="bag" role="dialog" aria-modal="true" aria-labelledby="bag-title" aria-hidden="true">
+  <div class="d-head"><h2 id="bag-title">Your bag</h2><button class="x" data-close aria-label="Close bag">&times;</button></div>
+  <div class="ship" id="ship"></div>
+  <div class="d-body" id="bag-body"></div>
+  <div class="d-foot">
+    <div class="sum"><span>Subtotal</span><b class="num" id="bag-sub">RM0</b></div>
+    <small>Demo bag: nothing is charged. Delivery is worked out at checkout.</small>
+    <button class="btn wide" data-demo>Checkout</button>
+  </div>
+</aside>
+
+<div class="toast" role="status" aria-live="polite">This is a concept site, so nothing is sold here. Like it? <a href="../../#contact">Get one made.</a></div>
+<script src="app.js"></script>
 </body>
 </html>

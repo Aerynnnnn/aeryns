@@ -2,162 +2,496 @@
 <html lang="en">
 <head>
 <meta charset="utf-8">
-<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
 <meta name="robots" content="noindex">
-<title>Kayu Lane · Concept site by Aeryn's</title>
+<title>Kayu Lane · Handmade furniture from reclaimed Malaysian hardwood · Concept site by Aeryn's</title>
+<meta name="description" content="Kayu Lane is a fictional furniture workshop in George Town, Penang: reclaimed chengal, nyatoh and merbau, hand-cut joinery, made to order. A concept site by Aeryn's.">
+<meta name="theme-color" content="#efe6d8">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,300..600;1,9..144,300..600&family=Work+Sans:wght@400;500&display=swap" rel="stylesheet">
-<style>
-  :root { --paper: #efe6d8; --oak: #c8915a; --walnut: #5a3a22; --clay: #b5532f; --ink: #2a1d14; --muted: #7a6656; --line: #2a1d1426; }
-  * { box-sizing: border-box; }
-  body { margin: 0; background: var(--paper); color: var(--ink); font: 400 16px/1.6 'Work Sans', system-ui, sans-serif; overflow-x: hidden; }
-  a { color: inherit; }
-  .concept { background: var(--walnut); color: var(--paper); font-size: 13px; text-align: center; padding: 8px 16px; }
-  header { display: grid; grid-template-columns: 1fr auto 1fr; align-items: center; padding: 20px clamp(16px, 5vw, 64px); border-bottom: 1px solid var(--line); }
-  header nav { display: flex; gap: 24px; font-size: 14px; } header nav a { text-decoration: none; }
-  .logo { font: italic 500 30px/1 Fraunces, serif; text-align: center; }
-  .logo span { font-style: normal; color: var(--clay); }
-  .visit { justify-self: end; font-size: 14px; text-decoration: none; border-bottom: 1px solid currentColor; }
-  .hero { display: grid; grid-template-columns: 1.1fr 1fr; min-height: min(78vh, 760px); border-bottom: 1px solid var(--line); }
-  .hero-text { padding: clamp(40px, 7vw, 96px) clamp(16px, 5vw, 64px); display: flex; flex-direction: column; justify-content: flex-end; }
-  .issue { font-size: 13px; letter-spacing: .2em; text-transform: uppercase; color: var(--muted); margin: 0 0 auto; }
-  .hero h1 { font: 300 clamp(56px, 8vw, 128px)/.92 Fraunces, serif; margin: 48px 0 28px; letter-spacing: -.02em; }
-  .hero h1 em { color: var(--clay); font-weight: 400; }
-  .hero p { max-width: 28em; margin: 0 0 32px; color: #4a3a2e; }
-  .btn { display: inline-block; background: var(--ink); color: var(--paper); text-decoration: none; padding: 16px 28px; font-size: 15px; border: 0; cursor: pointer; font-family: inherit; }
-  .hero-art { background: var(--oak); position: relative; display: grid; place-items: center; overflow: hidden; }
-  .hero-art .sun { position: absolute; width: min(70%, 440px); aspect-ratio: 1; border-radius: 50%; background: #dba872; top: 50%; left: 50%; transform: translate(-50%, -62%); }
-  .hero-art svg { position: relative; width: 70%; max-width: 420px; }
-  .hero-art .tag { position: absolute; bottom: 24px; left: 24px; background: var(--paper); padding: 10px 14px; font: italic 400 16px Fraunces, serif; }
-  .marquee { display: flex; gap: 48px; padding: 18px clamp(16px, 5vw, 64px); border-bottom: 1px solid var(--line); font: italic 300 22px Fraunces, serif; color: var(--walnut); overflow: hidden; white-space: nowrap; }
-  section { padding: 96px clamp(16px, 5vw, 64px); }
-  .head { display: flex; justify-content: space-between; align-items: flex-end; gap: 24px; flex-wrap: wrap; margin-bottom: 40px; }
-  h2 { font: 300 clamp(40px, 5vw, 72px)/1 Fraunces, serif; margin: 0; letter-spacing: -.01em; }
-  h2 em { color: var(--clay); }
-  .chips { display: flex; gap: 8px; flex-wrap: wrap; }
-  .chips button { background: none; border: 1px solid var(--ink); padding: 8px 16px; border-radius: 999px; font: 500 14px 'Work Sans'; cursor: pointer; color: var(--ink); }
-  .chips button[aria-pressed="true"] { background: var(--ink); color: var(--paper); }
-  .grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 1px; background: var(--line); border: 1px solid var(--line); }
-  .item { background: var(--paper); padding: 28px; display: flex; flex-direction: column; }
-  .item[hidden] { display: none; }
-  .item .pic { aspect-ratio: 4 / 3; background: #e6dac7; display: grid; place-items: center; margin-bottom: 18px; }
-  .item .pic svg { width: 60%; height: 80%; }
-  .item h3 { font: 400 26px/1.1 Fraunces, serif; margin: 0 0 6px; }
-  .item .meta { color: var(--muted); font-size: 14px; margin: 0 0 14px; }
-  .item .row { margin-top: auto; display: flex; justify-content: space-between; align-items: center; }
-  .item .row b { font: 500 18px Fraunces, serif; }
-  .item .row button { background: none; border: 0; border-bottom: 1px solid var(--clay); color: var(--clay); font: 500 14px 'Work Sans'; padding: 2px 0; cursor: pointer; }
-  .made { display: grid; grid-template-columns: 1fr 1.3fr; gap: 64px; background: var(--walnut); color: var(--paper); }
-  .made h2 em { color: #e8b47e; }
-  .made ol { list-style: none; padding: 0; margin: 0; display: grid; gap: 28px; counter-reset: m; }
-  .made li { display: grid; grid-template-columns: 64px 1fr; gap: 16px; border-top: 1px solid #efe6d833; padding-top: 20px; }
-  .made li::before { counter-increment: m; content: counter(m, upper-roman); font: italic 300 32px Fraunces, serif; color: #e8b47e; }
-  .made b { display: block; font: 400 22px Fraunces, serif; margin-bottom: 4px; }
-  .made p { margin: 0; color: #e6d6c3; }
-  .woods { display: grid; grid-template-columns: repeat(3, 1fr); gap: 24px; }
-  .wood .sw { height: 160px; margin-bottom: 14px; background-size: 100% 12px; }
-  .wood b { font: 400 24px Fraunces, serif; display: block; } .wood span { color: var(--muted); font-size: 14px; }
-  .visit-sec { display: grid; grid-template-columns: 1fr 1fr; gap: 48px; align-items: center; border-top: 1px solid var(--line); }
-  .visit-sec dl { display: grid; grid-template-columns: 140px 1fr; gap: 12px 24px; margin: 0; }
-  .visit-sec dt { color: var(--muted); } .visit-sec dd { margin: 0; }
-  footer { padding: 28px clamp(16px, 5vw, 64px); border-top: 1px solid var(--line); display: flex; justify-content: space-between; flex-wrap: wrap; gap: 12px; color: var(--muted); font-size: 14px; }
-  .toast { position: fixed; left: 50%; bottom: 24px; transform: translate(-50%, calc(100% + 48px)); background: var(--ink); color: var(--paper); padding: 14px 22px; font-size: 14px; transition: transform .3s; z-index: 9; }
-  .toast.show { transform: translate(-50%, 0); } .toast a { color: #e8b47e; }
-  @media (max-width: 900px) {
-    header { grid-template-columns: 1fr auto; } header nav { display: none; } .logo { text-align: left; }
-    .hero, .made, .visit-sec { grid-template-columns: 1fr; }
-    .hero-art { min-height: 340px; }
-    .grid, .woods { grid-template-columns: 1fr 1fr; }
-  }
-  @media (max-width: 560px) { .grid, .woods { grid-template-columns: 1fr; } .visit-sec dl { grid-template-columns: 100px 1fr; } }
-</style>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,300..600;1,9..144,300..500&family=Work+Sans:wght@400;500;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="styles.css">
+<script>document.documentElement.classList.add('js')</script>
 </head>
 <body>
+
+<a class="skip" href="#pieces">Skip to the pieces</a>
+
 <div class="concept">Concept site by <a href="../../">Aeryn's</a>. Kayu Lane is a fictional workshop; these pieces aren't for sale.</div>
-<header>
-  <nav><a href="#pieces">Pieces</a><a href="#made">How it's made</a><a href="#woods">Timber</a></nav>
-  <div class="logo">Kayu <span>Lane</span></div>
-  <a class="visit" href="#visit">Visit the workshop</a>
+
+<header class="top">
+  <div class="top-in">
+    <a class="mark" href="#top" aria-label="Kayu Lane, back to top">Kayu Lane<small>George Town · est. 2014</small></a>
+    <nav class="nav" aria-label="Sections">
+      <a href="#pieces">Pieces</a>
+      <a href="#making">How it's made</a>
+      <a href="#timber">Timber</a>
+      <a href="#commission">Commissions</a>
+      <a href="#visit">Visit</a>
+    </nav>
+    <p class="status" data-status><span class="dot" aria-hidden="true"></span><span data-status-text>Showroom Thu–Sun, 11am–6pm</span></p>
+  </div>
 </header>
 
-<div class="hero">
-  <div class="hero-text">
-    <p class="issue">Handmade in George Town · since 2014</p>
-    <h1>Furniture that <em>gets better</em> with age.</h1>
-    <p>Chairs, tables and shelves cut from reclaimed Malaysian hardwood, joined by hand without a single screw, and finished to be lived on for decades.</p>
-    <div><a class="btn" href="#pieces">Browse the pieces</a></div>
+<main id="top">
+
+<!-- HERO: a catalogue cover -->
+<section class="hero" aria-labelledby="hero-title">
+  <img class="hero-img" src="assets/hero-workbench.jpg" alt="A wooden workbench under a sunlit window, hand planes and chisels hanging on the wall" width="1600" height="1303" fetchpriority="high">
+  <div class="hero-shade" aria-hidden="true"></div>
+  <div class="hero-in">
+    <p class="hero-issue"><span>Catalogue No. 12</span><span>Pieces &amp; prices, 2026</span><span>Lorong Kayu, George Town, Penang</span></p>
+    <h1 id="hero-title">Furniture from old Penang timber, joined by hand.</h1>
+    <div class="hero-foot">
+      <p class="hero-lede">Chairs, tables and cabinets cut from reclaimed chengal, nyatoh and merbau. Pegs and wedges instead of screws. Each one built to order by one maker, then signed underneath.</p>
+      <div class="hero-cta">
+        <a class="btn btn-paper" href="#pieces">Browse the 11 pieces</a>
+        <a class="btn btn-line-light" href="#commission">Start a commission</a>
+      </div>
+    </div>
   </div>
-  <div class="hero-art" aria-hidden="true">
-    <div class="sun"></div>
-    <svg viewBox="0 0 200 220" fill="none" stroke="#2a1d14" stroke-width="3" stroke-linecap="round" stroke-linejoin="round">
-      <path d="M60 20 L60 120 M140 20 L140 120" /><path d="M60 30 L140 30 M60 55 L140 55 M60 80 L140 80" stroke-width="2"/>
-      <path d="M40 120 L160 120 L160 134 L40 134 Z" fill="#8a5a33"/>
-      <path d="M50 134 L42 210 M150 134 L158 210 M60 134 L66 200 M140 134 L134 200" /><path d="M48 175 L152 175" stroke-width="2"/>
-    </svg>
-    <span class="tag">The Lorong chair · chengal</span>
+  <p class="hero-cap">The bench by the back window, 9.40am</p>
+</section>
+
+<!-- CONTENTS: magazine contents strip doubles as nav -->
+<nav class="contents" aria-label="In this catalogue">
+  <p class="contents-label">In this catalogue</p>
+  <ol>
+    <li><a href="#pieces"><b>01</b> The pieces</a></li>
+    <li><a href="#making"><b>02</b> How a piece is made</a></li>
+    <li><a href="#timber"><b>03</b> Choose your timber</a></li>
+    <li><a href="#commission"><b>04</b> Commissions</a></li>
+    <li><a href="#visit"><b>05</b> Visit the workshop</a></li>
+    <li><a href="#care"><b>06</b> Care &amp; repairs</a></li>
+  </ol>
+</nav>
+
+<!-- FACTS -->
+<section class="facts" aria-label="The workshop in numbers">
+  <dl>
+    <div class="rv"><dt>Years at the bench</dt><dd>12</dd><p>Since a single lathe in a rented back room, 2014.</p></div>
+    <div class="rv"><dt>Makers</dt><dd>4</dd><p>One maker sees a piece through, start to finish.</p></div>
+    <div class="rv"><dt>Screws in a chair</dt><dd>0</dd><p>Mortise and tenon, dovetails, wedges, pegs.</p></div>
+    <div class="rv"><dt>Weeks to make</dt><dd>6–10</dd><p>Today's queue: about 7 weeks before we start.</p></div>
+  </dl>
+</section>
+
+<!-- 01 PIECES -->
+<section class="pieces" id="pieces" aria-labelledby="pieces-title">
+  <div class="sec-head">
+    <p class="eyebrow"><b>01</b> The pieces</p>
+    <h2 id="pieces-title">Eleven pieces we make again and again.</h2>
+    <p class="sec-lede">Prices are for the timber shown, made to the listed size. Every piece can change size or timber; tap one for the details.</p>
+  </div>
+
+  <div class="filters" role="group" aria-label="Filter pieces">
+    <button type="button" aria-pressed="true" data-filter="all">All <span>11</span></button>
+    <button type="button" aria-pressed="false" data-filter="seating">Seating <span>4</span></button>
+    <button type="button" aria-pressed="false" data-filter="tables">Tables <span>3</span></button>
+    <button type="button" aria-pressed="false" data-filter="storage">Storage <span>3</span></button>
+    <button type="button" aria-pressed="false" data-filter="small">Small things <span>1</span></button>
+    <button type="button" aria-pressed="false" data-filter="ready">Ready to take home <span>3</span></button>
+  </div>
+  <p class="filter-note" aria-live="polite" data-filter-note></p>
+
+  <div class="grid" data-grid>
+    <article class="piece wide" data-id="meja" data-cat="tables">
+      <div class="ph"><img src="assets/piece-meja-panjang.jpg" alt="A long wooden dining table with spindle-back chairs in a warm dining room" width="1400" height="933" loading="lazy"></div>
+      <p class="no">KL-04 · Tables</p>
+      <h3><button type="button" class="open" data-open="meja">Meja Panjang dining table</button></h3>
+      <p class="spec">Merbau · 220 × 95 × 75 cm · seats 8</p>
+      <p class="price">RM6,800</p>
+    </article>
+
+    <article class="piece" data-id="lorong" data-cat="seating">
+      <div class="ph"><img src="assets/piece-lorong-chair.jpg" alt="A dark wooden spindle-back dining chair on a timber floor" width="846" height="1500" loading="lazy"></div>
+      <p class="no">KL-01 · Seating</p>
+      <h3><button type="button" class="open" data-open="lorong">Lorong dining chair</button></h3>
+      <p class="spec">Nyatoh · 45 × 51 × 84 cm · seat 45 cm</p>
+      <p class="price">RM1,280</p>
+    </article>
+
+    <article class="piece" data-id="rotan" data-cat="seating">
+      <div class="ph"><img src="assets/piece-rotan-lounger.jpg" alt="A low wooden lounge chair with a woven cane seat and back, in afternoon light" width="1100" height="1100" loading="lazy"></div>
+      <p class="no">KL-02 · Seating</p>
+      <h3><button type="button" class="open" data-open="rotan">Rotan lounge chair</button></h3>
+      <p class="spec">Merbau &amp; hand-woven cane · 66 × 78 × 80 cm</p>
+      <p class="price">RM2,450</p>
+    </article>
+
+    <article class="piece" data-id="pasar" data-cat="seating ready">
+      <div class="ph mb"><img src="assets/piece-pasar-stools.jpg" alt="Two small three-legged wooden stools against a pale wall" width="1095" height="1500" loading="lazy"></div>
+      <p class="no">KL-03 · Seating <span class="tag">Ready now</span></p>
+      <h3><button type="button" class="open" data-open="pasar">Pasar stools, a pair</button></h3>
+      <p class="spec">Chengal offcuts · Ø 32 × 46 cm each</p>
+      <p class="price">RM680 the pair</p>
+    </article>
+
+    <article class="piece" data-id="almari" data-cat="storage">
+      <div class="ph"><img src="assets/piece-almari-sideboard.jpg" alt="A warm-toned wooden sideboard with drawers against a white brick wall" width="1200" height="800" loading="lazy"></div>
+      <p class="no">KL-07 · Storage</p>
+      <h3><button type="button" class="open" data-open="almari">Almari sideboard</button></h3>
+      <p class="spec">Merbau, nyatoh drawers · 160 × 45 × 78 cm</p>
+      <p class="price">RM7,400</p>
+    </article>
+
+    <article class="piece" data-id="serambi" data-cat="seating">
+      <div class="ph"><img src="assets/piece-serambi-bench.jpg" alt="A weathered wooden bench with splayed legs in front of an old shophouse door" width="1200" height="749" loading="lazy"></div>
+      <p class="no">KL-05 · Seating</p>
+      <h3><button type="button" class="open" data-open="serambi">Serambi bench</button></h3>
+      <p class="spec">Reclaimed chengal · 150 × 30 × 46 cm</p>
+      <p class="price">RM1,350</p>
+    </article>
+
+    <article class="piece" data-id="anjung" data-cat="tables">
+      <div class="ph mb"><img src="assets/piece-anjung-table.jpg" alt="A low, thick-topped wooden coffee table with a lower shelf" width="1200" height="800" loading="lazy"></div>
+      <p class="no">KL-10 · Tables</p>
+      <h3><button type="button" class="open" data-open="anjung">Anjung coffee table</button></h3>
+      <p class="spec">Chengal · 130 × 70 × 38 cm</p>
+      <p class="price">RM3,200</p>
+    </article>
+
+    <article class="piece" data-id="ruang" data-cat="storage">
+      <div class="ph mb"><img src="assets/piece-ruang-shelf.jpg" alt="Three solid wooden wall shelves holding books in a white alcove" width="1062" height="1500" loading="lazy"></div>
+      <p class="no">KL-06 · Storage</p>
+      <h3><button type="button" class="open" data-open="ruang">Ruang wall shelves, set of 3</button></h3>
+      <p class="spec">Nyatoh · 90 × 22 cm each</p>
+      <p class="price">RM960</p>
+    </article>
+
+    <article class="piece" data-id="tulis" data-cat="tables">
+      <div class="ph mb"><img src="assets/piece-tulis-desk.jpg" alt="A slim wooden writing desk and chair below a floating wall shelf" width="1100" height="1467" loading="lazy"></div>
+      <p class="no">KL-08 · Tables</p>
+      <h3><button type="button" class="open" data-open="tulis">Tulis writing desk</button></h3>
+      <p class="spec">Nyatoh · 120 × 60 × 74 cm</p>
+      <p class="price">RM2,900</p>
+    </article>
+
+    <article class="piece wide" data-id="laci" data-cat="storage ready">
+      <div class="ph"><img src="assets/piece-laci-drawers.jpg" alt="An old dark wooden chest of drawers with carved trim and brass pulls" width="1200" height="800" loading="lazy"></div>
+      <p class="no">KL-09 · Storage <span class="tag">One-off · ready now</span></p>
+      <h3><button type="button" class="open" data-open="laci">Laci chest, restored</button></h3>
+      <p class="spec">1950s chengal chest, re-joined · 100 × 48 × 90 cm</p>
+      <p class="price">RM4,600</p>
+    </article>
+
+    <article class="piece" data-id="dulang" data-cat="small ready">
+      <div class="ph mb"><img src="assets/piece-dulang-trays.jpg" alt="Two long oval wooden serving trays with cut-out handles" width="1100" height="734" loading="lazy"></div>
+      <p class="no">KL-11 · Small things <span class="tag">Ready now</span></p>
+      <h3><button type="button" class="open" data-open="dulang">Dulang serving trays, a pair</button></h3>
+      <p class="spec">Merbau offcuts · 52 × 16 cm &amp; 44 × 14 cm</p>
+      <p class="price">RM190 the pair</p>
+    </article>
+
+    <a class="piece piece-ask" href="#commission" data-cat="all-only">
+      <span class="no">KL-?? · Yours</span>
+      <span class="ask-title">Not quite the right size?</span>
+      <span class="ask-text">Two thirds of what we make is a catalogue piece changed to fit a room. Send us the space.</span>
+      <span class="ask-link">Start a commission →</span>
+    </a>
+  </div>
+</section>
+
+<!-- 02 MAKING: scroll story -->
+<section class="making" id="making" aria-labelledby="making-title">
+  <div class="sec-head on-dark">
+    <p class="eyebrow"><b>02</b> How a piece is made</p>
+    <h2 id="making-title">Seven weeks, four stages, one pair of hands.</h2>
+    <p class="sec-lede">This is the Lorong chair's timeline. Bigger pieces take longer; the order never changes.</p>
+  </div>
+
+  <div class="story" data-story>
+    <div class="story-media" aria-hidden="true">
+      <img class="on" data-step-img="0" src="assets/make-timber.jpg" alt="" width="1400" height="933" loading="lazy">
+      <img data-step-img="1" src="assets/make-joinery.jpg" alt="" width="1400" height="939" loading="lazy">
+      <img data-step-img="2" src="assets/make-oil.jpg" alt="" width="1125" height="1500" loading="lazy">
+      <img data-step-img="3" src="assets/make-deliver.jpg" alt="" width="1400" height="933" loading="lazy">
+      <ol class="story-dots"><li class="on"></li><li></li><li></li><li></li></ol>
+    </div>
+
+    <ol class="steps">
+      <li class="step on" data-step="0">
+        <img class="step-img" src="assets/make-timber.jpg" alt="Rough boards of reclaimed hardwood stacked to dry with spacers between them" width="1400" height="933" loading="lazy">
+        <p class="when">Week 1 · The timber</p>
+        <h3>We pick the boards before we pick up a tool.</h3>
+        <p>Our wood comes out of old buildings: joists, floorboards and door frames from shophouse restorations around the island, bought by the beam. It is pulled of nails, stacked with spacers and left to settle in the workshop for at least a year, so it moves in our shed and not in your house.</p>
+        <p class="aside">You can come and choose the actual boards for a table top. Most people do.</p>
+      </li>
+      <li class="step" data-step="1">
+        <img class="step-img" src="assets/make-joinery.jpg" alt="Close-up of a hand-cut dovetail joint at the corner of a wooden frame" width="1400" height="939" loading="lazy">
+        <p class="when">Weeks 2–4 · The joinery</p>
+        <h3>Cut by hand, held by wood.</h3>
+        <p>Legs and rails are joined with mortise and tenon, drawers with hand-cut dovetails, chair spindles with wedged through-tenons. Where a joint needs extra strength we drive in a chengal peg. Glue helps; nothing metal holds a Kayu Lane piece together.</p>
+        <figure class="inset"><img src="assets/make-chisel.jpg" alt="A chisel paring a curve in pale wood, shavings around it" width="1200" height="606" loading="lazy"><figcaption>Paring a seat by chisel takes most of a day.</figcaption></figure>
+      </li>
+      <li class="step" data-step="2">
+        <img class="step-img" src="assets/make-oil.jpg" alt="A maker rubbing oil into a wooden table top with a cloth" width="1125" height="1500" loading="lazy">
+        <p class="when">Weeks 5–6 · The finish</p>
+        <h3>Three coats of oil, rubbed in by hand.</h3>
+        <p>We sand to 240 grit, raise the grain with a damp cloth, then sand again. The finish is a plant-based hardwax oil, three coats a day apart, buffed by hand. It is food-safe, it doesn't peel like varnish, and a scratch can be oiled out at home.</p>
+        <p class="aside">The maker's name and the build month are burnt into the underside.</p>
+      </li>
+      <li class="step" data-step="3">
+        <img class="step-img" src="assets/make-deliver.jpg" alt="A scooter passing old two-storey shophouses on a Penang street" width="1400" height="933" loading="lazy">
+        <p class="when">Week 7 · To your door</p>
+        <h3>Wrapped in old blankets, carried in by us.</h3>
+        <p>We deliver with our own van and two people, place the piece, and take every bit of packing away with us.</p>
+        <table class="deliver">
+          <caption>Delivery, per order</caption>
+          <tbody>
+            <tr><th scope="row">Penang island</th><td>Free</td></tr>
+            <tr><th scope="row">Seberang Perai, Kedah</th><td>RM120</td></tr>
+            <tr><th scope="row">Ipoh, Perak</th><td>RM260</td></tr>
+            <tr><th scope="row">Klang Valley</th><td>RM420</td></tr>
+            <tr><th scope="row">Johor, East Coast</th><td>RM580</td></tr>
+            <tr><th scope="row">Sabah, Sarawak</th><td>Crated, by quote</td></tr>
+          </tbody>
+        </table>
+      </li>
+    </ol>
+  </div>
+</section>
+
+<!-- 03 TIMBER -->
+<section class="timber" id="timber" aria-labelledby="timber-title">
+  <div class="sec-head">
+    <p class="eyebrow"><b>03</b> Choose your timber</p>
+    <h2 id="timber-title">Three Malaysian hardwoods, all of them second-hand.</h2>
+    <p class="sec-lede">Prices in the catalogue are for the timber listed. Switching changes the price by the amount below. We never buy newly felled chengal: it is a protected, slow-growing tree, so every board we use has already lived one life.</p>
+  </div>
+
+  <div class="woods">
+    <article class="wood rv">
+      <div class="grain"><img src="assets/grain-nyatoh.jpg" alt="Close-up of smooth, pinkish-brown wood grain" width="700" height="467" loading="lazy"></div>
+      <h3>Nyatoh <i>Palaquium spp.</i></h3>
+      <p class="wood-line">Pinkish brown, straight and fine. Light enough to carry, calm to look at.</p>
+      <dl>
+        <div><dt>Hardness</dt><dd><span class="bar" style="--v:.45" aria-hidden="true"></span>Medium</dd></div>
+        <div><dt>Ages to</dt><dd>A deeper rose-brown</dd></div>
+        <div><dt>From</dt><dd>Floorboards and stair treads</dd></div>
+        <div><dt>Best for</dt><dd>Chairs, desks, shelves, drawer boxes</dd></div>
+        <div><dt>Price</dt><dd>Base price</dd></div>
+      </dl>
+    </article>
+    <article class="wood rv">
+      <div class="grain"><img src="assets/grain-merbau.jpg" alt="Close-up of deep reddish-brown wood grain" width="700" height="467" loading="lazy"></div>
+      <h3>Merbau <i>Intsia palembanica</i></h3>
+      <p class="wood-line">Deep red-brown with gold flecks in the grain. Heavy, stable, shrugs off hot cups.</p>
+      <dl>
+        <div><dt>Hardness</dt><dd><span class="bar" style="--v:.75" aria-hidden="true"></span>Hard</dd></div>
+        <div><dt>Ages to</dt><dd>Dark chocolate</dd></div>
+        <div><dt>From</dt><dd>Door frames and window sills</dd></div>
+        <div><dt>Best for</dt><dd>Dining tables, sideboards, trays</dd></div>
+        <div><dt>Price</dt><dd>+15% on nyatoh</dd></div>
+      </dl>
+    </article>
+    <article class="wood rv">
+      <div class="grain"><img src="assets/grain-chengal.jpg" alt="Close-up of golden-brown wood with dark streaks" width="467" height="700" loading="lazy"></div>
+      <h3>Chengal <i>Neobalanocarpus heimii</i></h3>
+      <p class="wood-line">Golden brown when cut, close to bronze in ten years. The timber old Penang was built from.</p>
+      <dl>
+        <div><dt>Hardness</dt><dd><span class="bar" style="--v:.95" aria-hidden="true"></span>Very hard</dd></div>
+        <div><dt>Ages to</dt><dd>Warm bronze</dd></div>
+        <div><dt>From</dt><dd>Shophouse beams and joists</dd></div>
+        <div><dt>Best for</dt><dd>Benches, coffee tables, anything outdoors</dd></div>
+        <div><dt>Price</dt><dd>+25% on nyatoh</dd></div>
+      </dl>
+    </article>
+  </div>
+</section>
+
+<!-- 04 COMMISSION -->
+<section class="commission" id="commission" aria-labelledby="commission-title">
+  <div class="comm-photo"><img src="assets/commission-bench.jpg" alt="A cluttered workbench with half-made wooden parts, clamps and hand tools by a window" width="1400" height="1050" loading="lazy"></div>
+  <div class="comm-body">
+    <div class="sec-head">
+      <p class="eyebrow"><b>04</b> Made to order</p>
+      <h2 id="commission-title">Tell us about the room. We'll draw the piece.</h2>
+    </div>
+    <ol class="comm-steps">
+      <li><b>Send the space.</b> A photo, the rough size, and what the piece needs to do.</li>
+      <li><b>Drawing and price</b> within three working days, free and with no obligation.</li>
+      <li><b>30% deposit</b> reserves your boards and your place in the queue.</li>
+      <li><b>Build, 6 to 10 weeks.</b> We send photos at glue-up and at oiling.</li>
+      <li><b>Balance on delivery,</b> once it's standing in your room.</li>
+    </ol>
+
+    <form class="enquiry" data-demo-form novalidate>
+      <p class="form-note">Demo form: nothing is sent.</p>
+      <div class="row2">
+        <label>Your name<input name="name" autocomplete="off" placeholder="Mei Ling"></label>
+        <label>WhatsApp or email<input name="contact" autocomplete="off" placeholder="012-345 6789"></label>
+      </div>
+      <div class="row2">
+        <label>Start from
+          <select name="piece" data-est-piece>
+            <option value="1280">Lorong dining chair · RM1,280</option>
+            <option value="2450">Rotan lounge chair · RM2,450</option>
+            <option value="1350">Serambi bench · RM1,350</option>
+            <option value="6800" selected>Meja Panjang table · RM6,800</option>
+            <option value="3200">Anjung coffee table · RM3,200</option>
+            <option value="2900">Tulis writing desk · RM2,900</option>
+            <option value="960">Ruang wall shelves · RM960</option>
+            <option value="7400">Almari sideboard · RM7,400</option>
+            <option value="0">Something new</option>
+          </select>
+        </label>
+        <label>Timber
+          <select name="timber" data-est-timber>
+            <option value="nyatoh">Nyatoh</option>
+            <option value="merbau" selected>Merbau</option>
+            <option value="chengal">Chengal</option>
+            <option value="unsure">Not sure yet</option>
+          </select>
+        </label>
+      </div>
+      <label>Size change
+        <select name="size" data-est-size>
+          <option value="1">Same size as the catalogue</option>
+          <option value="0.85">Smaller</option>
+          <option value="1.2">Up to 20% bigger</option>
+          <option value="1.45">Much bigger</option>
+        </select>
+      </label>
+      <label>The room and what it's for<textarea name="msg" rows="3" placeholder="Narrow dining room in a terrace house, table for 6, needs to fit past a 78 cm doorway."></textarea></label>
+      <p class="estimate" aria-live="polite">Rough guide: <b data-est-out>RM6,300 – RM7,300</b><span data-est-note>, before delivery</span></p>
+      <button class="btn btn-ink" type="submit">Send my enquiry</button>
+    </form>
+  </div>
+</section>
+
+<!-- 05 VISIT -->
+<section class="visit" id="visit" aria-labelledby="visit-title">
+  <div class="sec-head">
+    <p class="eyebrow"><b>05</b> Visit the workshop</p>
+    <h2 id="visit-title">The showroom is the front half of the workshop.</h2>
+    <p class="sec-lede">Sit on everything. Bring your measurements, a photo of the room and, if you like, a drawer that sticks. The saws stop at 4pm so we can talk.</p>
+  </div>
+
+  <div class="visit-grid">
+    <figure class="v-street rv"><img src="assets/visit-street.jpg" alt="Trishaws parked on a George Town street lined with old shophouses and a big rain tree" width="1400" height="1050" loading="lazy"><figcaption>Five minutes' walk from the trishaw stand.</figcaption></figure>
+    <figure class="v-room rv"><img src="assets/visit-showroom.jpg" alt="A long wall of wooden drawer cabinets and a wooden chair in a bright shop" width="1400" height="933" loading="lazy"><figcaption>Front room: finished pieces, timber samples, the queue board.</figcaption></figure>
+    <figure class="v-maker rv"><img src="assets/make-plane.jpg" alt="A maker planing a piece of wood at a workbench" width="1000" height="1500" loading="lazy"><figcaption>Back room: the benches.</figcaption></figure>
+
+    <div class="v-info rv">
+      <p class="live" data-status><span class="dot" aria-hidden="true"></span><span data-status-text>Showroom Thu–Sun, 11am–6pm</span></p>
+      <dl class="hours">
+        <div><dt>Thu – Sun</dt><dd>11am – 6pm, walk in</dd></div>
+        <div><dt>Mon – Wed</dt><dd>By appointment</dd></div>
+        <div><dt>Public holidays</dt><dd>Closed; first week of Chinese New Year too</dd></div>
+      </dl>
+      <address>
+        <span class="addr-label">Address (fictional)</span>
+        18 Lorong Kayu, George Town<br>10200 Penang, Malaysia
+      </address>
+      <ul class="getting">
+        <li><b>Parking</b> Street bays on the lane, paid by the Penang Smart Parking app until 6pm.</li>
+        <li><b>Bus</b> Rapid Penang CAT free shuttle, then a 4-minute walk.</li>
+        <li><b>Access</b> One step at the door; we have a ramp, just ask.</li>
+      </ul>
+      <button class="btn btn-ink" type="button" data-demo>Book a weekday visit</button>
+    </div>
+  </div>
+</section>
+
+<!-- 06 CARE -->
+<section class="care" id="care" aria-labelledby="care-title">
+  <div class="care-photo rv"><img src="assets/care-chair.jpg" alt="An old wooden chair in a shaft of sunlight, its seat worn smooth" width="1000" height="1500" loading="lazy"></div>
+  <div class="care-body">
+    <div class="sec-head">
+      <p class="eyebrow"><b>06</b> Care &amp; lifetime repairs</p>
+      <h2 id="care-title">If one of our joints ever loosens, we fix it free. For life.</h2>
+    </div>
+    <p class="care-promise">That's a promise to the piece, not the receipt: it holds if you sell it, hand it down or find it at a flea market. Bring it in, or we collect on the island for RM60.</p>
+
+    <div class="care-cols">
+      <div class="rv">
+        <h3>Every week</h3>
+        <p>Dust with a dry cotton cloth. Wipe spills straight away; a damp cloth is fine, sprays and polish aren't.</p>
+      </div>
+      <div class="rv">
+        <h3>Every 6–12 months</h3>
+        <p>Rub in a thin coat of oil, wait 15 minutes, buff off the rest. Our Minyak Kayu oil is RM45 for 250 ml, about four tables' worth.</p>
+      </div>
+      <div class="rv">
+        <h3>In Penang weather</h3>
+        <p>Keep pieces 30 cm away from aircon vents and out of afternoon sun through west windows. Hairline gaps in the dry months are the wood breathing, and close again in the rains.</p>
+      </div>
+    </div>
+
+    <table class="repairs">
+      <caption>Repairs</caption>
+      <tbody>
+        <tr><th scope="row">Loose or broken joint we cut</th><td>Free, for life</td></tr>
+        <tr><th scope="row">Re-oil and buff, any piece</th><td>RM80, at your home on the island</td></tr>
+        <tr><th scope="row">Rings, burns, scratches</th><td>Re-sand and re-oil from RM120</td></tr>
+        <tr><th scope="row">Furniture we didn't make</th><td>Gladly, after a look; quoted per job</td></tr>
+      </tbody>
+    </table>
+  </div>
+</section>
+
+</main>
+
+<footer class="foot">
+  <p class="foot-mark" aria-hidden="true">Kayu Lane</p>
+  <div class="foot-cols">
+    <div>
+      <h2>Workshop &amp; showroom</h2>
+      <p>18 Lorong Kayu, George Town<br>10200 Penang (fictional)</p>
+      <p>Thu–Sun 11am–6pm<br>Mon–Wed by appointment</p>
+    </div>
+    <div>
+      <h2>Talk to a maker</h2>
+      <ul>
+        <li><button type="button" class="linkish" data-demo>WhatsApp the workshop</button></li>
+        <li><button type="button" class="linkish" data-demo>Email for a quote</button></li>
+        <li><button type="button" class="linkish" data-demo>Instagram: work in progress</button></li>
+      </ul>
+    </div>
+    <div>
+      <h2>In this catalogue</h2>
+      <ul>
+        <li><a href="#pieces">The pieces</a></li>
+        <li><a href="#making">How it's made</a></li>
+        <li><a href="#timber">Timber</a></li>
+        <li><a href="#care">Care &amp; repairs</a></li>
+      </ul>
+    </div>
+  </div>
+  <p class="foot-small"><span>© 2026 Kayu Lane (fictional). Photos from Unsplash.</span><span>Concept by <a href="../../">Aeryn's</a></span></p>
+</footer>
+
+<!-- Piece detail overlay -->
+<div class="sheet" data-sheet hidden>
+  <div class="sheet-scrim" data-close></div>
+  <div class="sheet-panel" role="dialog" aria-modal="true" aria-labelledby="sheet-title" tabindex="-1">
+    <button type="button" class="sheet-close" data-close aria-label="Close details">Close <span aria-hidden="true">×</span></button>
+    <div class="sheet-media">
+      <img class="sheet-main" data-sheet-main src="" alt="">
+      <div class="sheet-thumbs" data-sheet-thumbs></div>
+    </div>
+    <div class="sheet-body">
+      <p class="no" data-sheet-no></p>
+      <h2 id="sheet-title" data-sheet-title></h2>
+      <p class="sheet-meaning" data-sheet-meaning></p>
+      <p class="sheet-desc" data-sheet-desc></p>
+      <fieldset class="sheet-timber" data-sheet-timber>
+        <legend>Timber</legend>
+        <div data-sheet-options></div>
+      </fieldset>
+      <p class="sheet-price"><span data-sheet-price></span><small data-sheet-price-note></small></p>
+      <dl class="sheet-spec" data-sheet-spec></dl>
+      <div class="sheet-actions">
+        <button type="button" class="btn btn-ink" data-demo>Enquire about this piece</button>
+        <a class="btn btn-line" href="#commission" data-close-go>Change the size</a>
+      </div>
+    </div>
   </div>
 </div>
-<div class="marquee" aria-hidden="true"><span>Reclaimed chengal</span><span>·</span><span>Hand-cut joinery</span><span>·</span><span>Made to order</span><span>·</span><span>Delivery across the Peninsula</span><span>·</span><span>Lifetime repairs</span></div>
 
-<section id="pieces">
-  <div class="head"><h2>The <em>pieces</em></h2><div class="chips" role="group" aria-label="Filter pieces"></div></div>
-  <div class="grid"></div>
-</section>
+<div class="toast" role="status" aria-live="polite" data-toast>Concept site, so these aren't for sale. Want a site like this? <a href="../../#contact">Ask Aeryn's.</a></div>
 
-<section class="made" id="made">
-  <div><h2>Six weeks,<br><em>one maker.</em></h2></div>
-  <ol>
-    <li><div><b>Find the timber</b><p>Beams from old shophouses and kampung homes, dried slowly for a year.</p></div></li>
-    <li><div><b>Cut and join</b><p>Mortise and tenon, dovetails and wooden pegs. No screws, no metal brackets.</p></div></li>
-    <li><div><b>Oil and finish</b><p>Three coats of natural oil, hand-rubbed. Safe for food, kind to skin.</p></div></li>
-    <li><div><b>Sign and deliver</b><p>Each piece is signed by its maker and delivered by our own team.</p></div></li>
-  </ol>
-</section>
-
-<section id="woods">
-  <div class="head"><h2>Choose your <em>timber</em></h2></div>
-  <div class="woods">
-    <div class="wood"><div class="sw" style="background-color:#8a5a33;background-image:repeating-linear-gradient(90deg,#0000 0 18px,#0001 18px 22px)"></div><b>Chengal</b><span>Dense, golden-brown, darkens beautifully</span></div>
-    <div class="wood"><div class="sw" style="background-color:#c8915a;background-image:repeating-linear-gradient(90deg,#0000 0 26px,#0001 26px 29px)"></div><b>Nyatoh</b><span>Lighter, warm pink tones, smooth grain</span></div>
-    <div class="wood"><div class="sw" style="background-color:#5a3a22;background-image:repeating-linear-gradient(90deg,#0000 0 14px,#fff1 14px 16px)"></div><b>Merbau</b><span>Deep red-brown, for tables that work hard</span></div>
-  </div>
-</section>
-
-<section class="visit-sec" id="visit">
-  <h2>Come sit on <em>everything.</em></h2>
-  <dl><dt>Workshop</dt><dd>Lebuh Kayu (fictional), George Town, Penang</dd><dt>Open</dt><dd>Thu–Sun, 11am–6pm</dd><dt>Commissions</dt><dd>WhatsApp us your space and sizes</dd><dt>Delivery</dt><dd>Peninsula-wide, 2–3 weeks after finishing</dd></dl>
-</section>
-
-<footer><span>© Kayu Lane (fictional) · Concept by Aeryn's</span><span>Instagram · Pinterest · WhatsApp</span></footer>
-<div class="toast" role="status">Concept site, so these aren't for sale. Want a site like this? <a href="../../#contact">Ask Aeryn's.</a></div>
-<script>
-  const S = 'fill="none" stroke="#2a1d14" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"';
-  const art = {
-    chair: `<svg viewBox="0 0 120 140" ${S}><path d="M35 10v70M85 10v70M35 22h50M35 40h50"/><path d="M25 80h70v8H25z" fill="#c8915a"/><path d="M30 88l-5 48M90 88l5 48M38 88l3 40M82 88l-3 40"/></svg>`,
-    stool: `<svg viewBox="0 0 120 140" ${S}><ellipse cx="60" cy="40" rx="40" ry="10" fill="#c8915a"/><path d="M28 46l-10 88M92 46l10 88M45 50l-4 80M75 50l4 80M24 100h72"/></svg>`,
-    table: `<svg viewBox="0 0 160 120" ${S}><path d="M10 30h140v10H10z" fill="#8a5a33"/><path d="M22 40v70M138 40v70M22 85h116"/></svg>`,
-    shelf: `<svg viewBox="0 0 120 150" ${S}><path d="M20 10v135M100 10v135"/><path d="M20 30h80M20 70h80M20 110h80" stroke-width="5" stroke="#8a5a33"/><path d="M35 30v-14M45 30v-18M52 30v-12M70 70v-20h14v20"/></svg>`,
-    bench: `<svg viewBox="0 0 160 110" ${S}><path d="M10 40h140v10H10z" fill="#c8915a"/><path d="M25 50l-8 50M135 50l8 50M30 80h100"/></svg>`,
-    tray: `<svg viewBox="0 0 160 110" ${S}><path d="M20 50h120l-10 30H30z" fill="#c8915a"/><path d="M40 50v-10h20M100 40h20v10"/></svg>`,
-  };
-  const items = [
-    ['Lorong Chair', 'chair', 'Seating', 'Chengal · 46 × 50 × 82 cm', 'RM1,450'],
-    ['Pasar Stool', 'stool', 'Seating', 'Nyatoh · 35 × 35 × 65 cm', 'RM520'],
-    ['Meja Panjang', 'table', 'Tables', 'Merbau · 200 × 90 cm, seats 8', 'RM4,800'],
-    ['Ruang Shelf', 'shelf', 'Storage', 'Chengal · 4 shelves, 180 cm tall', 'RM2,300'],
-    ['Serambi Bench', 'bench', 'Seating', 'Nyatoh · 140 cm, fits 3', 'RM1,180'],
-    ['Dulang Tray', 'tray', 'Small things', 'Offcuts · 40 × 28 cm', 'RM160'],
-  ];
-  const grid = document.querySelector('.grid'), chips = document.querySelector('.chips');
-  grid.innerHTML = items.map(([n, a, c, m, p]) => `<article class="item" data-cat="${c}"><div class="pic">${art[a]}</div><h3>${n}</h3><p class="meta">${m}</p><div class="row"><b>${p}</b><button data-demo>Enquire</button></div></article>`).join('');
-  ['All', ...new Set(items.map(i => i[2]))].forEach(c => {
-    const b = document.createElement('button'); b.textContent = c; b.setAttribute('aria-pressed', c === 'All');
-    b.onclick = () => { chips.querySelectorAll('button').forEach(x => x.setAttribute('aria-pressed', x === b)); grid.querySelectorAll('.item').forEach(it => it.hidden = c !== 'All' && it.dataset.cat !== c); };
-    chips.append(b);
-  });
-  const t = document.querySelector('.toast'); let timer;
-  document.querySelectorAll('[data-demo]').forEach(b => b.addEventListener('click', () => { t.classList.add('show'); clearTimeout(timer); timer = setTimeout(() => t.classList.remove('show'), 3200); }));
-</script>
+<script src="app.js"></script>
 </body>
 </html>
