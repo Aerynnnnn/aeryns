@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
 <meta charset="utf-8">
-<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
 <meta name="robots" content="noindex">
 <title>Aeryn's · Custom websites for small brands</title>
 <meta name="description" content="Hand-built websites for small brands in Malaysia: shops, studios, clinics, makers, cafés and restaurants. Phone-first, easy to update, and you own everything.">
@@ -18,287 +18,335 @@
 <meta property="og:image:alt" content="Aeryn's: custom websites for small brands, with a screenshot of The Bread Bar website">
 <meta name="twitter:card" content="summary_large_image">
 <meta name="twitter:image" content="https://aerynnnnn.github.io/aeryns/assets/og-card.jpg">
+<meta name="theme-color" content="#efece6">
+<link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'><rect width='32' height='32' rx='8' fill='%23161310'/><text x='16' y='23' font-family='Georgia,serif' font-size='20' text-anchor='middle' fill='%23ff7559'>A</text></svg>">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,300..700&family=Instrument+Serif:ital@0;1&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="scrollcraft.css">
 <link rel="stylesheet" href="styles.css">
-<script>document.documentElement.classList.add('js')</script>
 </head>
 <body>
 
-<header class="nav" id="top">
-  <a class="brand" href="#top" aria-label="Aeryn's, back to top">Aeryn<span>’</span>s</a>
-  <nav class="nav-links" aria-label="Sections">
-    <a href="#work">Work</a>
-    <a href="#packages">Packages</a>
-    <a href="#process">How it works</a>
-    <a href="#faq">FAQ</a>
-  </nav>
-  <a class="btn btn-ink btn-sm" data-wa href="#contact">WhatsApp me</a>
+<!-- The chrome is a browser: wordmark, a real address field (it is the section menu), one CTA -->
+<header class="bar">
+  <a class="mark" href="#top" aria-label="Aeryn's, back to top">Aeryn<span>’</span>s</a>
+  <div class="omni">
+    <button class="omni-field" type="button" aria-expanded="false" aria-controls="omni-list" aria-label="Sections menu">
+      <svg class="omni-lock" viewBox="0 0 16 16" aria-hidden="true"><path d="M4.5 7V5.2a3.5 3.5 0 0 1 7 0V7" fill="none" stroke="currentColor" stroke-width="1.5"/><rect x="3" y="7" width="10" height="7" rx="1.6" fill="currentColor"/></svg>
+      <span class="omni-host">aerynnnnn.github.io/</span><span class="omni-path">aeryns/</span><b class="omni-hash" data-omni-hash></b>
+      <svg class="omni-caret" viewBox="0 0 16 16" aria-hidden="true"><path d="m4 6 4 4 4-4" fill="none" stroke="currentColor" stroke-width="1.6"/></svg>
+    </button>
+    <ul class="omni-list" id="omni-list" hidden>
+      <li><a href="#work">Client work <span>#work</span></a></li>
+      <li><a href="#concepts">Concept sites <span>#concepts</span></a></li>
+      <li><a href="#included">In every site <span>#included</span></a></li>
+      <li><a href="#packages">Packages <span>#packages</span></a></li>
+      <li><a href="#process">How it works <span>#process</span></a></li>
+      <li><a href="#faq">Questions <span>#faq</span></a></li>
+      <li><a href="#contact">Get in touch <span>#contact</span></a></li>
+    </ul>
+  </div>
+  <a class="btn btn-accent btn-sm" data-wa href="#contact">Chat on WhatsApp</a>
 </header>
 
 <main>
-  <!-- Hero -->
-  <section class="hero">
-    <div class="hero-copy">
-      <p class="eyebrow">Custom websites for small brands · Malaysia</p>
-      <h1>A website as good as <em>what you make.</em></h1>
-      <p class="lede">Shops, studios, clinics, makers, cafés: a site that looks like your brand, not a template, with one-tap WhatsApp, bookings or ordering built in. Hand-built, phone-first, easy to update, and you own every bit of it.</p>
-      <div class="hero-cta">
-        <a class="btn btn-accent" data-wa href="#contact">Get a free quote on WhatsApp</a>
-        <a class="btn btn-line" href="#work">See my work</a>
-      </div>
-      <p class="hero-note">Free 20-minute chat · No monthly fees unless you want them</p>
-    </div>
-    <div class="hero-art" aria-hidden="true">
-      <div class="frame frame-desk">
-        <div class="frame-bar"><i></i><i></i><i></i><span>Embun Botanics · concept</span></div>
-        <img src="assets/work/embun-desktop.jpg" alt="" width="1200" height="750">
-      </div>
-      <div class="frame frame-phone">
-        <img src="assets/work/gerak-mobile.jpg" alt="" width="500" height="1025">
-      </div>
-      <p class="sticker">Hand-built<br>in KL</p>
-    </div>
-  </section>
 
-  <div class="ticker" aria-hidden="true">
-    <div class="ticker-track">
-      <span>Product catalogues</span><span>Bookings</span><span>Menus</span><span>Price lists</span><span>Class timetables</span><span>WhatsApp enquiries</span><span>Opening hours</span><span>Google Maps</span><span>Online ordering</span>
-      <span>Product catalogues</span><span>Bookings</span><span>Menus</span><span>Price lists</span><span>Class timetables</span><span>WhatsApp enquiries</span><span>Opening hours</span><span>Google Maps</span><span>Online ordering</span>
-    </div>
-  </div>
-
-  <!-- Work -->
-  <section class="section" id="work">
-    <div class="section-head reveal">
-      <p class="eyebrow">Selected work</p>
-      <h2>Different brands, <em>very</em> different sites.</h2>
-      <p class="sub">Two real restaurant projects, then concept sites for fictional brands that show the range: retail, fitness, craft and healthcare.</p>
-    </div>
-    <h3 class="work-label reveal">Client projects</h3>
-
-    <article class="case reveal">
-      <div class="case-media">
-        <figure class="frame frame-desk">
-          <div class="frame-bar"><i></i><i></i><i></i><span>The Bread Bar · home</span></div>
-          <img src="assets/work/tbb-desktop.jpg" alt="The Bread Bar website home page: a sourdough hero photo with the line Redefining Food" width="1200" height="750" loading="lazy">
-        </figure>
-        <figure class="frame frame-desk frame-back">
-          <div class="frame-bar"><i></i><i></i><i></i><span>The Bread Bar · menu</span></div>
-          <img src="assets/work/tbb-menu-desktop.jpg" alt="The Bread Bar menu page with a TTDI / Publika outlet switch and dish photos" width="1200" height="750" loading="lazy">
-        </figure>
+  <!-- 1 · Recognition: real windows at three depths, the promise beside them -->
+  <section class="hero g-light" id="top" data-sc-act="pin" data-sc-span="1.5">
+    <div data-sc-stage class="hero-stage">
+      <div class="hero-copy" data-sc-cue="0 1 0 0.25">
+        <h1 class="sc-display">A website as good as <em>what you make.</em></h1>
+        <p class="hero-lede">Hand-built sites for shops, studios, clinics, makers and cafés in Malaysia. Phone-first, and yours to keep.</p>
+        <div class="hero-cta">
+          <a class="btn btn-accent" data-wa href="#contact">Chat on WhatsApp</a>
+          <a class="link-line" href="#work">See the work</a>
+        </div>
       </div>
-      <div class="case-copy">
-        <p class="case-tag">Sourdough bakery-café · TTDI &amp; Publika</p>
-        <h3>The Bread Bar</h3>
-        <p>Two outlets with slightly different menus and prices, so the menu flips between TTDI and Publika with one tap. Every “Order” button lets guests pick their outlet, then Beep, GrabFood or WhatsApp.</p>
-        <ul class="ticks">
-          <li>Full menu with a photo for every dish</li>
-          <li>Bakery, merch shop and whole-loaf pre-orders</li>
-          <li>Looping kitchen videos, muted and light on data</li>
-        </ul>
-        <a class="link-arrow" href="https://aerynnnnn.github.io/TBB-FLAT18-Websites/the-bread-bar/" target="_blank" rel="noopener">Visit the site <span>→</span></a>
-      </div>
-    </article>
-
-    <article class="case case-flip reveal">
-      <div class="case-media daynight" data-mode="day">
-        <figure class="frame frame-desk">
-          <div class="frame-bar"><i></i><i></i><i></i><span>FLAT18 · home</span></div>
-          <img class="dn-day" src="assets/work/flat18-day-desktop.jpg" alt="FLAT18 website in its daytime look: green and cream with a brunch photo" width="1200" height="750" loading="lazy">
-          <img class="dn-night" src="assets/work/flat18-desktop.jpg" alt="FLAT18 website in its evening look: deep green with a steak dinner photo" width="1200" height="750" loading="lazy">
-        </figure>
-        <button class="dn-switch" type="button" aria-pressed="false"><span class="dn-knob"></span><span class="dn-label">Day</span></button>
-      </div>
-      <div class="case-copy">
-        <p class="case-tag">All-day restaurant · Mutiara Damansara</p>
-        <h3>FLAT18</h3>
-        <p>Brunch by day, dinner specials after five, so the site changes with the clock: bright and fresh in the morning, moody in the evening. <span class="hint">Try the switch on the picture.</span></p>
-        <ul class="ticks">
-          <li>Day and night looks that switch on their own</li>
-          <li>Events page: buffets, plated dinners, canapés</li>
-          <li>Whole-cake gallery and table bookings on WhatsApp</li>
-        </ul>
-        <a class="link-arrow" href="https://aerynnnnn.github.io/TBB-FLAT18-Websites/flat18/" target="_blank" rel="noopener">Visit the site <span>→</span></a>
-      </div>
-    </article>
-
-    <div class="concepts-head reveal">
-      <h3 class="work-label">Concept projects</h3>
-      <p>Fictional brands I designed to show what I can build beyond food. Click through: they all work.</p>
-    </div>
-    <div class="concepts">
-      <a class="concept reveal" href="work/embun/">
-        <figure class="frame frame-desk"><div class="frame-bar"><i></i><i></i><i></i><span>Embun Botanics</span></div><img src="assets/work/embun-desktop.jpg" alt="Embun Botanics concept: a sage-green skincare shop with drawn product bottles" width="1200" height="750" loading="lazy"></figure>
-        <p class="case-tag">Skincare online shop</p>
-        <h3>Embun Botanics</h3>
-        <p>Photo-led skincare shop: product quick view and bag, an ingredient story that changes as you scroll, routine bundle, refill program and stockists.</p>
-        <span class="link-arrow">View concept <span>→</span></span>
-      </a>
-      <a class="concept reveal" href="work/gerak/">
-        <figure class="frame frame-desk"><div class="frame-bar"><i></i><i></i><i></i><span>Gerak Studio</span></div><img src="assets/work/gerak-desktop.jpg" alt="Gerak Studio concept: a bold black and lime fitness studio site" width="1200" height="750" loading="lazy"></figure>
-        <p class="case-tag">Fitness &amp; pilates studio</p>
-        <h3>Gerak Studio</h3>
-        <p>Loud and energetic: video hero, a live weekly timetable with spots left and waitlists, class packs and passes, first-visit guide and studio tour.</p>
-        <span class="link-arrow">View concept <span>→</span></span>
-      </a>
-      <a class="concept reveal" href="work/kayu/">
-        <figure class="frame frame-desk"><div class="frame-bar"><i></i><i></i><i></i><span>Kayu Lane</span></div><img src="assets/work/kayu-desktop.jpg" alt="Kayu Lane concept: an earthy, editorial handmade furniture catalogue" width="1200" height="750" loading="lazy"></figure>
-        <p class="case-tag">Handmade furniture</p>
-        <h3>Kayu Lane</h3>
-        <p>Editorial catalogue: filterable pieces with a detail view where the price follows the timber you pick, a scroll story of how it's made, and a commission estimator.</p>
-        <span class="link-arrow">View concept <span>→</span></span>
-      </a>
-      <a class="concept reveal" href="work/sinar/">
-        <figure class="frame frame-desk"><div class="frame-bar"><i></i><i></i><i></i><span>Sinar Dental</span></div><img src="assets/work/sinar-desktop.jpg" alt="Sinar Dental concept: a clean teal and white dental clinic site" width="1200" height="750" loading="lazy"></figure>
-        <p class="case-tag">Dental clinic</p>
-        <h3>Sinar Dental</h3>
-        <p>Clean and reassuring: live open/closed status, treatment details, upfront price list, a first-visit guide for nervous patients and a 4-step booking flow.</p>
-        <span class="link-arrow">View concept <span>→</span></span>
-      </a>
-    </div>
-  </section>
-
-  <!-- What you get -->
-  <section class="section section-tint" id="included">
-    <div class="section-head reveal">
-      <p class="eyebrow">In every site</p>
-      <h2>Built for how people actually find you: on their phone, ready to buy.</h2>
-    </div>
-    <div class="grid-3">
-      <div class="feature reveal"><span class="num">01</span><h3>Phone-first</h3><p>Designed for a thumb first and a laptop second. That’s where most of your customers are.</p></div>
-      <div class="feature reveal"><span class="num">02</span><h3>Easy to update</h3><p>Products, prices, menus and schedules live in one simple file, so changes don’t need a developer. Or I do it for you.</p></div>
-      <div class="feature reveal"><span class="num">03</span><h3>One tap to act</h3><p>WhatsApp, booking, Shopee or GrabFood: buttons that take people straight to buying, booking or asking.</p></div>
-      <div class="feature reveal"><span class="num">04</span><h3>Fast and light</h3><p>No heavy page builders. Pages open quickly on mobile data, and that helps you on Google too.</p></div>
-      <div class="feature reveal"><span class="num">05</span><h3>Easy to find</h3><p>Map, opening hours and address where they matter, plus the basics Google needs to show you properly.</p></div>
-      <div class="feature reveal"><span class="num">06</span><h3>Yours to keep</h3><p>Your domain, your accounts, your files. No lock-in, no surprise renewal from me. More on that below.</p></div>
-    </div>
-  </section>
-
-  <!-- Packages -->
-  <section class="section" id="packages">
-    <div class="section-head reveal">
-      <p class="eyebrow">Packages</p>
-      <h2>Clear prices, no surprises.</h2>
-      <p class="sub">One-time build fee. Hosting is free on the setups I use; you only pay for your domain name (about RM50–150 a year, paid straight to the registrar in your name).</p>
-    </div>
-    <div class="plans">
-      <div class="plan reveal">
-        <h3>One Page</h3>
-        <p class="plan-for">For a new or small business that needs to look good and be findable, fast.</p>
-        <p class="price"><small>from</small> RM<span data-price="starter">700</span></p>
-        <ul class="ticks">
-          <li>One scrolling page: about, products or services, hours, map</li>
-          <li>WhatsApp + order/booking buttons</li>
-          <li>Up to 40 products, services or menu items</li>
-          <li>1 round of changes</li>
-          <li>Ready in about 1 week</li>
-        </ul>
-      </div>
-      <div class="plan plan-pick reveal">
-        <p class="plan-flag">Most popular</p>
-        <h3>Full Site</h3>
-        <p class="plan-for">For an established shop, studio, clinic or restaurant, one or two locations.</p>
-        <p class="price"><small>from</small> RM<span data-price="standard">2,000</span></p>
-        <ul class="ticks">
-          <li>Up to 6 pages: home, products, about, locations, contact…</li>
-          <li>Full catalogue, price list, menu or timetable with photos</li>
-          <li>Per-location hours, maps and booking/order links</li>
-          <li>2 rounds of changes</li>
-          <li>Ready in about 2–3 weeks</li>
-        </ul>
-      </div>
-      <div class="plan reveal">
-        <h3>Signature</h3>
-        <p class="plan-for">A one-of-a-kind design built around your brand, like FLAT18’s day-and-night look.</p>
-        <p class="price"><small>from</small> RM<span data-price="signature">3,200</span></p>
-        <ul class="ticks">
-          <li>Everything in Full Site, no page limit</li>
-          <li>Custom touches: interactive features, video, motion</li>
-          <li>Shop, booking, pre-order or events pages</li>
-          <li>3 rounds of changes</li>
-          <li>Ready in about 3–5 weeks</li>
-        </ul>
-      </div>
-    </div>
-    <div class="care reveal">
-      <div>
-        <h3>Care plan <span class="care-price">RM<span data-price="care">120</span>/month</span></h3>
-        <p>Optional, cancel any time. Send me product, price, menu or hours changes on WhatsApp and they’re live within 2 working days (up to 1 hour of edits a month), plus a monthly check that everything still works.</p>
-      </div>
-      <a class="btn btn-line" data-wa href="#contact">Ask about it</a>
-    </div>
-  </section>
-
-  <!-- Ownership -->
-  <section class="section section-dark" id="own">
-    <div class="own reveal">
-      <p class="eyebrow">No lock-in</p>
-      <h2>It’s your website. <em>Really.</em></h2>
-      <div class="grid-3">
-        <div><h3>Your name on everything</h3><p>The domain and hosting are set up in your business’s name from day one, with me added as a helper. Not the other way round.</p></div>
-        <div><h3>A clean handover</h3><p>When we’re done you get a short guide for updating your products and prices, a list of every account the site uses, and all the files.</p></div>
-        <div><h3>Leave whenever</h3><p>Stay on the care plan, do updates yourself, or hire someone else. Nothing needs to move, nothing breaks.</p></div>
+      <div class="hero-scene" aria-hidden="true">
+        <div class="plane plane-far" data-sc-parallax="-1.5">
+          <div class="pw" data-depth="0.35">
+            <figure class="win"><div class="win-bar"><i></i><i></i><i></i><span>Kayu Lane</span></div><img src="assets/work/kayu-desktop.jpg" alt="" width="1200" height="750"></figure>
+          </div>
+        </div>
+        <div class="plane plane-mid" data-sc-parallax="-0.6">
+          <div class="pw" data-depth="0.7">
+            <figure class="win"><div class="win-bar"><i></i><i></i><i></i><span>Rexie the Dino</span></div><img src="assets/work/rexie-hero-d.jpg" alt="" width="1200" height="750"></figure>
+          </div>
+        </div>
+        <div class="plane plane-near" data-sc-parallax="1.1">
+          <div class="pw" data-depth="1.3">
+            <figure class="phone"><img src="assets/work/tbb-hero-m.jpg" alt="" width="520" height="1125"></figure>
+          </div>
+        </div>
       </div>
     </div>
   </section>
 
-  <!-- Process -->
-  <section class="section" id="process">
-    <div class="section-head reveal">
-      <p class="eyebrow">How it works</p>
-      <h2>From first chat to live in four steps.</h2>
-    </div>
-    <ol class="steps">
-      <li class="reveal"><span class="num">1</span><div><h3>Chat</h3><p>A free 20-minute call or WhatsApp chat about your business, your customers and what the site needs to do. You get a fixed quote.</p></div></li>
-      <li class="reveal"><span class="num">2</span><div><h3>Deposit &amp; your content</h3><p>50% to start. You send your logo, products or menu, photos and links; I tell you exactly what’s missing.</p></div></li>
-      <li class="reveal"><span class="num">3</span><div><h3>Draft &amp; changes</h3><p>You get a private preview link to try on your own phone, then your rounds of changes.</p></div></li>
-      <li class="reveal"><span class="num">4</span><div><h3>Launch &amp; handover</h3><p>Balance paid, site goes live on your domain, and you get your handover pack.</p></div></li>
-    </ol>
-  </section>
-
-  <!-- FAQ -->
-  <section class="section section-tint" id="faq">
-    <div class="section-head reveal">
-      <p class="eyebrow">Questions</p>
-      <h2>Good to know.</h2>
-    </div>
-    <div class="faq reveal">
-      <details><summary>Do I have to pay every month?</summary><p>No. The build is a one-time fee and hosting is free on the setups I use. Your only running cost is the domain name, about RM50–150 a year. The care plan is optional.</p></details>
-      <details><summary>What kinds of businesses do you work with?</summary><p>Small brands of all kinds: shops and online stores, studios and gyms, clinics and salons, makers and crafts, cafés and restaurants. If your customers find you on their phone, I can help.</p></details>
-      <details><summary>Can I change prices and products myself?</summary><p>Yes. Products, prices, menus and schedules sit in one file, and the handover guide shows you how to edit it. If you’d rather not, the care plan covers it.</p></details>
-      <details><summary>What do you need from me?</summary><p>Your logo, your product or price list (a PDF or photos are fine), good photos, opening hours, addresses and your WhatsApp, booking or shop links. I’ll send a checklist.</p></details>
-      <details><summary>Do you take the photos?</summary><p>I work with the photos you have. If they need help, I can suggest a photographer, priced separately.</p></details>
-      <details><summary>Can you build a full online shop with payments?</summary><p>I build product catalogues that send orders to WhatsApp, Shopee or your existing store. Full checkout with card payments is quoted separately, since it needs a payment provider in your name.</p></details>
-      <details><summary>Can you put me on Google Maps?</summary><p>I’ll link the site to your Google Business Profile and help you check it’s filled in. The profile itself has to be claimed by the owner.</p></details>
-      <details><summary>How do payments work?</summary><p>50% deposit to start, 50% before launch. Bank transfer or DuitNow. Everything is written down in a short agreement before we begin.</p></details>
+  <!-- 2 · Quiet doubt: type on space, the silence before the peak -->
+  <section class="statement g-light" id="intro">
+    <div class="sc-wrap">
+      <p class="statement-line" data-sc-in>Most small brands end up on a template that looks like everyone else’s. <span>Your customers decide on their phone, in seconds.</span></p>
+      <p class="statement-sub" data-sc-in>So every site I make is built by hand around what you actually sell, then handed over to you.</p>
     </div>
   </section>
 
-  <!-- Contact -->
-  <section class="section contact" id="contact">
-    <div class="reveal">
-      <p class="eyebrow">Let’s talk</p>
-      <h2>Let’s get your brand <em>online.</em></h2>
-      <p class="sub">Tell me your business name and what you’re after. I usually reply the same day.</p>
-      <div class="contact-links">
-        <a class="btn btn-accent" data-wa href="#contact">WhatsApp</a>
-        <a class="btn btn-line" data-email href="#contact">Email</a>
-        <a class="btn btn-line" data-ig href="#contact">Instagram</a>
+  <!-- 3 · PEAK: the browser types each client's address and scrolls their real site -->
+  <section class="work g-dark" id="work" data-sc-act="pin" data-sc-span="5.4">
+    <div data-sc-stage class="work-stage">
+      <div class="work-side">
+        <h2 class="work-title sc-display">Client work</h2>
+        <div class="labels">
+          <article class="label is-on" data-label="0">
+            <p class="label-kind">Social media &amp; video agency · Malaysia</p>
+            <h3>Rexie the Dino</h3>
+            <dl>
+              <div><dt>Built</dt><dd>Homepage, Oct 2026</dd></div>
+              <div><dt>Signature</dt><dd>Colour rings that follow the scroll, purple to orange</dd></div>
+              <div><dt>Status</dt><dd>Preview, with the client</dd></div>
+            </dl>
+            <a class="link-line" href="https://aerynnnnn.github.io/aeryns-previews/rexie-the-dino/" target="_blank" rel="noopener">Open the site</a>
+          </article>
+          <article class="label" data-label="1">
+            <p class="label-kind">Sourdough bakery-café · TTDI &amp; Publika</p>
+            <h3>The Bread Bar</h3>
+            <dl>
+              <div><dt>Built</dt><dd>Full site, Oct 2026</dd></div>
+              <div><dt>Signature</dt><dd>One tap flips menus and prices between outlets</dd></div>
+              <div><dt>Status</dt><dd>Preview, awaiting launch</dd></div>
+            </dl>
+            <a class="link-line" href="https://aerynnnnn.github.io/TBB-FLAT18-Websites/the-bread-bar/" target="_blank" rel="noopener">Open the site</a>
+          </article>
+          <article class="label" data-label="2">
+            <p class="label-kind">All-day restaurant · Mutiara Damansara</p>
+            <h3>FLAT18</h3>
+            <dl>
+              <div><dt>Built</dt><dd>Full site, Oct 2026</dd></div>
+              <div><dt>Signature</dt><dd>Day and night looks that follow the clock</dd></div>
+              <div><dt>Status</dt><dd>Preview, awaiting launch</dd></div>
+            </dl>
+            <a class="link-line" href="https://aerynnnnn.github.io/TBB-FLAT18-Websites/flat18/" target="_blank" rel="noopener">Open the site</a>
+          </article>
+        </div>
+      </div>
+
+      <div class="browser" aria-hidden="true">
+        <div class="browser-tabs">
+          <span class="dots"><i></i><i></i><i></i></span>
+          <span class="tab is-on" data-tab="0">Rexie the Dino</span>
+          <span class="tab" data-tab="1">The Bread Bar</span>
+          <span class="tab" data-tab="2">FLAT18</span>
+        </div>
+        <div class="browser-addr">
+          <svg viewBox="0 0 16 16"><path d="M4.5 7V5.2a3.5 3.5 0 0 1 7 0V7" fill="none" stroke="currentColor" stroke-width="1.5"/><rect x="3" y="7" width="10" height="7" rx="1.6" fill="currentColor"/></svg>
+          <span class="addr-text"><span class="addr-host" data-addr-host></span><span class="addr-path" data-addr-path></span><span class="addr-caret"></span></span>
+          <span class="addr-load" data-addr-load></span>
+        </div>
+        <div class="browser-view">
+          <div class="shot is-on" data-shot="0" data-url="aerynnnnn.github.io/aeryns-previews/rexie-the-dino/">
+            <picture><source media="(max-width: 760px)" srcset="assets/work/rexie-scroll-m.jpg"><img src="assets/work/rexie-scroll-d.jpg" alt="" width="1024" height="5120" decoding="async"></picture>
+          </div>
+          <div class="shot" data-shot="1" data-url="aerynnnnn.github.io/TBB-FLAT18-Websites/the-bread-bar/">
+            <picture><source media="(max-width: 760px)" srcset="assets/work/tbb-scroll-m.jpg"><img src="assets/work/tbb-scroll-d.jpg" alt="" width="1024" height="5120" decoding="async"></picture>
+          </div>
+          <div class="shot" data-shot="2" data-url="aerynnnnn.github.io/TBB-FLAT18-Websites/flat18/">
+            <picture><source media="(max-width: 760px)" srcset="assets/work/flat18-scroll-m.jpg"><img src="assets/work/flat18-scroll-d.jpg" alt="" width="1024" height="5120" decoding="async"></picture>
+          </div>
+        </div>
       </div>
     </div>
   </section>
+
+  <!-- 4 · Curiosity: the range, sideways -->
+  <section class="concepts g-light" id="concepts" data-sc-act="pan" data-sc-span="4">
+    <div data-sc-stage class="con-stage">
+      <div class="rail" data-sc-pan="0.04">
+        <div class="rail-lead">
+          <h2 class="sc-display">Beyond food.</h2>
+          <p>Four fictional brands I designed and built to show the range. Every one of them works: click through and try it.</p>
+        </div>
+        <a class="con" href="work/embun/">
+          <figure class="win"><div class="win-bar"><i></i><i></i><i></i><span>Embun Botanics</span></div><img src="assets/work/embun-desktop.jpg" alt="Embun Botanics concept: a sage-green skincare shop" width="1200" height="750" loading="lazy"></figure>
+          <h3>Embun</h3>
+          <dl class="con-lab">
+            <div><dt>Kind</dt><dd>Skincare online shop</dd></div>
+            <div><dt>Built</dt><dd>Quick view, bag, routine bundle, refills</dd></div>
+          </dl>
+        </a>
+        <a class="con" href="work/gerak/">
+          <figure class="win"><div class="win-bar"><i></i><i></i><i></i><span>Gerak Studio</span></div><img src="assets/work/gerak-desktop.jpg" alt="Gerak Studio concept: a black and lime fitness studio site" width="1200" height="750" loading="lazy"></figure>
+          <h3>Gerak</h3>
+          <dl class="con-lab">
+            <div><dt>Kind</dt><dd>Fitness &amp; pilates studio</dd></div>
+            <div><dt>Built</dt><dd>Video hero, live timetable, class packs</dd></div>
+          </dl>
+        </a>
+        <a class="con" href="work/kayu/">
+          <figure class="win"><div class="win-bar"><i></i><i></i><i></i><span>Kayu Lane</span></div><img src="assets/work/kayu-desktop.jpg" alt="Kayu Lane concept: an earthy handmade furniture catalogue" width="1200" height="750" loading="lazy"></figure>
+          <h3>Kayu</h3>
+          <dl class="con-lab">
+            <div><dt>Kind</dt><dd>Handmade furniture</dd></div>
+            <div><dt>Built</dt><dd>Catalogue, timber pricing, commission estimator</dd></div>
+          </dl>
+        </a>
+        <a class="con" href="work/sinar/">
+          <figure class="win"><div class="win-bar"><i></i><i></i><i></i><span>Sinar Dental</span></div><img src="assets/work/sinar-desktop.jpg" alt="Sinar Dental concept: a clean teal and white clinic site" width="1200" height="750" loading="lazy"></figure>
+          <h3>Sinar</h3>
+          <dl class="con-lab">
+            <div><dt>Kind</dt><dd>Dental clinic</dd></div>
+            <div><dt>Built</dt><dd>Open-now status, price list, 4-step booking</dd></div>
+          </dl>
+        </a>
+        <p class="rail-end">Concept sites: made-up brands with free stock photos. Their buttons are demos and send nothing.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- 5 · Confidence: what every site has, then plain prices -->
+  <section class="included g-light" id="included">
+    <div class="sc-wrap inc-grid">
+      <h2 class="sc-display inc-title" data-sc-in>Built for how people find you: on a phone, <em>ready to buy.</em></h2>
+      <ul class="inc" data-sc-in data-sc-stagger="60">
+        <li><h3>Phone-first</h3><p>Designed for a thumb first and a laptop second. That’s where most of your customers are.</p></li>
+        <li><h3>Easy to update</h3><p>Products, prices, menus and schedules live in one simple file. Change them yourself, or I do it for you.</p></li>
+        <li><h3>One tap to act</h3><p>WhatsApp, booking, Shopee or GrabFood: buttons that go straight to buying, booking or asking.</p></li>
+        <li><h3>Fast and light</h3><p>No heavy page builders. Pages open quickly on mobile data, which helps you on Google too.</p></li>
+        <li><h3>Easy to find</h3><p>Map, hours and address where they matter, plus the basics Google needs to show you properly.</p></li>
+        <li><h3>Yours to keep</h3><p>Your domain, your accounts, your files. No lock-in, no surprise renewal from me.</p></li>
+      </ul>
+    </div>
+  </section>
+
+  <section class="packages g-light" id="packages">
+    <div class="sc-wrap">
+      <div class="pk-head" data-sc-in>
+        <h2 class="sc-display">Clear prices, no surprises.</h2>
+        <p>One-time build fee. Hosting is free on the setups I use; you only pay for your domain name (about RM50–150 a year, paid straight to the registrar in your name).</p>
+      </div>
+      <div class="plans" data-sc-in data-sc-stagger="70">
+        <div class="plan">
+          <h3>One Page</h3>
+          <p class="plan-for">For a new or small business that needs to look good and be findable, fast.</p>
+          <p class="price"><small>from</small> RM<span data-price="starter">700</span></p>
+          <ul class="ticks">
+            <li>One scrolling page: about, products or services, hours, map</li>
+            <li>WhatsApp + order/booking buttons</li>
+            <li>Up to 40 products, services or menu items</li>
+            <li>1 round of changes</li>
+            <li>Ready in about 1 week</li>
+          </ul>
+        </div>
+        <div class="plan plan-pick">
+          <p class="plan-flag">Most popular</p>
+          <h3>Full Site</h3>
+          <p class="plan-for">For an established shop, studio, clinic or restaurant, one or two locations.</p>
+          <p class="price"><small>from</small> RM<span data-price="standard">2,000</span></p>
+          <ul class="ticks">
+            <li>Up to 6 pages: home, products, about, locations, contact…</li>
+            <li>Full catalogue, price list, menu or timetable with photos</li>
+            <li>Per-location hours, maps and booking/order links</li>
+            <li>2 rounds of changes</li>
+            <li>Ready in about 2–3 weeks</li>
+          </ul>
+        </div>
+        <div class="plan">
+          <h3>Signature</h3>
+          <p class="plan-for">A one-of-a-kind design built around your brand, like FLAT18’s day-and-night look.</p>
+          <p class="price"><small>from</small> RM<span data-price="signature">3,200</span></p>
+          <ul class="ticks">
+            <li>Everything in Full Site, no page limit</li>
+            <li>Custom touches: interactive features, video, scroll motion</li>
+            <li>Shop, booking, pre-order or events pages</li>
+            <li>3 rounds of changes</li>
+            <li>Ready in about 3–5 weeks</li>
+          </ul>
+        </div>
+      </div>
+      <div class="care" data-sc-in>
+        <p><strong>Care plan, RM<span data-price="care">120</span>/month.</strong> Optional, cancel any time. Send me product, price, menu or hours changes on WhatsApp and they’re live within 2 working days (up to 1 hour of edits a month), plus a monthly check that everything still works.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- 6 · Relief: a dark plate rises -->
+  <section class="own g-light" id="own" data-sc-act="flow">
+    <div class="own-plate g-dark" data-sc-reveal="down" data-sc-reveal-at="0.04 0.4">
+      <div class="sc-wrap own-inner">
+        <h2 class="sc-display">It’s your website. <em>Really.</em></h2>
+        <dl class="own-list">
+          <div><dt>Your name on everything</dt><dd>The domain and hosting are set up in your business’s name from day one, with me added as a helper. Not the other way round.</dd></div>
+          <div><dt>A clean handover</dt><dd>A short guide for updating your products and prices, a list of every account the site uses, and all the files.</dd></div>
+          <div><dt>Leave whenever</dt><dd>Stay on the care plan, do updates yourself, or hire someone else. Nothing needs to move, nothing breaks.</dd></div>
+        </dl>
+      </div>
+    </div>
+  </section>
+
+  <!-- 7 · Calm: steps and short answers -->
+  <section class="process g-light" id="process">
+    <div class="sc-wrap">
+      <h2 class="sc-display" data-sc-in>From first chat to live in four steps.</h2>
+      <ol class="steps" data-sc-in data-sc-stagger="70">
+        <li><h3>Chat</h3><p>A free 20-minute call or WhatsApp chat about your business and what the site needs to do. You get a fixed quote.</p></li>
+        <li><h3>Deposit &amp; content</h3><p>50% to start. You send your logo, products or menu, photos and links; I tell you exactly what’s missing.</p></li>
+        <li><h3>Draft &amp; changes</h3><p>A private preview link to try on your own phone, then your rounds of changes.</p></li>
+        <li><h3>Launch &amp; handover</h3><p>Balance paid, the site goes live on your domain, and you get your handover pack.</p></li>
+      </ol>
+    </div>
+  </section>
+
+  <section class="faq g-light" id="faq">
+    <div class="sc-wrap faq-grid">
+      <h2 class="sc-display" data-sc-in>Good to know.</h2>
+      <div class="faq-list" data-sc-in>
+        <details><summary>Do I have to pay every month?</summary><p>No. The build is a one-time fee and hosting is free on the setups I use. Your only running cost is the domain name, about RM50–150 a year. The care plan is optional.</p></details>
+        <details><summary>What kinds of businesses do you work with?</summary><p>Small brands of all kinds: shops and online stores, studios and gyms, clinics and salons, makers and crafts, agencies, cafés and restaurants. If your customers find you on their phone, I can help.</p></details>
+        <details><summary>Can I change prices and products myself?</summary><p>Yes. Products, prices, menus and schedules sit in one file, and the handover guide shows you how to edit it. If you’d rather not, the care plan covers it.</p></details>
+        <details><summary>What do you need from me?</summary><p>Your logo, your product or price list (a PDF or photos are fine), good photos, opening hours, addresses and your WhatsApp, booking or shop links. I’ll send a checklist.</p></details>
+        <details><summary>Do you take the photos?</summary><p>I work with the photos you have. If they need help, I can suggest a photographer, priced separately.</p></details>
+        <details><summary>Can you build a full online shop with payments?</summary><p>I build product catalogues that send orders to WhatsApp, Shopee or your existing store. Full checkout with card payments is quoted separately, since it needs a payment provider in your name.</p></details>
+        <details><summary>Can you put me on Google Maps?</summary><p>I’ll link the site to your Google Business Profile and help you check it’s filled in. The profile itself has to be claimed by the owner.</p></details>
+        <details><summary>How do payments work?</summary><p>50% deposit to start, 50% before launch. Bank transfer or DuitNow. Everything is written down in a short agreement before we begin.</p></details>
+      </div>
+    </div>
+  </section>
+
+  <!-- 8 · Resolve: the visitor types their own brand into the address bar -->
+  <section class="close g-dark" id="contact" data-sc-act="pin" data-sc-span="1.25">
+    <div data-sc-stage class="close-stage">
+      <div class="close-inner" data-sc-cue="0 1 0 0">
+        <div class="close-copy">
+          <h2 class="sc-display">Your turn. <em>Type your brand.</em></h2>
+          <label class="field" for="brand-name">
+            <span>Your business name</span>
+            <input id="brand-name" type="text" maxlength="40" autocomplete="organization" placeholder="e.g. Kopi Kaki" spellcheck="false">
+          </label>
+          <a class="btn btn-accent btn-lg" data-wa data-wa-brand href="#contact">Chat on WhatsApp</a>
+          <p class="close-alt">Or <a data-email href="#contact">email</a> · <a data-ig href="#contact">Instagram</a>. I usually reply the same day.</p>
+        </div>
+        <div class="yours" aria-hidden="true" data-yours>
+          <div class="win-bar yours-bar"><i></i><i></i><i></i>
+            <span class="yours-addr"><svg viewBox="0 0 16 16"><path d="M4.5 7V5.2a3.5 3.5 0 0 1 7 0V7" fill="none" stroke="currentColor" stroke-width="1.5"/><rect x="3" y="7" width="10" height="7" rx="1.6" fill="currentColor"/></svg><b data-yours-slug>your-brand</b>.com.my</span>
+          </div>
+          <div class="yours-view">
+            <div class="yours-nav"><b data-yours-name>Your Brand</b><span></span><span></span><span></span></div>
+            <p class="yours-h" data-yours-name>Your Brand</p>
+            <span class="yours-line"></span><span class="yours-line short"></span>
+            <span class="yours-btn"></span>
+            <div class="yours-tiles"><span></span><span></span><span></span></div>
+          </div>
+        </div>
+      </div>
+      <footer class="foot">
+        <p class="foot-mark" aria-hidden="true">Aeryn<span>’</span>s</p>
+        <p>Custom websites for small brands · Malaysia · © <span data-year>2026</span></p>
+      </footer>
+    </div>
+  </section>
+
 </main>
 
-<footer class="foot">
-  <p class="foot-mark" aria-hidden="true">Aeryn<span>’</span>s</p>
-  <div class="foot-row">
-    <p>Custom websites for small brands · Malaysia</p>
-    <p>© <span data-year>2026</span> Aeryn’s</p>
-  </div>
-</footer>
-
+<script src="scrollcraft.js"></script>
 <script src="site.js"></script>
 </body>
 </html>
